@@ -11,5 +11,5 @@ involving basic parsing and visualization of scraping results
  
 There are 3 text files (instructions for xxxx.txt), where xxxx is analysis, scraping and visualization. This should provide instructions for running these 3 components; for e.g. what Python libraries to import, any setup required, etc. It should be completed by the developers responsible for each of these components.
  
- There are 3 branches in addition to the master branch which correspond to each of these 3 components. All code development should be confined to these branches until it has been tested to be working for a specific features. Then issue a pull-request and I will merge the required branch into the master branch. 
+ There are 3 branches in addition to the master branch which correspond to each of these 3 components (analysis, scraping and visualization). All code development should be confined to these branches until it has been tested to be working for a specific features. Then issue a pull-request and I will merge the required branch into the master branch. 
 
