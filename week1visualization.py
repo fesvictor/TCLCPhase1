@@ -1,6 +1,7 @@
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
 def autolabel(rects):
     for rect in rects:
@@ -16,17 +17,32 @@ partylist = []
 oppose_list = []
 notsure_list = []
 consent_list = []
+response_list = []
+rect_list = []
+rect_list2 = []
+color_list = ['b','g','r','c','m','y','k']
+
 for row in reader:
     partylist.append(row[0])
     inputdict[row[0]] = []
     inputdict[row[0]].append(int(row[1]))
     inputdict[row[0]].append(int(row[2]))
     inputdict[row[0]].append(int(row[3]))
-
+    
 for n in inputdict:
     oppose_list.append(inputdict[n][0])
     notsure_list.append(inputdict[n][1])
     consent_list.append(inputdict[n][2])
+    
+raw_data = {'Party':partylist,'scale1':oppose_list,'scale2':notsure_list,'scale3':consent_list}
+
+df = pd.DataFrame(raw_data, columns = ['Party','scale1','scale2','scale3'])
+
+df_list = df.values.tolist()
+
+response_list.append(oppose_list)
+response_list.append(notsure_list)
+response_list.append(consent_list)
 
 n_groups = len(inputdict)
 index = np.arange (n_groups)
@@ -35,9 +51,9 @@ width = 0.25
 plt.figure(1)
 fig, ax = plt.subplots(figsize=(10,5))
 
-rect1 = ax.bar(index, oppose_list, width, alpha=0.5, color='r')
-rect2 = ax.bar([p + width for p in index], notsure_list, width, alpha=0.5, color='g')
-rect3 = ax.bar([p + width*2 for p in index], consent_list, width, alpha=0.5, color='b')
+for i in range(0,len(response_list)):
+    rect_list.append(ax.bar([p + width*i for p in index], response_list[i], width, alpha=0.7, color=color_list[i]))
+    autolabel(rect_list[i])
 
 ax.set_xticks([p + 1 * width for p in index])
 ax.set_xticklabels(partylist)
@@ -48,31 +64,30 @@ ax.set_title('Grouped by Party')
 ax.set_ylabel('Count')
 ax.set_xlabel('Party')
 
-autolabel(rect1)
-autolabel(rect2)
-autolabel(rect3)
-
 plt.savefig('party_plot.png')
 
 plt.figure(2)
 fig, ax = plt.subplots(figsize=(10,5))
 
-rect4 = ax.bar(index, inputdict['BN'], width, alpha=0.8, color='C0')
-rect5 = ax.bar([p + width for p in index], inputdict['DAP'], width, alpha=0.8, color='C1')
-rect6 = ax.bar([p + width*2 for p in index], inputdict['PKR'], width, alpha=0.8, color='C2')
+print (df_list)
+print (response_list)
 
-ax.set_xticks([p + 1 * width for p in index])
+width2 = 0.12
+index2 = np.arange(len(response_list))
+
+for i in range(0,len(partylist)):
+    rect_list2.append(ax.bar([p + width2 * i for p in index2], df_list[i][1::], width2, alpha=0.7, color=color_list[-i]))
+    print (df_list[i][1::])
+    autolabel(rect_list2[i])
+
+ax.set_xticks([p + (len(partylist)/2 - 0.5) * width2 for p in index2])
 ax.set_xticklabels(['Oppose','Not Sure','Consent'])
-plt.ylim([0, max(oppose_list + notsure_list + consent_list)+20])
+plt.ylim([0, max(oppose_list + notsure_list + consent_list)+30])
 plt.grid()
 plt.legend(partylist,loc='upper left')
 ax.set_title('Grouped by Response')
 ax.set_ylabel('Count')
 ax.set_xlabel('Response')
-
-autolabel(rect4)
-autolabel(rect5)
-autolabel(rect6)
 
 plt.savefig('response_plot.png')
 
