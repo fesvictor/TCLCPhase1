@@ -103,35 +103,34 @@ def search_scale(num, sentence): #pass the sentence to be interpreted in databas
                 return True
     return False
 
+def scale_database(FileName):
+    scale_words = []
+    with open(FileName, "rb")as scale_file:
+        for line in scale_file:
+            scale_words.append(line.decode('utf-8').replace('\r\n',''))   
+    return scale_words
+
+##main program##
+
+#storing words to rate the scale
+scale1_words = scale_database("scale1.txt")
+scale2_words = scale_database("scale2.txt")
+scale3_words = scale_database("scale3.txt")
+
+#get all partys previous information and the header format
 party_list, _header = GetPartyRecord("recordss.csv")
 
-#scale1 database
-scale1_words = []
-with open("scale1.txt", "rb")as scale1_file:
-    for line in scale1_file:
-        scale1_words.append(line.decode('utf-8').replace('\r\n',''))        
-#scale2 database
-scale2_words = []
-with open("scale2.txt", "rb")as scale2_file:
-    for line in scale2_file:
-        scale2_words.append(line.decode('utf-8').replace('\r\n',''))       
-#scale3 database
-scale3_words = []
-with open("scale3.txt", "rb")as scale3_file:
-    for line in scale3_file:
-        scale3_words.append(line.decode('utf-8').replace('\r\n',''))       
-
-#main program
-full_word_list = []# Facebook MalaysiaKini_facebook_statuses.csv
-argument = sys.argv[1:]# MalaysiaKini malaysiakini_20170519.csv
-# Json tweet_streams_00106.json.csv
+full_word_list = []
+#remove the python filename #argument= Facebook, MalaysiaKini_facebook_statuses.csv
+argument = sys.argv[1:]              # MalaysiaKini, malaysiakini_20170519.csv
+                                     # Json, tweet_streams_00106.json.csv                           
 for i in range(int(len(argument)/2)):
-    full_word_list = full_word_list + ProcessFile(argument[2*i], argument[2*i+1])
+    full_word_list += ProcessFile(argument[2*i], argument[2*i+1])
     
 for sentence in full_word_list:  #process every sentence
     for party in party_list: #search if any party name in the sentence
         if party.getName() in sentence: #likert scale
-            if search_scale(1,sentence): # if sentence contains words found in scale1 database
+            if search_scale(1,sentence): # if sentence contains words found in scale database
                 party.increScale1()
                 break
             elif search_scale(2,sentence):
