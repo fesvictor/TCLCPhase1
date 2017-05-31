@@ -4,14 +4,14 @@ from json import loads
 import sys
 
 def ProcessFile(FileType, FilePath):
-    if FileType == "Facebook":
+    if FileType == 'Facebook':
         return ProcessFbData(FilePath)
-    elif FileType == "MalaysiaKini":    
+    elif FileType == 'MalaysiaKini':    
         return ProcessMalaysiaKiniData(FilePath)
-    elif FileType == "Json":
+    elif FileType == 'Json':
         return ProcessJsonData(FilePath)
     
-def ProcessJsonData(FileName):
+def ProcessJsonData(FileName): #process json format file
     word_list = []
     with open(FileName) as InFile:
         for line in InFile:
@@ -19,7 +19,7 @@ def ProcessJsonData(FileName):
             word_list.append(data['text'])
         return word_list
 
-def ProcessFbData(FileName):
+def ProcessFbData(FileName): #process facebook txt file
     with open(FileName) as InFile:
         word_list = []
         next(InFile)
@@ -33,7 +33,7 @@ def ProcessFbData(FileName):
             word_list.append(row[2])
         return word_list
     
-def ProcessMalaysiaKiniData(FileName):
+def ProcessMalaysiaKiniData(FileName): #process malaysiakini txt file
     with open(FileName, encoding='UTF-8') as InFile:
         word_list = []
         next(InFile)
@@ -74,7 +74,7 @@ class Party:
     def addNewSentence(self, sentence):
         self.unmatch_sentence_list.append(sentence)
 
-def GetPartyRecord(FileName):
+def GetPartyRecord(FileName): #get data from record file
     party_list = []
     with open(FileName) as record_file:
         _header = record_file.readline()
@@ -82,13 +82,13 @@ def GetPartyRecord(FileName):
             party_list.append(Party(row))
     return party_list, _header
             
-def UpdatePartyRecord(FileName, party_list):
+def UpdatePartyRecord(FileName, party_list): #update the record file
     with open(FileName, "w") as record_file:
         record_file.write(_header)
         for party in party_list:
             record_file.write(party.getName() + "," + str(party.getScale1()) + "," + str(party.getScale2()) + "," + str(party.getScale3()) + "\n")
         
-def search_scale(num, sentence):
+def search_scale(num, sentence): #pass the sentence to be interpreted in database
     if num == 1:
         for words in scale1_words:
             if words in sentence:
@@ -104,6 +104,7 @@ def search_scale(num, sentence):
     return False
 
 party_list, _header = GetPartyRecord("recordss.csv")
+
 #scale1 database
 scale1_words = []
 with open("scale1.txt", "rb")as scale1_file:
@@ -121,10 +122,12 @@ with open("scale3.txt", "rb")as scale3_file:
         scale3_words.append(line.decode('utf-8').replace('\r\n',''))       
 
 #main program
-full_word_list = []
-for i in range(int(len(sys.argv)/2)):
-    full_word_list += ProcessFile(sys.argv[i],sys.argv[i+1])
-print(full_word_list)
+full_word_list = []# Facebook MalaysiaKini_facebook_statuses.csv
+argument = sys.argv[1:]# MalaysiaKini malaysiakini_20170519.csv
+# Json tweet_streams_00106.json.csv
+for i in range(int(len(argument)/2)):
+    full_word_list = full_word_list + ProcessFile(argument[2*i], argument[2*i+1])
+    
 for sentence in full_word_list:  #process every sentence
     for party in party_list: #search if any party name in the sentence
         if party.getName() in sentence: #likert scale
