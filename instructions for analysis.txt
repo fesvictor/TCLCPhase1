@@ -1,2 +1,15 @@
 
 Instructions for analysis should go here
+-
+-
+1)no external library is used, just import from built-in python libray(sys, csv, literal_eval and json).
+
+2)run week1analysis_argv.py with command line arguments come in a pair which 1st argument is file type and 2nd argument is filepath
+For example:
+In windows,
+python week1analysis_argv.py Facebook MalaysiaKini_facebook_statuses.csv Json tweet_streams_00106.json.csv MalaysiaKini malaysiakini_20170519.csv
+
+In Linux,
+./week1analysis_argv.py Facebook MalaysiaKini_facebook_statuses.csv Json tweet_streams_00106.json.csv MalaysiaKini malaysiakini_20170519.csv
+
+3)There is 3 text file(scale1.txt, scale2.txt, scale3.txt) to represent database where the words to rate the scale is stored. Move this to the same directory with the week1analysis_argv.py
