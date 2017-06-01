@@ -3,11 +3,15 @@
 This is the repo for the first phase for TCLC project
 involving basic parsing and visualization of scraping results
 
- There are two folders in the master branch.   
+ There are three folders in the master branch.   
  
- data - contains the output from the scraping component, currently in csv and json format  
+ data - contains the output from the scraping component (currently in csv and json format) as well as phrases for categorizing this  output  
  
- results - contains the output from the analysis component  
+ temp - contains  the output from the analysis component that will subsequently be used by the visualization component.  
+ 
+ results - contains the output from the visualization component
+
+ parameter-file.txt specifies the parameters and values to be used by the different analysis, scraping and visualization components.
  
 There are 3 text files (instructions for xxxx.txt), where xxxx is analysis, scraping and visualization. This should provide instructions for running these 3 components; for e.g. what Python libraries to import, any setup required, etc. It should be completed by the developers responsible for each of these components.
  
