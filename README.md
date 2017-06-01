@@ -11,6 +11,7 @@ involving basic parsing and visualization of scraping results
  
  results - contains the output from the visualization component
 
+ parameter-file.txt specifies the parameters and values to be used by the different analysis, scraping and visualization components.
  
 There are 3 text files (instructions for xxxx.txt), where xxxx is analysis, scraping and visualization. This should provide instructions for running these 3 components; for e.g. what Python libraries to import, any setup required, etc. It should be completed by the developers responsible for each of these components.
  
