@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import glob
 import os
+from ReadParameterFile import get_parameter_dict
 
 def autolabel(rects,ax):
     for rect in rects:
@@ -67,6 +68,8 @@ def visualization(filename,path):
     ax.set_xlabel('Party')
     
     plt.savefig(path+'\\party_plot.png', bbox_inches='tight')
+    plt.close() # Disable ipython console plot
+    
     
     plt.figure(2)
     fig, ax = plt.subplots(figsize=(10,5))
@@ -87,19 +90,22 @@ def visualization(filename,path):
     ax.set_xlabel('Response')
     
     plt.savefig(path+'\\response_plot.png', bbox_inches='tight')
-    #plt.show() #Plot on console
+    plt.close() # Disable ipython console plot
     
+
 # Main
 
-received_path = ('csv/') #Assuming parameter-file module temp.dir=csv/
+parameter_dict = get_parameter_dict() 
+read_path = parameter_dict['temp.dir'].strip('./') + '\\' # temp\
+output_path = parameter_dict['output.dir'].strip('./') # results\
 file_format = ('*.csv')
-file_list = glob.glob(received_path + file_format) #Full path will be "csv/*.csv" which gets a list of all .csv files in csv folder
+file_list = glob.glob(read_path + file_format) #Full path will be "temp\*.csv" which gets a list of all .csv files in csv folder
 for f in file_list:
     file_name = f.split('\\')[-1].split('.csv')[0]
     # Creates new path if it doesnt exist
-    if not os.path.exists('output'):
-        os.makedirs('output')
-    save_path = 'output\\'+file_name+'_output'
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    save_path = output_path+'\\'+file_name+'_output'
     if not os.path.exists(save_path):
         os.makedirs(save_path)
     visualization(f,save_path)
