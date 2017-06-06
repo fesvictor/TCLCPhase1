@@ -12,7 +12,6 @@ def GetPartyRecord(FileName): #get data from record file
     with open(FileName) as record_file:
         _header = record_file.readline()
         for row in reader(record_file):
-            print(row)
             party_list.append(createParty(row))
     return party_list, _header
 
