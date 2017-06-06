@@ -5,7 +5,7 @@ from ReadParameterFile import get_parameter_dict
 ##main program##
 param = get_parameter_dict()
 #get all partys previous information and the header format
-party_list, _header = GetPartyRecord(param["output.dir"] + '/recordss.csv')
+party_list, _header = GetPartyRecord(param["temp.dir"] + '/recordss.csv')
 
 word_list = []
 word_list += ProcessJsonData(param["json.files"])
