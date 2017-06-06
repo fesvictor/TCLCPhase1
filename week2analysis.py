@@ -1,61 +1,74 @@
-from AnalysisLib.ProcessFile import GetPartyRecord, UpdatePartyRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData
+from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
 
-##main program##
+##main program
 param = get_parameter_dict()
 #get all partys previous information and the header format
-party_list, _header = GetPartyRecord(param["temp.dir"] + '/recordss.csv')
+party_list, party_header = GetPartyRecord(param["temp.dir"] + '/recordss.csv')
+govtPolicy_list, govtPolicy_header = GetGovtPolicyRecord(param["temp.dir"] + '/perceptions.csv')
+leader_list, leader_header = GetLeaderRecord(param["temp.dir"] + '/popularity.csv')
 
 word_list = []
 word_list += ProcessJsonData(param["json.files"])
 word_list += ProcessFbData(param["facebook.files"])
 word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
 
-for word in word_list:  #process every sentence 
+for word in word_list:  #process every sentence
+
     for party in party_list: #search if any party name in the sentence
         if party.getName() in word: # if sentence contains words found in scale database
             #attitude likert scale
             if search_scale("Attitude",1,word): # search whether this word in database
-                party.increAttScale1()
+                party.increScale1()
             elif search_scale("Attitude",2,word):
-                party.increAttScale2()
+                party.increScale2()
             elif search_scale("Attitude",3,word):
-                party.increAttScale3()
+                party.increScale3()
+                
+    for govtPolicy in govtPolicy_list: 
+        if govtPolicy.getName() in word: 
             #perception likert scale
             if search_scale("Perception",1,word): 
-                party.increPercepScale1()
+                govtPolicy.increScale1()
             elif search_scale("Perception",2,word):
-                party.increPercepScale2()
+                govtPolicy.increScale2()
             elif search_scale("Perception",3,word):
-                party.increPercepScale3()
+                govtPolicy.increScale3()
             elif search_scale("Perception",4,word):
-                party.increPercepScale4()
+                govtPolicy.increScale4()
             elif search_scale("Perception",5,word):
-                party.increPercepScale5()
+                govtPolicy.increScale5()
+                
+    for leader in leader_list: 
+        if leader.getName() in word: 
             #popularity likert scale
             if search_scale("Popularity",1,word):
-                party.increPop()
+                leader.increScale1()
             elif search_scale("Popularity",2,word):
-                party.increNotPop()
+                leader.increScale2()
             break
         else:
             continue
 
+print("attitude:")#attitude
 for party in party_list: #can exclude this/for printing purpuse
     print('\033[4m' + party.getName() + '\033[0m')
-    print("attitude:")#attitude
-    print("Scale 1: ", party.getAttScale1() , " response")
-    print("Scale 2: ", party.getAttScale2() , " response")
-    print("Scale 3: ", party.getAttScale3() , " response")
-    print("perception:")#perception
-    print("Scale 1: ", party.getPercepScale1() , " response")
-    print("Scale 2: ", party.getPercepScale2() , " response")
-    print("Scale 3: ", party.getPercepScale3() , " response")
-    print("Scale 4: ", party.getPercepScale4() , " response")
-    print("Scale 5: ", party.getPercepScale5() , " response")
-    print("popularity:")#popularity
-    print("Popular: ", party.getPopular() , " response")
-    print("Not popular: ", party.getNotPopular() , " response")
+    for index, scale in enumerate(party.getScale(), 1):
+        print("Scale", index, ": ", scale , " response")
 
-UpdatePartyRecord(param["output.dir"]+ '/recordss.csv', _header, party_list)
+print("perception:")#perception
+for govtPolicy in govtPolicy_list:
+    print('\033[4m' + govtPolicy.getName() + '\033[0m')
+    for index, scale in enumerate(govtPolicy.getScale(), 1):
+        print("Scale", index, ": ", scale , " response")
+    
+print("popularity:")#popularity
+for leader in leader_list:
+    print('\033[4m' + leader.getName() + '\033[0m')
+    for index, scale in enumerate(leader.getScale(), 1):
+        print("Scale", index, ": ", scale , " response")
+
+UpdateRecord(param["temp.dir"]+ '/recordss.csv', party_header, party_list)
+UpdateRecord(param["temp.dir"]+ '/perceptions.csv', govtPolicy_header, govtPolicy_list)
+UpdateRecord(param["temp.dir"]+ '/popularity.csv', leader_header, leader_list)
