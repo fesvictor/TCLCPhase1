@@ -36,7 +36,7 @@ All these text files is to represent a database that storing the words to rate t
 4)make sure there are 3 csv files in TCLCPhase1/temp repository: recordss.csv, perceptions.csv and popularity.csv
 
 5)in order to run week2analysis.py, make sure the working directory is the file directory 
-  run week2analysis.py without any command line argument, changes can be made by changing the parameter-file.txt
+  run week2analysis.py without any command line argument, changes can be made by editting the parameter-file.txt
   For example:
     In windows,
       C:\Users\Tan Hong Zher\Documents\GitHub\TCLCPhase1> python week2analysis.py
