@@ -24,9 +24,10 @@ def visualization(filename,path):
     color_list = ['#E53935','#D81B60','#8E24AA','#5E35B1','#1E88E5','#039BE5','#00ACC1','#00897B','#7CB342','#C0CA33','#FDD835','#FFB300','#FB8C00','#F4511E','#6D4C41','#757575','#546E7A']
 
     for row in reader:
-        namelist.append(row[0])
-        inputdict[row[0]] = list(row[1::])
-        inputdict[row[0]] = [int(i) for i in inputdict[row[0]]]
+        if len(row) != 0:
+            namelist.append(row[0])
+            inputdict[row[0]] = list(row[1::])
+            inputdict[row[0]] = [int(i) for i in inputdict[row[0]]]
 
     #Popularity
     if header==['name','scale1','scale2']:
