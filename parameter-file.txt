@@ -27,6 +27,9 @@ policies.perception.scale=./data/categories/perceptions
 
 popular.political=./data/categories/popularity
 
+# directory for targets to analyse
+target=./data/target
+
 # directory to hold intermediate results
 
 temp.dir=./temp
