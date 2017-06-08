@@ -32,7 +32,7 @@ All these text files is to represent a database that storing the words to rate t
   -csv files in these 3 repositories will be used to get data used for anaylsis. 
   -These 3 repositories may or may not contain file but the program will process every file in these 3 repositories.
 
-4)make sure there are 3 csv files in TCLCPhase1/temp repository: recordss.csv, perceptions.csv and popularity.csv
+4)make sure there is TCLCPhase1/temp repository: the output of analysis module will be stored in this repository
 
 5)in order to run week2analysis.py, make sure the working directory is the file directory 
   run week2analysis.py without any command line argument, changes can be made by editting the parameter-file.txt
