@@ -19,11 +19,12 @@ def scrape(link, save_dir):
     spoiler_text = "» Click to show Spoiler - click again to hide... «" #Appears when content hidden in spoilers
     
     #Used to pull raw HTML file
-    #with open('raw_html.html', 'wb') as f:
+    #with open(save_filename+'_raw_html.html', 'wb') as f:
     #   f.write(soup.prettify('utf8'))
         
     [div.extract() for div in soup.find_all("div", { "class" : "quotemain"})]   #Removes quote text
     [div.extract() for div in soup.find_all("div", { "class" : "quotetop"})]    #Removes quote timestamp
+    [div.extract() for div in soup.find_all("span", { "class" : "edit"})]       #Removes edit text and timestamps
     fp = open(save_dir+'lowyat_'+save_filename+'.txt', 'a')
     fp.truncate(0)  #Clears the text file first
     for div in soup.find_all("div", { "class" : "postcolor post_text"}):    #Get all specific tags
