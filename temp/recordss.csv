@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 Name," ""Attitude Scale 1"""," ""Attitude Scale 2"""," ""Attitude Scale 3"""," ""Perception Scale 1"""," ""Perception Scale 2"""," ""Perception Scale 3"""," ""Perception Scale 4"""," ""Perception Scale 5"""," ""Popular""","""Not Popular"""
 BN,0,0,0,0,0,0,0,0,0,0
 DAP,0,0,0,0,0,0,0,0,0,0
 PKR,0,0,0,0,0,0,0,0,0,0
+=======
+name,scale1,scale2,scale3
+BN,10,10,17
+DAP,20,20,11
+PKR,30,30,16
+>>>>>>> master
