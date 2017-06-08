@@ -1,2 +1,15 @@
+Instruction for Visualization Module (week1visualization.py)
 
-Instructions for visualization should go here
+Required: get temp.dir parameter from parameter-file module.
+Assuming returned parameter is the directory of the csv input data path: "csv\"
+
+1. Script must be ran on the same directory level as "csv\" folder.
+2. Program only reads .csv files, and will ignore .txt or other formats.
+3. Program will create 'output' folder if it doesnt exist.
+4. All visual charts will be output to the output folder such as the following:
+
+123.csv         -> ..\output\123_output\*.png
+dummydata.csv   -> ..\output\dummydata_output\*.png
+recordss.csv    -> ..\output\recordss_output\*.png
+
+..and so on.
