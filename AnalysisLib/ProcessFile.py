@@ -2,47 +2,41 @@ def scale_database(FileName):
     scale_words = []
     with open(FileName, "rb")as scale_file:
         for line in scale_file:
-            scale_words.append(line.decode('utf-8').replace('\n',''))   
+            scale_words.append(line.decode('utf-8').replace('\r\n',''))   
     return scale_words
 
 def GetPartyRecord(FileName): #get data from record file
-    from csv import reader
     from AnalysisLib.Party import createParty
     party_list = []
     with open(FileName) as record_file:
-        _header = record_file.readline()
-        for row in reader(record_file):
+        for row in record_file.read().splitlines():
             party_list.append(createParty(row))
-    return party_list, _header
+    return party_list
 
 def GetLeaderRecord(FileName):
-    from csv import reader
     from AnalysisLib.Leader import createLeader
     leader_list = []
     with open(FileName) as record_file:
-        _header = record_file.readline()
-        for row in reader(record_file):
+        for row in record_file.read().splitlines():
             leader_list.append(createLeader(row))
-    return leader_list, _header
+    return leader_list
 
 def GetGovtPolicyRecord(FileName):
-    from csv import reader
     from AnalysisLib.GovtPolicy import createGovtPolicy
     govt_policy_list = []
     with open(FileName) as record_file:
-        _header = record_file.readline()
-        for row in reader(record_file):
+        for row in record_file.read().splitlines():
             govt_policy_list.append(createGovtPolicy(row))
-    return govt_policy_list, _header
+    return govt_policy_list
 
 def UpdateRecord(FileName, _header, object_list): #update the record file
     with open(FileName, "w") as record_file:
         record_file.write(_header)
         for _object in object_list:
-            record_file.write(_object.getName() + "," )
-            for scale in _object.getScale():
-                record_file.write(str(scale) + ",")
             record_file.write("\n")
+            record_file.write(_object.getName())
+            for scale in _object.getScale():
+                record_file.write("," + str(scale))
                 
 def ProcessJsonData(FilePath): #process json format file
     from os import listdir
