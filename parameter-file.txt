@@ -1,0 +1,45 @@
+
+# the purpose of this parameter file is to provide parameter-value
+# pairs that will be used by the scraping, analysis and visualization
+# components
+
+# directory to hold scraping output from facebook
+
+facebook.files=./data/scraperesults/facebook
+
+# directory to hold scraping output from malaysiakini
+
+malaysiakini.files=./data/scraperesults/malaysiakini
+
+# directory to hold scraping output in JSON format
+ 
+json.files=./data/scraperesults/json
+
+# directory for phrases for attitude to political parties
+
+political.attitudes.scale=./data/categories/attitudes
+
+# directory for phrases for perceptions on government policies
+
+policies.perception.scale=./data/categories/perceptions
+
+# directory for phrases for popularity of political parties
+
+popular.political=./data/categories/popularity
+
+# directory to hold intermediate results
+
+temp.dir=./temp
+
+# directory to hold output (png, jpg files, etc) from visualization program
+
+output.dir=./results
+
+# scrap links text file
+
+scrap.links=scrap_links.txt
+
+# directory to hold scraping output from lowyat forums (scraping.py)
+
+lowyat.files=./data/scraperesults/lowyat
+
