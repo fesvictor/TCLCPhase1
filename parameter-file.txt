@@ -38,3 +38,10 @@ temp.dir=./temp
 
 output.dir=./results
 
+# scrap links text file
+
+scrap.links=scrap_links.txt
+
+# directory to hold scraping output from lowyat forums (scraping.py)
+
+lowyat.files=./data/scraperesults/lowyat
