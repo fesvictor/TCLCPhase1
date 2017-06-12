@@ -22,6 +22,7 @@ def getResult():
                 
     for govtPolicy in govtPolicy_list: 
         if govtPolicy.getName() in word: 
+            print("2")
             #perception likert scale
             if search_scale("Perception",1,word): 
                 govtPolicy.increScale1()
@@ -36,6 +37,7 @@ def getResult():
                 
     for leader in leader_list: 
         if leader.getName() in word: 
+            print("3")
             #popularity likert scale
             if search_scale("Popularity",1,word):
                 leader.increScale1()
@@ -66,11 +68,11 @@ def printResult():
             
 ##main program
 param = get_parameter_dict()
-party_list, party_header = GetPartyRecord(param["temp.dir"] + '/recordss.csv')
-govtPolicy_list, govtPolicy_header = GetGovtPolicyRecord(param["temp.dir"] + '/perceptions.csv')
-leader_list, leader_header = GetLeaderRecord(param["temp.dir"] + '/popularity.csv')
+party_list = GetPartyRecord(param["target"] + '/party.txt')
+govtPolicy_list = GetGovtPolicyRecord(param["target"] + '/govtPolicy.txt')
+leader_list = GetLeaderRecord(param["target"] + '/leader.txt')
 getResult()
 printResult()
-UpdateRecord(param["temp.dir"]+ '/recordss.csv', party_header, party_list)
-UpdateRecord(param["temp.dir"]+ '/perceptions.csv', govtPolicy_header, govtPolicy_list)
-UpdateRecord(param["temp.dir"]+ '/popularity.csv', leader_header, leader_list)
+UpdateRecord(param["temp.dir"]+ '/attitudes.csv', "name,scale1,scale2,scale3", party_list)
+UpdateRecord(param["temp.dir"]+ '/perceptions.csv', "name,scale1,scale2,scale3,scale4,scale5", govtPolicy_list)
+UpdateRecord(param["temp.dir"]+ '/popularity.csv', "name,scale1,scale2", leader_list)
