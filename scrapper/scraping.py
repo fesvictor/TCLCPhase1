@@ -2,8 +2,8 @@
 import urllib
 import textwrap as tw
 from bs4 import BeautifulSoup as bs
-from ReadParameterFile import get_parameter_dict
-import re #Regex library
+#from ReadParameterFile import get_parameter_dict
+#import re #Regex library
 
 def scrape(link, save_dir):
     link_suffix = "/all" #Used to read first 25 pages (limited to first 25 only)
@@ -19,8 +19,8 @@ def scrape(link, save_dir):
     spoiler_text = "» Click to show Spoiler - click again to hide... «" #Appears when content hidden in spoilers
     
     #Used to pull raw HTML file
-    #with open(save_filename+'_raw_html.html', 'wb') as f:
-    #   f.write(soup.prettify('utf8'))
+    with open(save_filename+'_raw_html.html', 'wb') as f:
+       f.write(soup.prettify('utf8'))
         
     [div.extract() for div in soup.find_all("div", { "class" : "quotemain"})]   #Removes quote text
     [div.extract() for div in soup.find_all("div", { "class" : "quotetop"})]    #Removes quote timestamp
@@ -41,27 +41,27 @@ def reassemble_link(topic_number):
     reassembled = suffix + topic_number
     return reassembled
     
-#main
-parameter_dict = get_parameter_dict()
-links_file = parameter_dict['scrap.links'].strip('./')  
-save_dir = parameter_dict['lowyat.files'].strip('./')+'/'
+##main
+#parameter_dict = get_parameter_dict()
+#links_file = parameter_dict['scrap.links'].strip('./')  
+#save_dir = parameter_dict['lowyat.files'].strip('./')+'/'
 
 #URL
-with open(links_file, 'r') as fp:
-    link_list = fp.readlines()
-    link_list = [links for links in link_list if len(links) > 5] #Removes blank, typo rows in list
-    link_list = [links.strip('\n') for links in link_list] #Removes newline characters from links
-    link_list = [links.split('\t\t')[0] for links in link_list] #Ignore topic titles in link list
-    
-    #Check if links obtained are from forum search engine
-    #Forum search engine returns links in a different format
-    #Eg: https://forum.lowyat.net/index.php?showtopic=4318258&hl=barisan
-    #Instead of https://forum.lowyat.net/topic/4318258
-    for i in range(0, len(link_list)):
-
-        if "index.php?showtopic=" in link_list[i]:
-            regex = re.search('showtopic=(.+?)&hl', link_list[i])
-            link_list[i] = regex.group(1)
-            link_list[i] = reassemble_link(link_list[i])
-    for links in link_list:
-       scrape(links, save_dir)
+#with open(links_file, 'r') as fp:
+#    link_list = fp.readlines()
+#    link_list = [links for links in link_list if len(links) > 5] #Removes blank, typo rows in list
+#    link_list = [links.strip('\n') for links in link_list] #Removes newline characters from links
+#    link_list = [links.split('\t\t')[0] for links in link_list] #Ignore topic titles in link list
+#    
+#    #Check if links obtained are from forum search engine
+#    #Forum search engine returns links in a different format
+#    #Eg: https://forum.lowyat.net/index.php?showtopic=4318258&hl=barisan
+#    #Instead of https://forum.lowyat.net/topic/4318258
+#    for i in range(0, len(link_list)):
+#
+#        if "index.php?showtopic=" in link_list[i]:
+#            regex = re.search('showtopic=(.+?)&hl', link_list[i])
+#            link_list[i] = regex.group(1)
+#            link_list[i] = reassemble_link(link_list[i])
+#    for links in link_list:
+#       scrape(links, save_dir)
