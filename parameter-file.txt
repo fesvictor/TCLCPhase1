@@ -35,7 +35,7 @@ temp.dir=./temp
 
 output.dir=./results
 
-# directory to hold scraping output from lowyat forums (scraping.py)
+# directory to hold scraping output from lowyat forums (start_scrapper.py)
 
 lowyat.files=./data/scraperesults/lowyat
 
