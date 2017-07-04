@@ -33,7 +33,7 @@ link_list = c.crawl_levels(link, levels, l1_search, l2_search)
 print("[C] Crawler task completed")
 
 #THREAD LINK SCRAPPER
-print("\t[T] Link scrapper initiated with keywords: " + str(search_list))
+print("\t[T] Link scrapper initiated with keywords: " + str(search_list) + " With page limit: " + str(page_limit))
 for l in link_list:
     print("\t[T] Link scrapper task started for link: " + l)
     temp_retrieved, temp_titles = t.tlink_scrape(l, page_limit, search_list)
@@ -44,6 +44,7 @@ print("\t[T] Link scrapper task completed")
     
 #POST SCRAPPER
 count = 0
+print("\t\t[P] Post scrapper initiated with page limit: " + str(page_limit_p))
 for l,ttl in zip(links_retrieved, titles):
     count += 1
     print("\t\t[P] Post scrapper task started for link: " + str(l) + " (" + str(count) + "/" + str(len(links_retrieved)) + ")")
