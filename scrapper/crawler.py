@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 #import pandas as pd
 
 def crawler(link, search_list=[]):
+    main_link = "https://forum.lowyat.net" 
     try:
         page = urllib.request.urlopen(link)
     except:
@@ -31,7 +32,7 @@ def crawler(link, search_list=[]):
     title = []
     result_list = []
     for b in td:
-        href.append(link+b.find("b").findNext("a")['href']) #Reconstruct link from href
+        href.append(main_link+b.find("b").findNext("a")['href']) #Reconstruct link from href
         title.append(b.find("b").findNext("a").get_text().strip('"'))
         
     index_set = list(zip(title,href))
@@ -43,7 +44,7 @@ def crawler(link, search_list=[]):
     for i in range(0,len(index_set)):
         if search_list != []:
             for word in search_list:
-                if word in index_set[i][0].lower():
+                if word.lower() in index_set[i][0].lower():
                     result_list.append(index_set[i][1])
         else:
             result_list.append(index_set[i][1])
@@ -60,6 +61,5 @@ def crawl_levels(link, n, l1_search, l2_search):
                 links_retrieved = links_retrieved + crawler(l, l2_search)
             except:
                 pass
-    print("Crawler retrieved links: ")
-    print(links_retrieved)
+    print("[C] Crawler retrieved links: " + str(links_retrieved))
     return links_retrieved

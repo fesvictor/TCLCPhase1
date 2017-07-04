@@ -1,12 +1,19 @@
 import urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
+import time
 
-def post_scrape(link):
+global page_no
+global counter
+page_no = 0
+counter = 0
+
+def post_scrape_main(link):
+    main_link = "https://forum.lowyat.net"
     try:
         page = urllib.request.urlopen(link)
     except:
-        return
+        return 0
     
     soup = bs(page, "lxml")
     #For debugging purposes, prints raw html to file
@@ -51,9 +58,44 @@ def post_scrape(link):
             text.append(a.find("div", class_="postcolor post_text").get_text().strip())
         except:
             text.append("")
+    try:
+        np_link = main_link + soup.find("a", title="Next page")['href']
+    except:
+        np_link = 0
     
-    
-
     index_set = list(zip(un_list,time_list,avatar_title,info_group,info_post_count,info_joined,info_from,text))
     df = pd.DataFrame(data = index_set, columns=['username','time','avatar_title','group','post_count','join_date','from','text'])
-    return df
+    return df, np_link
+
+def post_scrape(link, page_limit=50):
+    global page_no
+    global counter
+    page_no = 0
+    frames = []
+    
+    while (True):
+        if (counter == 45):
+            print("\t\t[P] *****15 second delay initated to prevent forum block*****")
+            time.sleep(15)
+            counter = 0
+        if (page_no == page_limit):
+            return pd.concat(frames, ignore_index=True)
+        page_no += 1
+        counter += 1
+        if page_no == 1:
+            print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + link)
+            prev_link = link
+            df, np_link = post_scrape_main(link)
+            frames.append(df)
+            if np_link == 0:
+                print("\t\t[P] Last page reached at: " + prev_link)
+                return pd.concat(frames, ignore_index=True)
+        else:
+            print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
+            prev_link = np_link
+            df, np_link = post_scrape_main(np_link)
+            frames.append(df)
+            if np_link == 0:
+                print("\t\t[P] Last page reached at: " + prev_link)
+                return pd.concat(frames, ignore_index=True)
+    
