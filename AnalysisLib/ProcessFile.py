@@ -50,7 +50,11 @@ def UpdateRecord(FileName, object_list): #update the record file
         for _object in object_list:
                 object_name = _object.getName()
                 for index, scale in enumerate(_object.getScale(), 1):
-                    record_dict[_day][object_name + "(scale" + str(index) + ")"] = scale #name
+                    try:
+                        record_dict[_day][object_name + "(scale" + str(index) + ")"] = scale #name
+                    except KeyError:
+                        record_dict[_day] = {}
+                        record_dict[_day][object_name + "(scale" + str(index) + ")"] = scale #name
 
         with open(FileName, "w") as outFile:
             outFile.write("name")
@@ -97,13 +101,11 @@ def ProcessFbData(FilePath): #process facebook txt file
             df = read_csv(InFile)
             for index, row in df.iterrows():
                 _text = df.loc[index]['status_message']
-                print(type(_text))
                 try:
                     if _text is not "":
                         word_list.append(literal_eval(_text).decode('utf-8'))
                 except ValueError:
                     pass
-    print(word_list)
     return word_list
 
 def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
@@ -115,6 +117,7 @@ def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
             df = read_csv(InFile)
             for index, row in df.iterrows():
                 word_list.append(df.loc[index]['text'])
+    #print(word_list)
     return word_list
 
 def ProcessLowyatData(FilePath):
@@ -125,5 +128,12 @@ def ProcessLowyatData(FilePath):
         with open(FilePath + "/" + FileName) as InFile:
             df = read_csv(InFile)
             for index, row in df.iterrows():
-                word_list.apppend(df.loc[index]['text'])
+                _text = df.loc[index]['text']
+                try:
+                    if not isinstance(_text, float):
+                        if _text is not "":
+                            word_list.append(_text)
+                except ValueError:
+                    print("aaa")
+#    print(word_list)
     return word_list

@@ -7,7 +7,7 @@ def getResult():
     word_list += ProcessJsonData(param["json.files"])
     word_list += ProcessFbData(param["facebook.files"])
     word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
-    #word_list += ProcessLowyatData(param["lowyat.files"])
+    word_list += ProcessLowyatData(param["lowyat.files"])
 
     for word in word_list:  #process every sentence
     
@@ -23,7 +23,6 @@ def getResult():
                 
     for govtPolicy in govtPolicy_list: 
         if govtPolicy.getName() in word: 
-            print("2")
             #perception likert scale
             if search_scale("Perception",1,word): 
                 govtPolicy.increScale1()
@@ -38,7 +37,6 @@ def getResult():
                 
     for leader in leader_list: 
         if leader.getName() in word: 
-            print("3")
             #popularity likert scale
             if search_scale("Popularity",1,word):
                 leader.increScale1()
@@ -73,7 +71,7 @@ party_list = GetPartyRecord(param["target"] + '/party.txt')
 govtPolicy_list = GetGovtPolicyRecord(param["target"] + '/govtPolicy.txt')
 leader_list = GetLeaderRecord(param["target"] + '/leader.txt')
 getResult()
-printResult()
+#printResult()
 _location = getDirInTemp(param["temp.dir"])
 
 UpdateRecord(_location + '/attitudes.csv', party_list)
