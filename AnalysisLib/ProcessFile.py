@@ -46,7 +46,6 @@ def UpdateRecord(FileName, object_list): #update the record file
             df = pd.read_csv(inFile)
             
         record_dict = df.set_index("name").to_dict()
-        print(record_dict)
         for _object in object_list:
                 object_name = _object.getName()
                 for index, scale in enumerate(_object.getScale(), 1):
