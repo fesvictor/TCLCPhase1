@@ -5,6 +5,14 @@ def scale_database(FileName):
             scale_words.append(line.decode('utf-8').replace('\r\n',''))   
     return scale_words
 
+def getDirInTemp(_dir):
+    from os import makedirs
+    from os.path import exists
+    from time import strftime
+    if not exists(_dir + "/" + strftime("%Y") + "/" + strftime("%B")):
+        makedirs(_dir + "/" + strftime("%Y") + "/" + strftime("%B"))
+    return _dir + "/" + strftime("%Y") + "/" + strftime("%B")
+
 def GetPartyRecord(FileName): #get data from record file
     from AnalysisLib.Party import createParty
     party_list = []
@@ -29,14 +37,44 @@ def GetGovtPolicyRecord(FileName):
             govt_policy_list.append(createGovtPolicy(row))
     return govt_policy_list
 
-def UpdateRecord(FileName, _header, object_list): #update the record file
-    with open(FileName, "w") as record_file:
-        record_file.write(_header)
+def UpdateRecord(FileName, object_list): #update the record file
+    from time import strftime
+    import pandas as pd
+    _day = strftime("%d")
+    try:
+        with open(FileName, "r") as inFile:
+            df = pd.read_csv(inFile)
+            
+        record_dict = df.set_index("name").to_dict()
+        print(record_dict)
         for _object in object_list:
-            record_file.write("\n")
-            record_file.write(_object.getName())
-            for scale in _object.getScale():
-                record_file.write("," + str(scale))
+                object_name = _object.getName()
+                for index, scale in enumerate(_object.getScale(), 1):
+                    record_dict[_day][object_name + "(scale" + str(index) + ")"] = scale #name
+
+        with open(FileName, "w") as outFile:
+            outFile.write("name")
+            for _key in record_dict:
+                outFile.write(",")
+                outFile.write(_key)
+            
+            for index, key in enumerate(list(list(record_dict.values())[0].keys()),0):
+                outFile.write("\n")
+                outFile.write((list(list(record_dict.values())[0].keys())[index]))
+                for _key in record_dict:
+                    outFile.write(",")
+                    #list(_key.values())[index]
+                    outFile.write(str(list(record_dict[_key].values())[index]))
+                    #outFile.write(record_dict[_key])
+                
+    except FileNotFoundError:        
+        with open(FileName, "w") as record_file:
+            record_file.write("name," + _day) #header
+            for _object in object_list:
+                object_name = _object.getName()
+                print(object_name)
+                for index, scale in enumerate(_object.getScale(), 1):
+                    record_file.write("\n" + object_name + "(scale" + str(index) + ")," + str(scale)) #scale
                 
 def ProcessJsonData(FilePath): #process json format file
     from os import listdir
@@ -50,31 +88,42 @@ def ProcessJsonData(FilePath): #process json format file
     return word_list
 
 def ProcessFbData(FilePath): #process facebook txt file
-    from csv import reader
+    from pandas import read_csv
     from os import listdir
     from ast import literal_eval
     word_list = []
     for FileName in listdir(FilePath):
         with open(FilePath + "/" + FileName) as InFile:
-            next(InFile)
-            rows = reader(InFile)
-            for row in rows:
-                if row[1] is not '':
-                   row[1] = literal_eval(row[1]).decode('utf-8')
-                if row[2] is not '':
-                   row[2] = literal_eval(row[2]).decode('utf-8')
-                word_list.append(row[1])
-                word_list.append(row[2])
+            df = read_csv(InFile)
+            for index, row in df.iterrows():
+                _text = df.loc[index]['status_message']
+                print(type(_text))
+                try:
+                    if _text is not "":
+                        word_list.append(literal_eval(_text).decode('utf-8'))
+                except ValueError:
+                    pass
+    print(word_list)
     return word_list
 
 def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
-    from csv import reader
     from os import listdir
+    from pandas import read_csv
     word_list = []
     for FileName in listdir(FilePath):
         with open(FilePath + "/" + FileName, encoding='UTF-8') as InFile:
-            next(InFile)
-            rows = reader(InFile)
-            for row in rows:
-                word_list.append(row[27])
+            df = read_csv(InFile)
+            for index, row in df.iterrows():
+                word_list.append(df.loc[index]['text'])
+    return word_list
+
+def ProcessLowyatData(FilePath):
+    from os import listdir
+    from pandas import read_csv
+    word_list = []
+    for FileName in listdir(FilePath):
+        with open(FilePath + "/" + FileName) as InFile:
+            df = read_csv(InFile)
+            for index, row in df.iterrows():
+                word_list.apppend(df.loc[index]['text'])
     return word_list
