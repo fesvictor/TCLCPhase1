@@ -1,4 +1,4 @@
-from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData
+from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, getDirInTemp
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
 
@@ -7,6 +7,7 @@ def getResult():
     word_list += ProcessJsonData(param["json.files"])
     word_list += ProcessFbData(param["facebook.files"])
     word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
+    word_list += ProcessLowyatData(param["lowyat.files"])
 
     for word in word_list:  #process every sentence
     
@@ -44,7 +45,7 @@ def getResult():
             break
         else:
             continue
-    
+
 def printResult():
     print("attitude:")#attitude
     for party in party_list: #can exclude this/for printing purpuse
@@ -66,11 +67,13 @@ def printResult():
             
 ##main program
 param = get_parameter_dict()
-party_list, party_header = GetPartyRecord(param["temp.dir"] + '/recordss.csv')
-govtPolicy_list, govtPolicy_header = GetGovtPolicyRecord(param["temp.dir"] + '/perceptions.csv')
-leader_list, leader_header = GetLeaderRecord(param["temp.dir"] + '/popularity.csv')
+party_list = GetPartyRecord(param["target"] + '/party.txt')
+govtPolicy_list = GetGovtPolicyRecord(param["target"] + '/govtPolicy.txt')
+leader_list = GetLeaderRecord(param["target"] + '/leader.txt')
 getResult()
-printResult()
-UpdateRecord(param["temp.dir"]+ '/recordss.csv', party_header, party_list)
-UpdateRecord(param["temp.dir"]+ '/perceptions.csv', govtPolicy_header, govtPolicy_list)
-UpdateRecord(param["temp.dir"]+ '/popularity.csv', leader_header, leader_list)
+#printResult()
+_location = getDirInTemp(param["temp.dir"])
+
+UpdateRecord(_location + '/attitudes.csv', party_list)
+UpdateRecord(_location + '/perceptions.csv', govtPolicy_list)
+UpdateRecord(_location + '/popularity.csv', leader_list)

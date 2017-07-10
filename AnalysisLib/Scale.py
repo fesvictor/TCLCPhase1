@@ -1,19 +1,23 @@
 from AnalysisLib.ProcessFile import scale_database
 from ReadParameterFile import get_parameter_dict
 param = get_parameter_dict()
+
 #storing words to rate the attitude scale
 att_scale1_words = scale_database(param['political.attitudes.scale'] + "/scale1.txt")
 att_scale2_words = scale_database(param['political.attitudes.scale'] + "/scale2.txt")
 att_scale3_words = scale_database(param['political.attitudes.scale'] + "/scale3.txt")
+
 #storing words to rate the perception scale
 percep_scale1_words = scale_database(param['policies.perception.scale'] + "/scale1.txt")
 percep_scale2_words = scale_database(param['policies.perception.scale'] + "/scale2.txt")
 percep_scale3_words = scale_database(param['policies.perception.scale'] + "/scale3.txt")
 percep_scale4_words = scale_database(param['policies.perception.scale'] + "/scale4.txt")
 percep_scale5_words = scale_database(param['policies.perception.scale'] + "/scale5.txt")
+
 #storing words to rate the popularity scale
 popular_words = scale_database(param['popular.political'] + "/popular.txt")
 not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt")
+
 def search_scale(category, num, sentence): #pass the sentence to be interpreted in database
     if category == "Attitude":
         if num == 1:

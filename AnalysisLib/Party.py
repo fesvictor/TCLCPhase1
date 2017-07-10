@@ -1,9 +1,9 @@
 class Party:
-    def __init__(self, _list):
-        self.name = _list[0]
-        self.scale1 = int(_list[1])
-        self.scale2 = int(_list[2])
-        self.scale3 = int(_list[3])
+    def __init__(self, _name):
+        self.name = _name
+        self.scale1 = 0
+        self.scale2 = 0
+        self.scale3 = 0
 
     def getName(self):
         return self.name
