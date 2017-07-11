@@ -2,6 +2,7 @@ import urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import time
+import datetime
 
 global page_no
 global counter
@@ -10,6 +11,8 @@ counter = 0
 
 def post_scrape_main(link):
     main_link = "https://forum.lowyat.net"
+    today = datetime.date.today()
+    yesterday = today - datetime.timedelta(1)
     try:
         page = urllib.request.urlopen(link)
     except:
@@ -40,7 +43,7 @@ def post_scrape_main(link):
     timestamp = soup.find_all("div", style="float: left;")
     for a in timestamp:
         try:
-            time_list.append(a.find('span', class_='postdetails').get_text())
+            time_list.append(a.find('span', class_='postdetails').get_text().replace("Today",today.strftime("%b %d %Y")).replace("Yesterday",yesterday.strftime("%b %d %Y")))
         except:
             pass
     

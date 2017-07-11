@@ -9,22 +9,26 @@ import re
 #List initialization
 links_retrieved = []
 titles = []
-parameter_dict = get_parameter_dict()
-save_dir = parameter_dict['lowyat.files'].strip('./')+'/'
+pd = get_parameter_dict()
+save_dir = pd['lowyat.files'].strip('./')+'/'
 
 #************CONFIGURATION******************
 #CRAWLER CONFIG
-link = "https://forum.lowyat.net/" #Start link
-levels = 2 #Currently limited to 2 levels
-l1_search = ["Kopi"] #Level 1 filter (/Kopitiam)
-l2_search = ["serious"] #Level 2 filter (/Kopitiam/SeriousKopitiam)
+link = pd['scrapper.c.link'] #Start link
+levels = int(pd['scrapper.c.levels']) #Currently limited to 2 levels
+l1_search = pd['scrapper.c.l1_search'].split(',') #Level 1 filter (/Kopitiam)
+l2_search = pd['scrapper.c.l2_search'].split(',') #Level 2 filter (/Kopitiam/SeriousKopitiam)
 
 #THREAD LINK SCRAPPER CONFIG
-page_limit = 1 #Default 50
-search_list = ["DAP","malaysia"]
+page_limit = int(pd['scrapper.t.page_limit']) #Default 50
+search_list = pd['scrapper.t.search_list'].split(',')
+#Date is written in dd-mm-YYYY format
+#Accepted keywords are "today","yesterday","31-12-2017"
+start_date = pd['scrapper.t.start_date']
+end_date = pd['scrapper.t.end_date']
 
 #POST SCRAPPER CONFIG
-page_limit_p = 10 #Default 50
+page_limit_p = int(pd['scrapper.p.page_limit_p']) #Default 50
 #************CONFIGURATION END******************
 
 #CRAWLER
@@ -36,7 +40,7 @@ print("[C] Crawler task completed")
 print("\t[T] Link scrapper initiated with keywords: " + str(search_list) + " With page limit: " + str(page_limit))
 for l in link_list:
     print("\t[T] Link scrapper task started for link: " + l)
-    temp_retrieved, temp_titles = t.tlink_scrape(l, page_limit, search_list)
+    temp_retrieved, temp_titles = t.tlink_scrape(l, page_limit, search_list, start_date, end_date)
     links_retrieved = links_retrieved + temp_retrieved
     titles = titles + temp_titles
 print("\t[T] Link scrapper retrieved links: " + str(links_retrieved))
