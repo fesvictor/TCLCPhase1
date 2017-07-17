@@ -20,5 +20,5 @@ class Party:
     def increScale3(self):
         self.scale3 += 1
 
-def createParty(Name):
+def instantObject(Name):
     return Party(Name)

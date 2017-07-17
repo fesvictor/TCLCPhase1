@@ -13,29 +13,18 @@ def getDirInTemp(_dir):
         makedirs(_dir + "/" + strftime("%Y") + "/" + strftime("%B"))
     return _dir + "/" + strftime("%Y") + "/" + strftime("%B")
 
-def GetPartyRecord(FileName): #get data from record file
-    from AnalysisLib.Party import createParty
-    party_list = []
+def getObjectList(ObjectType, FileName): #get data from record file
+    if ObjectType == "Party":
+        from AnalysisLib.Party import instantObject
+    elif ObjectType == "GovtPolicy":
+        from AnalysisLib.GovtPolicy import instantObject
+    elif ObjectType == "Leader":
+        from AnalysisLib.Leader import instantObject
+    object_list = []
     with open(FileName) as record_file:
         for row in record_file.read().splitlines():
-            party_list.append(createParty(row))
-    return party_list
-
-def GetLeaderRecord(FileName):
-    from AnalysisLib.Leader import createLeader
-    leader_list = []
-    with open(FileName) as record_file:
-        for row in record_file.read().splitlines():
-            leader_list.append(createLeader(row))
-    return leader_list
-
-def GetGovtPolicyRecord(FileName):
-    from AnalysisLib.GovtPolicy import createGovtPolicy
-    govt_policy_list = []
-    with open(FileName) as record_file:
-        for row in record_file.read().splitlines():
-            govt_policy_list.append(createGovtPolicy(row))
-    return govt_policy_list
+            object_list.append(instantObject(row))
+    return object_list
 
 def UpdateRecord(FileName, object_list): #update the record file
     from time import strftime
@@ -79,7 +68,7 @@ def UpdateRecord(FileName, object_list): #update the record file
                 for index, scale in enumerate(_object.getScale(), 1):
                     record_file.write("\n" + object_name + "(scale" + str(index) + ")," + str(scale)) #scale
                 
-def ProcessJsonData(FilePath): #process json format file
+def ProcessJsonData(FilePath): #process json format scrapped data
     from os import listdir
     from json import loads
     word_list = []
@@ -90,7 +79,7 @@ def ProcessJsonData(FilePath): #process json format file
                 word_list.append(data['text'])
     return word_list
 
-def ProcessFbData(FilePath): #process facebook txt file
+def ProcessFbData(FilePath): #process facebook csv scrapped data
     from pandas import read_csv
     from os import listdir
     from ast import literal_eval
@@ -103,11 +92,11 @@ def ProcessFbData(FilePath): #process facebook txt file
                 try:
                     if _text is not "":
                         word_list.append(literal_eval(_text).decode('utf-8'))
-                except ValueError:
+                except ValueError: #skip nan type
                     pass
     return word_list
 
-def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
+def ProcessMalaysiaKiniData(FilePath): #process malaysiakini scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
@@ -116,10 +105,9 @@ def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
             df = read_csv(InFile)
             for index, row in df.iterrows():
                 word_list.append(df.loc[index]['text'])
-    #print(word_list)
     return word_list
 
-def ProcessLowyatData(FilePath):
+def ProcessLowyatData(FilePath): #process lowyat scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
@@ -132,7 +120,6 @@ def ProcessLowyatData(FilePath):
                     if not isinstance(_text, float):
                         if _text is not "":
                             word_list.append(_text)
-                except ValueError:
-                    print("aaa")
-#    print(word_list)
+                except ValueError: #skip nan type
+                    pass
     return word_list

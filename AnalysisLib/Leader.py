@@ -16,5 +16,5 @@ class Leader:
     def increScale2(self):
         self.scale2 += 1
 
-def createLeader(Name):
+def instantObject(Name):
     return Leader(Name)
