@@ -29,8 +29,6 @@ word_list += ProcessFbData(param["facebook.files"])
 word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
 word_list += ProcessLowyatData(param["lowyat.files"])
 
-
-
 #main program
 full_list = []
 BN_list = MatchingWordFinder("BN")
@@ -39,7 +37,7 @@ PKR_list = MatchingWordFinder("PKR")
 KitSiang_list = MatchingWordFinder("Kit Siang")
 mahathair_list = MatchingWordFinder("Mahathair")
 najib_list = MatchingWordFinder("Najib")
-
+print(najib_list)
 #print(BN_list)
 
 removed_list = []
@@ -49,4 +47,4 @@ removed_list.append(removeName(PKR_list, "PKR"))
 removed_list.append(removeName(KitSiang_list, "Kit Siang"))
 removed_list.append(removeName(mahathair_list, "Mahathair"))
 removed_list.append(removeName(najib_list, "Najib"))
-print(removed_list)
+#print(removed_list)
