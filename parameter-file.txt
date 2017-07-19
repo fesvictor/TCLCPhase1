@@ -35,22 +35,22 @@ temp.dir=./temp
 
 output.dir=./results
 
-# directory to hold scraping output from lowyat forums (start_scrapper.py)
+# directory to hold scraping output from lowyat forums (start_scraper.py)
 
 lowyat.files=./data/scraperesults/lowyat
 
-# Scrapper configuration
+# scraper configuration
 # 1. Crawler configuration
-scrapper.c.link=https://forum.lowyat.net/
-scrapper.c.levels=2
-scrapper.c.l1_search=kopi
-scrapper.c.l2_search=serious
+scraper.c.link=https://forum.lowyat.net/
+scraper.c.levels=2
+scraper.c.l1_search=kopi
+scraper.c.l2_search=serious
 
-# 2. Thread link scrapper configuration
-scrapper.t.page_limit=2
-scrapper.t.search_list=
-scrapper.t.start_date=today
-scrapper.t.end_date=today
+# 2. Thread link scraper configuration
+scraper.t.page_limit=1
+scraper.t.search_list=
+scraper.t.start_date=today
+scraper.t.end_date=today
 
-# 3. Post scrapper configuration
-scrapper.p.page_limit_p=10
+# 3. Post scraper configuration
+scraper.p.page_limit_p=1
