@@ -1,7 +1,6 @@
 from AnalysisLib.ProcessFile import scale_database
 from ReadParameterFile import get_parameter_dict
 import re
-
 param = get_parameter_dict()
 
 #storing words to rate the attitude scale
@@ -24,72 +23,57 @@ not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt
 #    print("1")
 
 #p =re.compile("bca*t")
-#print(p.match(""))
+#print(p.search(""))
 def search_scale(category, num, sentence): #pass the sentence to be interpreted in database
+    sentence = sentence.replace(".", "")
+    sentence = sentence.replace("?", "")
+    sentence = sentence.replace("*", "")
+    sentence = sentence.replace(" "," *")
+    #print(sentence)
+    p = re.compile(sentence)
     if category == "Attitude":
         if num == 1:
             for words in att_scale1_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 2:
             for words in att_scale2_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 3:
             for words in att_scale3_words:
-                words = words.replace(" "," *")
-                print(words)
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
                 
     elif category == "Perception":
         if num == 1:
             for words in percep_scale1_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 2:
             for words in percep_scale2_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 3:
             for words in percep_scale3_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 4:
             for words in percep_scale4_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 5:
             for words in percep_scale5_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
                 
     elif category == "Popularity":
         if num == 1:
             for words in popular_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
         elif num == 2:
             for words in not_popular_words:
-                words = words.replace(" "," *")
-                p = re.compile(words)
-                if p.match(sentence):
+                if p.search(words):
                     return True
     return False
