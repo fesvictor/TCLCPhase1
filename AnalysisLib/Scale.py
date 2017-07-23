@@ -19,61 +19,77 @@ percep_scale5_words = scale_database(param['policies.perception.scale'] + "/scal
 popular_words = scale_database(param['popular.political'] + "/popular.txt")
 not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt")
 
-#if re.search('axe', 'Axe aXe aXE', re.IGNORECASE):
-#    print("1")
-
-#p =re.compile("bca*t")
-#print(p.search(""))
 def search_scale(category, num, sentence): #pass the sentence to be interpreted in database
     sentence = sentence.replace(".", "")
     sentence = sentence.replace("?", "")
     sentence = sentence.replace("*", "")
-    sentence = sentence.replace(" "," *")
+    sentence = sentence.lower()
+  #  sentence = sentence.replace(" "," *")
     #print(sentence)
-    p = re.compile(sentence)
+ #   p = re.compile(sentence)
     if category == "Attitude":
         if num == 1:
             for words in att_scale1_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 2:
             for words in att_scale2_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 3:
             for words in att_scale3_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
                 
     elif category == "Perception":
         if num == 1:
             for words in percep_scale1_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 2:
             for words in percep_scale2_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 3:
             for words in percep_scale3_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 4:
             for words in percep_scale4_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 5:
             for words in percep_scale5_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
                 
     elif category == "Popularity":
         if num == 1:
             for words in popular_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
         elif num == 2:
             for words in not_popular_words:
-                if p.search(words):
+                words = words.replace(" "," *")
+                p = re.compile(words)
+                if p.search(sentence):
                     return True
     return False
