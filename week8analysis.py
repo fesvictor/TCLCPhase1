@@ -18,6 +18,7 @@ def getResult():
                 elif search_scale("Attitude",2,word):
                     party.increScale2()
                 elif search_scale("Attitude",3,word):
+                    print(word)
                     party.increScale3()
                 
     for govtPolicy in govtPolicy_list: 

@@ -1,20 +1,3 @@
-import re
-axe = "BN party is for development"
-axe = axe.replace(" "," *")
-print(axe)
-p =re.compile(axe)
-if p.search("fuck BN party is   for       developmentqqqq nonoo", re.IGNORECASE):
-    print("hi")
-
-#if re.search('bas is not bus', 'bas is not bus', re.IGNORECASE):
-#    print("hi")
-
-#if re.search('axe', 'Axe aXe aXE', re.IGNORECASE):
-#    print("1")
-
-#p =re.compile("bca*t")
-#print(p.search(""))
-
 class MatchWord:
     def __init__(self):
         self.match_cnt = 0
