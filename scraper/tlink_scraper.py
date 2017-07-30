@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import time
 #import pandas as pd
 import datetime
+import re
 
 global page_no
 global counter
@@ -24,14 +25,14 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
             elif (sdate.lower() == "yesterday"):
                 start_date = yesterday
             else:
-                start_date = datetime.datetime.strptime(sdate, "%d-%m-%Y").date()
+                start_date = datetime.datetime.strptime(sdate, "%m/%d/%Y").date()
         if (edate != ""):
             if (edate.lower() == "today"):
                 end_date = today
             elif (edate.lower() == "yesterday"):
                 end_date = yesterday
             else:
-                end_date = datetime.datetime.strptime(edate, "%d-%m-%Y").date()
+                end_date = datetime.datetime.strptime(edate, "%m/%d/%Y").date()
         if (start_date > end_date):
             raise ValueError("Invalid start-end date pairs, please redefine start-end dates.")
     
@@ -49,7 +50,6 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
 #        for a in topics:
 #            f.write(a.prettify('utf8'))
     
-    
     for a in topics:
         tdate = datetime.datetime.strptime(a.find("a")['title'][24:].split(",")[0].replace("Today",today.strftime("%b %d %Y")).replace("Yesterday",yesterday.strftime("%b %d %Y")),"%b %d %Y").date()
         if (sdate != "") and (edate != ""):
@@ -59,7 +59,8 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
                 if date_test == True:
                     for word in search_list:
                         try:
-                            if (word.lower() in list(a.stripped_strings)[0].lower()) or (word.lower() in list(a.stripped_strings)[5].lower()):
+                            #if (word.lower() in list(a.stripped_strings)[0].lower()) or (word.lower() in list(a.stripped_strings)[5].lower()):
+                            if (re.search(r'\b'+word.lower()+r'\b', list(a.stripped_strings)[0].lower()) or re.search(r'\b'+word.lower()+r'\b', list(a.stripped_strings)[5].lower())):
                                 titles.append(list(a.stripped_strings)[0])
                                 try:
                                     desc.append(list(a.stripped_strings)[5])
@@ -68,7 +69,7 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
                                 tlink.append(main_link + a.find("a")['href'])
                                 tdate_list.append(tdate)
                         except:
-                            if word.lower() in list(a.stripped_strings)[0].lower():
+                            if re.search(r'\b'+word.lower()+r'\b', list(a.stripped_strings)[0].lower()):
                                 titles.append(list(a.stripped_strings)[0])
                                 try:
                                     desc.append(list(a.stripped_strings)[5])
@@ -118,7 +119,7 @@ def tlink_scrape(link, page_limit=50, search_list=[], sdate="", edate=""):
             time.sleep(15)
             counter = 0
         if (page_no == page_limit):
-            return links_retrieved, titles_retrieved
+            return links_retrieved, titles_retrieved, counter
         page_no += 1
         counter += 1
         if page_no == 1:
@@ -129,7 +130,7 @@ def tlink_scrape(link, page_limit=50, search_list=[], sdate="", edate=""):
             titles_retrieved = titles_retrieved + titles
             if np_link == 0:
                 print("\tLast page reached at: " + prev_link)
-                return links_retrieved, titles_retrieved
+                return links_retrieved, titles_retrieved, counter
         else:
             print("\t[T] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
             prev_link = np_link
@@ -138,4 +139,4 @@ def tlink_scrape(link, page_limit=50, search_list=[], sdate="", edate=""):
             titles_retrieved = titles_retrieved + titles
             if np_link == 0:
                 print("\t[T] Last page reached at: " + prev_link)
-                return links_retrieved, titles_retrieved
+                return links_retrieved, titles_retrieved, counter
