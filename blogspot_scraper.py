@@ -1,6 +1,7 @@
 import urllib
 from bs4 import BeautifulSoup as bs
 import time
+import datetime
 import pandas as pd
 
 def scrape_page(link):
@@ -30,7 +31,7 @@ def scrape_page(link):
             date_ = a.find("h2", class_="date-header").get_text().split(",")
             date_ = date_[1].strip() + date_[2]
             date_ = time.strptime(date_, "%B %d %Y")
-            date_ = time.strftime("%x", date_)
+            date_ = time.strftime("%Y%m%d", date_)
             buffer_list.append(date_)
             buffer_list.append(check_comment[:-1])
             comments = comment_scrape(a.find("span", class_="post-comment-link").a["href"])
@@ -85,5 +86,7 @@ def scrape(link, max_pages=50, file_name="blogspot.csv"):
     resultdf.to_csv(file_name, index=False)
     print("Scraping process completed for " + str(max_pages) + " pages in " + str('{0:.3f}'.format(time.time() - start_time)) + " seconds")
 
-#scrape("http://kadirjasin.blogspot.my/", max_pages=10, file_name="kadirjasin.csv")
-scrape("http://www.rockybru.com.my/", max_pages=10, file_name="rkb.csv")
+current_timestamp = datetime.datetime.now()
+current_timestamp = current_timestamp.strftime("%Y%m%d_%H%M%S")
+#scrape("http://kadirjasin.blogspot.my/", max_pages=11, file_name="data/scraperesults/blog/kadirjasin_"+current_timestamp+".csv")
+scrape("http://www.rockybru.com.my/", max_pages=17, file_name="data/scraperesults/blog/rockybru_"+current_timestamp+".csv")

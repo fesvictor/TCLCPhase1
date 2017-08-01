@@ -10,31 +10,31 @@ global counter
 page_no = 0
 counter = 0
 
-def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
+def tlink_scrape_main(link, sdate, edate, search_list=[]):
     main_link = "https://forum.lowyat.net"
     page = urllib.request.urlopen(link)
     soup = bs(page, "lxml")
     
 #Initialize date variables
-    today = datetime.date.today()
+    today = datetime.datetime.today()
     yesterday = today - datetime.timedelta(1)
-    if (sdate != "") and (edate != ""):
-        if (sdate != ""):
-            if (sdate.lower() == "today"):
-                start_date = today
-            elif (sdate.lower() == "yesterday"):
-                start_date = yesterday
-            else:
-                start_date = datetime.datetime.strptime(sdate, "%m/%d/%Y").date()
-        if (edate != ""):
-            if (edate.lower() == "today"):
-                end_date = today
-            elif (edate.lower() == "yesterday"):
-                end_date = yesterday
-            else:
-                end_date = datetime.datetime.strptime(edate, "%m/%d/%Y").date()
-        if (start_date > end_date):
-            raise ValueError("Invalid start-end date pairs, please redefine start-end dates.")
+    
+    if (sdate.lower() == "today"):
+        start_date = today
+    elif (sdate.lower() == "yesterday"):
+        start_date = yesterday
+    else:
+        start_date = datetime.datetime.strptime(sdate, "%Y%m%d")
+        
+    if (edate.lower() == "today"):
+        end_date = today
+    elif (edate.lower() == "yesterday"):
+        end_date = yesterday
+    else:
+        end_date = datetime.datetime.strptime(edate, "%Y%m%d")
+        
+    if (start_date > end_date):
+        raise ValueError("Invalid start-end date pairs, please redefine start-end dates.")
     
     #For debugging purposes, prints raw html to file
 #    with open('temp.html', 'wb') as f:
@@ -51,9 +51,15 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
 #            f.write(a.prettify('utf8'))
     
     for a in topics:
-        tdate = datetime.datetime.strptime(a.find("a")['title'][24:].split(",")[0].replace("Today",today.strftime("%b %d %Y")).replace("Yesterday",yesterday.strftime("%b %d %Y")),"%b %d %Y").date()
-        if (sdate != "") and (edate != ""):
-            date_test = start_date <= tdate <= end_date #Test date in range
+        tdate = a.find("a")['title'][24:]
+        if "Today" in tdate:
+            tdate = tdate.replace("Today", datetime.datetime.strftime(today, "%b %d %Y"))
+        elif "Yesterday" in tdate:
+            tdate = tdate.replace("Yesterday", datetime.datetime.strftime(yesterday, "%b %d %Y"))
+        tdate = datetime.datetime.strptime(tdate, "%b %d %Y, %I:%M %p")
+        #if (sdate != "") and (edate != ""):
+        date_test = start_date <= tdate <= end_date #Test date in range
+        tdate = datetime.datetime.strftime(tdate, "%Y%m%dT%H%M%S")
         if search_list != []:
             if (sdate != "") or (edate != ""):
                 if date_test == True:
@@ -104,14 +110,15 @@ def tlink_scrape_main(link, search_list=[], sdate="", edate=""):
 #    df = pd.DataFrame(data = index_set, columns=['titles','desc','link','date'])
 #    df.to_csv('temp.csv',index=False)
     
-    return tlink, np_link, titles
+    return tlink, np_link, titles, tdate_list
 
-def tlink_scrape(link, page_limit=50, search_list=[], sdate="", edate=""):
+def tlink_scrape(link, sdate, edate, page_limit=50, search_list=[], verbose = False):
     global page_no
     global counter
     page_no = 0
     links_retrieved = []
     titles_retrieved = []
+    tdate_retrieved = []
     
     while (True):
         if (counter == 45):
@@ -119,24 +126,31 @@ def tlink_scrape(link, page_limit=50, search_list=[], sdate="", edate=""):
             time.sleep(15)
             counter = 0
         if (page_no == page_limit):
-            return links_retrieved, titles_retrieved, counter
+            return links_retrieved, titles_retrieved, tdate_retrieved, counter
         page_no += 1
         counter += 1
         if page_no == 1:
-            print("\t[T] Page = " + str(page_no) + " Counter = " + str(counter) + " " + link)
+            if verbose == True:
+                print("\t[T] Page = " + str(page_no) + " Counter = " + str(counter) + " " + link)
             prev_link = link
-            tlink, np_link, titles = tlink_scrape_main(link, search_list, sdate, edate)
+            tlink, np_link, titles, tdate_list = tlink_scrape_main(link,  sdate, edate, search_list)
             links_retrieved = links_retrieved + tlink
             titles_retrieved = titles_retrieved + titles
+            tdate_retrieved = tdate_retrieved + tdate_list
             if np_link == 0:
                 print("\tLast page reached at: " + prev_link)
-                return links_retrieved, titles_retrieved, counter
+                return links_retrieved, titles_retrieved, tdate_retrieved, counter
         else:
-            print("\t[T] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
+            if verbose == True:
+                print("\t[T] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
             prev_link = np_link
-            tlink, np_link, titles = tlink_scrape_main(np_link, search_list, sdate, edate)
+            tlink, np_link, titles, tdate_list= tlink_scrape_main(np_link, sdate, edate, search_list)
             links_retrieved = links_retrieved + tlink
             titles_retrieved = titles_retrieved + titles
+            tdate_retrieved = tdate_retrieved + tdate_list
             if np_link == 0:
-                print("\t[T] Last page reached at: " + prev_link)
-                return links_retrieved, titles_retrieved, counter
+                if verbose == True:
+                    print("\t[T] Last page reached at: " + prev_link)
+                return links_retrieved, titles_retrieved, tdate_retrieved, counter
+            
+#print(tlink_scrape("https://forum.lowyat.net/Kopitiam", "yesterday", "today", 1))

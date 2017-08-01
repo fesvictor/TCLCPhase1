@@ -2,6 +2,7 @@ import urllib
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import time
+import datetime
 
 def scrape_page(link):
     
@@ -29,7 +30,7 @@ def scrape_page(link):
             buffer_list.append(a.find("a").get_text()) #Stores post title
             date = a.find("p").get_text().split(',')[-2].strip()
             date = time.strptime(date, "%d %B %Y")
-            date = time.strftime("%x", date)
+            date = time.strftime("%Y%m%d", date)
             buffer_list.append(date)
             buffer_list.append(check_comment)
             comments = comment_scrape(a.find("p", class_="postcontrols").find("a")['href'])
@@ -86,8 +87,9 @@ def scrape(link, max_pages=50, file_name="wordpress.csv"):
         list_of_frames.append(df)
     resultdf = pd.concat(list_of_frames)
     resultdf = resultdf.add_prefix("column")
-    resultdf.to_csv(file_name, index=False)
+    resultdf.to_csv(file_name, index=False, encoding='utf-8')
     print("Scraping process completed for " + str(max_pages) + " pages in " + str('{0:.3f}'.format(time.time() - start_time)) + " seconds")
         
-    
-scrape("https://blog.limkitsiang.com/", max_pages=10, file_name="lks.csv")
+current_timestamp = datetime.datetime.now()
+current_timestamp = current_timestamp.strftime("%Y%m%d_%H%M%S")
+scrape("https://blog.limkitsiang.com/", max_pages=24, file_name="data/scraperesults/blog/limkitsiang_"+current_timestamp+".csv")

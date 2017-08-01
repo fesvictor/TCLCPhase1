@@ -14,10 +14,16 @@ def post_scrape_main(link):
     yesterday = today - datetime.timedelta(1)
     try:
         page = urllib.request.urlopen(link)
-    except urllib.error.HTTPError:
-        print("\t\t[P] Caught HTTPError, sleeping for 5 minutes.")
-        time.sleep(310)
-        page = urllib.request.urlopen(link)
+    except:
+        print("\t\t[P] Caught HTTPError, sleeping for 10 minutes.")
+        time.sleep(600)
+        try:
+            page = urllib.request.urlopen(link)
+        except:
+            with open("data\scraperesults\lowyat\failed_links.txt", 'a') as f:
+                for row in f:
+                    f.write(link + '\n')
+            return 0,0
     
     soup = bs(page, "lxml")
     #For debugging purposes, prints raw html to file
@@ -48,9 +54,9 @@ def post_scrape_main(link):
             time_string = time_string.split(',')[0]
             time_string = time_string.replace("Today",today.strftime("%b %d %Y")).replace("Yesterday",yesterday.strftime("%b %d %Y")).strip()
             time_string = time.strptime(time_string, "%b %d %Y")
-            time_string = time.strftime("%x", time_string)
+            time_string = time.strftime("%Y%m%d", time_string)
             time_list.append(time_string)
-        except:
+        except AttributeError:
             pass
     
     userinfo = soup.find_all("table", class_="post_table")
@@ -59,17 +65,27 @@ def post_scrape_main(link):
         info_group.append(list(a.find("div", class_="avatar_extra").stripped_strings)[0])
         info_post_count.append(list(a.find("div", class_="avatar_extra").stripped_strings)[1])
         join_date_string = list(a.find("div", class_="avatar_extra").stripped_strings)[2].split(':')[1].strip()
-        join_date_string = time.strptime(join_date_string, "%b %Y")
-        join_date_string = time.strftime("1 "+"%b %Y", join_date_string)
+        
+        if ("Today" not in join_date_string) and ("Yesterday" not in join_date_string):
+            join_date_string = time.strptime(join_date_string, "%b %Y")
+            join_date_string = time.strftime("%Y%m", join_date_string)
+        elif ("Today" in join_date_string):
+            join_date_string = datetime.datetime.strftime(datetime.datetime.today(), "%Y%m")
+        elif ("Yesterday" in join_date_string):
+            join_date_string = datetime.datetime.strftime(datetime.datetime.today()-datetime.timedelta(1), "%Y%m")
+            
         info_joined.append(join_date_string)
+        
         try:
             info_from.append(list(a.find("div", class_="avatar_extra").stripped_strings)[3])
         except IndexError:
             info_from.append("")
+            
         try:
             text.append(a.find("div", class_="postcolor post_text").get_text().strip())
         except:
             text.append("")
+            
     try:
         np_link = main_link + soup.find("a", title="Next page")['href']
     except:
@@ -79,7 +95,7 @@ def post_scrape_main(link):
     df = pd.DataFrame(data = index_set, columns=['username','date','avatar_title','group','post_count','join_date','from','text'])
     return df, np_link
 
-def post_scrape(link, page_limit=50, counter=0):
+def post_scrape(link, page_limit=50, counter=0, verbose = False):
     global page_no
     page_no = 0
     frames = []
@@ -94,18 +110,24 @@ def post_scrape(link, page_limit=50, counter=0):
         page_no += 1
         counter += 1
         if page_no == 1:
-            print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + link)
+            if verbose == True:
+                print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + link)
             prev_link = link
             df, np_link = post_scrape_main(link)
             frames.append(df)
             if np_link == 0:
-                print("\t\t[P] Last page reached at: " + prev_link)
+                if verbose == True:
+                    print("\t\t[P] Last page reached at: " + prev_link)
                 return pd.concat(frames, ignore_index=True), counter
         else:
-            print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
+            if verbose == True:
+                print("\t\t[P] Page = " + str(page_no) + " Counter = " + str(counter) + " " + np_link)
             prev_link = np_link
             df, np_link = post_scrape_main(np_link)
             frames.append(df)
             if np_link == 0:
-                print("\t\t[P] Last page reached at: " + prev_link)
+                if verbose == True:
+                    print("\t\t[P] Last page reached at: " + prev_link)
                 return pd.concat(frames, ignore_index=True), counter
+            
+#print(post_scrape("https://forum.lowyat.net/topic/4271549"))
