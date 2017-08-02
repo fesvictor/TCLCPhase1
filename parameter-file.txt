@@ -27,6 +27,9 @@ policies.perception.scale=./data/categories/perceptions
 
 popular.political=./data/categories/popularity
 
+# directory for targets to analyse
+target=./data/target
+
 # directory to hold intermediate results
 
 temp.dir=./temp
@@ -54,3 +57,12 @@ scraper.c.l2_search=serious
 
 # 3. Post scraper configuration
 #scraper.p.page_limit_p=99999
+=======
+# scrap links text file
+
+scrap.links=scrap_links.txt
+
+# directory to hold scraping output from lowyat forums (scraping.py)
+
+lowyat.files=./data/scraperesults/lowyat
+
