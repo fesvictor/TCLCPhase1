@@ -29,14 +29,15 @@ def plot_perception():
     plt.xlabel("Government Policy", labelpad=90)
     plt.ylabel("Count")
     plt.subplots_adjust(hspace=0.15, wspace=0.1)
+    plt.legend()
     
     
     for i in range(1,11):
         df1 = df.pivot(index='name', columns='scale', values=str(i))
         splt1 = df1.plot(ax=axes[0,i-1], kind='bar')
         splt1.set_ylabel("")
-        splt1.set_xlabel("")
-        splt1.set_yticks([0,10,20,30,40])
+        splt1.set_xlabel("")    
+        splt1.set_yticks([0,5,10,15,20,25,30,35,40])
         splt1.legend().remove()
         splt1.set_title("Day "+str(i))
         
@@ -66,6 +67,8 @@ def plot_perception():
         #splt1.set_yticks([1,2,3,4,5])
         splt1.legend().remove()
         splt1.set_title("Day "+str(i+30))
+    
+    splt1.legend(bbox_to_anchor=(11.05, 4), loc='lower left', borderaxespad=0.)
     
 #    splt2 = df2.plot(ax=axes[0,1], kind='bar')
 #    splt2.set_ylabel("")
