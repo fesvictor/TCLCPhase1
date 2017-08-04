@@ -45,3 +45,6 @@ scrap.links=scrap_links.txt
 # directory to hold scraping output from lowyat forums (scraping.py)
 
 lowyat.files=./data/scraperesults/lowyat
+
+#directory of regex module(regex.py)
+regex.files=./AnalysisLib

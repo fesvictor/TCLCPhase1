@@ -6,7 +6,7 @@ class GovtPolicy:
         self.scale3 = 0
         self.scale4 = 0
         self.scale5 = 0
-        
+    
     def getName(self):
         return self.name
     
