@@ -16,7 +16,7 @@ def read_csv_count(file_dir):
     
     for df_text in df['text']:
         for keyword in search_list:
-            if keyword in str(df_text):
+            if keyword.lower() in str(df_text).lower():
                 keyword_count += 1
     
     return int(keyword_count)
@@ -43,5 +43,4 @@ data = list(zip(filename_list, keyword_count_list))
 
 df = pd.DataFrame(data, columns=['filename','keyword_counts'])
 df = df.sort_values(by='keyword_counts', ascending=False)
-print(df)
 df.to_csv("top10.csv", index=False)
