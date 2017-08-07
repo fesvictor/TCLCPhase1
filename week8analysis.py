@@ -1,4 +1,4 @@
-from AnalysisLib.ProcessFile import getObjectList, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, getDirInTemp
+from AnalysisLib.ProcessFile import getObjectList, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData, getDirInTemp
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
 from AnalysisLib import Year
@@ -10,6 +10,7 @@ def getResult():
     word_list += ProcessFbData(param["facebook.files"])
     word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
     word_list += ProcessLowyatData(param["lowyat.files"])
+    word_list += ProcessTweetData(param["twitter.files"])
     
     for word in word_list:  #process every sentence
         word[0] = word[0].lower()

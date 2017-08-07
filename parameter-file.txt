@@ -15,6 +15,14 @@ malaysiakini.files=./data/scraperesults/malaysiakini
  
 json.files=./data/scraperesults/json
 
+# directory to hold scraping output from lowyat forums (scraping.py)
+
+lowyat.files=./data/scraperesults/lowyat
+
+# directory to hold scraping output from twitter
+
+twitter.files=./data/scraperesults/twitter
+
 # directory for phrases for attitude to political parties
 
 political.attitudes.scale=./data/categories/attitudes
@@ -41,10 +49,6 @@ output.dir=./results
 # scrap links text file
 
 scrap.links=scrap_links.txt
-
-# directory to hold scraping output from lowyat forums (scraping.py)
-
-lowyat.files=./data/scraperesults/lowyat
 
 #directory of regex module(regex.py)
 regex.files=./AnalysisLib
