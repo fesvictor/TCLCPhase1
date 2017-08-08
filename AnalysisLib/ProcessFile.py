@@ -134,7 +134,7 @@ def ProcessMalaysiaKiniData(FilePath): #process malaysiakini scrapped data
 #    print(word_list)
     return word_list
 
-def ProcessLowyatData(FilePath): #process lowyat scrapped data
+def xProcessLowyatData(FilePath): #process lowyat scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
@@ -158,6 +158,13 @@ def ProcessLowyatData(FilePath): #process lowyat scrapped data
                         pass
 #    print(word_list)
     return word_list
+
+def ProcessLowyatData(FilePath):
+    from os import listdir
+    from pandas import read_csv
+    word_list = []
+    lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+
 
 def ProcessTweetData(FilePath):
     from os import listdir
