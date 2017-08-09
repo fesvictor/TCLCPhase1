@@ -28,7 +28,7 @@ def getObjectList(ObjectType, FileName): #get data from record file(replaced)
 
 def UpdateRecord(_location, _table):
     year_list = ['17']
-    month_list = ['00', '01', '02','03','04','05','06','07','08','09','10','11','12']
+    month_list = ['01', '02','03','04','05','06','07','08','09','10','11','12']
     for _year in year_list:
         if _year in _table:
             for _month in month_list:
@@ -50,7 +50,7 @@ def UpdateRecord(_location, _table):
                                             outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]))        
                                    
 
-                            elif ((int(_month)&2)!= 0) or _month is "08":
+                            elif ((int(_month)%2)!= 0) or _month is "08":
                                     outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31")
                                     for key, value in _table[_year][_month].items():
                                         for i, x in enumerate(value['01'], 0):
