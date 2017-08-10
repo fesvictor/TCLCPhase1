@@ -9,7 +9,6 @@ param = get_parameter_dict()
 #att_scale3_words = scale_database(param['political.attitudes.scale'] + "/scale3.txt")
 
 #storing words to rate the perception scale
-percep_scale3_words = scale_database(param['policies.perception.scale'] + "/scale3.txt")
 #percep_scale1_words = scale_database(param['policies.perception.scale'] + "/scale1.txt")
 #percep_scale2_words = scale_database(param['policies.perception.scale'] + "/scale2.txt")
 #percep_scale3_words = scale_database(param['policies.perception.scale'] + "/scale3.txt")
