@@ -1,4 +1,3 @@
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
 import re
@@ -16,28 +15,22 @@ def add_subplots(df, axes, name_key):
 
 def new_figure(my_dpi, df_main, date_str):
     fig, axes = plt.subplots(nrows=5, ncols=4, figsize=(3840/my_dpi, 2160/my_dpi), dpi=my_dpi, sharey=True, sharex=False)
-    fig.suptitle("Perceptions (Montly Trend) - " + date_str, y=0.92, fontsize=25)
+    fig.suptitle("Polarity (Montly Trend) - " + date_str, y=0.92, fontsize=25)
     
     count = 0
     for i in range(0,5):
         for j in range(0,4):
             add_subplots(df_main, axes[i,j], df_main['name'].unique()[count])
             count += 1
-    
-#    add_subplots(df_main, axes[0,0], df_main['name'].unique()[0])
-#    add_subplots(df_main, axes[0,1], df_main['name'].unique()[1])
-#    add_subplots(df_main, axes[0,2], df_main['name'].unique()[2])
-#    add_subplots(df_main, axes[0,3], df_main['name'].unique()[3])
-#    add_subplots(df_main, axes[1,0], df_main['name'].unique()[4])
-#    add_subplots(df_main, axes[1,1], df_main['name'].unique()[5])
-#    add_subplots(df_main, axes[1,2], df_main['name'].unique()[6])
-#    add_subplots(df_main, axes[1,3], df_main['name'].unique()[7])
-#    add_subplots(df_main, axes[2,0], df_main['name'].unique()[8])
+
     plt.subplots_adjust(hspace=0.3, wspace=0.05)
     
     lines, labels = axes[0,0].get_legend_handles_labels()
     fig.legend(lines, ['Positive','Negative'], bbox_to_anchor=(0.95, 0.885), bbox_transform=plt.gcf().transFigure)
-    fig.savefig('perception_line.png', bbox_inches='tight', dpi=300)
+    
+    filename_datestamp = datetime.datetime.strptime(date_str, '%B %Y')
+    filename_datestamp = datetime.datetime.strftime(filename_datestamp, '%Y%m')
+    fig.savefig('results/polarity_output/' + filename_datestamp + '_daily_trend_01.png', bbox_inches='tight', dpi=300)
 
 def date_converter(filename):
     date_regex = re.compile("temp/(.*).csv")

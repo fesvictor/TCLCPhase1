@@ -7,7 +7,9 @@ def plot_subplots(df, axes):
     df1 = df.pivot(index='name', columns='scale', values=str(df.columns[2]))
     splt1 = df1.plot(ax=axes, kind='bar')
     splt1.set_xlabel("")
-    splt1.set_xticklabels(splt1.get_xticklabels(), fontsize=10, rotation=90)
+    labels = [item.get_text() for item in splt1.get_xticklabels()]
+    labels = [x.upper().replace(' ','\n') for x in labels]
+    splt1.set_xticklabels(labels, fontsize=8, rotation=90)
     splt1.legend().remove()
     splt1.set_title("Day "+str(df.columns[2]))
 
@@ -39,16 +41,12 @@ def plot_perception():
     df_main = pd.read_csv(filename)
     top3_daily_list = get_top3_daily(df_main)
     
-
     
-#   print(top3_daily_list[0].pivot(index='name', columns='scale'))
-    
-    fig, axes = plt.subplots(nrows=4, ncols=10, figsize=(3840/my_dpi, 2160/my_dpi), dpi=my_dpi, sharey=True, sharex=False)
-    fig.suptitle("Perceptions (Top 3 Daily) - " + date_str, y=0.92, fontsize=25)
+    fig, axes = plt.subplots(nrows=4, ncols=8, figsize=(3840/my_dpi, 2160/my_dpi), dpi=my_dpi, sharey=True, sharex=False)
+    fig.suptitle("Polarity (Top 3 Daily Summed) - " + date_str, y=0.92, fontsize=25)
     
     #Delete extra subplot axes
-    for i in range(1,10):
-        fig.delaxes(axes[3,i])
+    fig.delaxes(axes[3,7])
         
     for df_, ax_ in zip(top3_daily_list, axes.reshape(-1)):
         plot_subplots(df_, ax_)
@@ -56,24 +54,18 @@ def plot_perception():
     #Create invisible surrounding subplot for labeling purposes
     fig.add_subplot(111, frameon=False)
     plt.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
-    plt.xlabel("Name", fontsize=20)
+#    plt.xlabel("Name", fontsize=20)
     plt.ylabel("Count", fontsize=20)
-    plt.subplots_adjust(hspace=1, wspace=0.1)
-    
-#    df = top3_daily_list[0]
-#    df1 = top3_daily_list[0].pivot(index='name', columns='scale', values='1')
-#    splt1 = df1.plot(ax=axes[0,0], kind='bar')
-#    splt1.set_xlabel("")
-#    splt1.set_xticklabels(splt1.get_xticklabels(), fontsize=10, rotation=45)
-#    splt1.legend().remove()
-#    splt1.set_title("Day "+str(df.columns[2]))
+    plt.subplots_adjust(hspace=0.7, wspace=0.1)
     
     #Custom legend
     lines, labels = axes[0,0].get_legend_handles_labels()
     fig.legend(lines, ['Positive','Negative'], bbox_to_anchor=(0.95, 0.885), bbox_transform=plt.gcf().transFigure)
     #Save plot
-    plt.savefig('temp.png', bbox_inches='tight', dpi=300)
-    plt.close(fig) #Disable console print
+    filename_datestamp = datetime.datetime.strptime(date_str, '%B %Y')
+    filename_datestamp = datetime.datetime.strftime(filename_datestamp, '%Y%m')
+    plt.savefig('results/polarity_output/'+filename_datestamp+'_top3_summed.png', bbox_inches='tight', dpi=300)
+    plt.close('all') #Disable console print
 
         
 #Main
