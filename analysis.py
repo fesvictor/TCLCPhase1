@@ -11,38 +11,38 @@ def definexYear(year, party_list, leader_list):
         
         for key, value in xyear[oyear].items():
             for party in party_list:
-                    xyear[oyear][key][party.getName()] = leader_dict
+                    xyear[oyear][key][party.getName()] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
             for leader in leader_list:
-                    xyear[oyear][key][leader.getName()] = leader_dict
+                    xyear[oyear][key][leader.getName()] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
     #print(xyear)
     return xyear
 
-def addScale(xyear, year, month, day, name, scale, _type):
+def addScale(year, month, day, name, scale, _type):
+    global yearTable
     #party_dict = {'01':[0,0,0],'02':[0,0,0],'03':[0,0,0],'04':[0,0,0],'05':[0,0,0],'06':[0,0,0],'07':[0,0,0],'08':[0,0,0],'09':[0,0,0],'10':[0,0,0],'11':[0,0,0],'12':[0,0,0],'13':[0,0,0],'14':[0,0,0],'15':[0,0,0],'16':[0,0,0],'17':[0,0,0],'18':[0,0,0],'19':[0,0,0],'20':[0,0,0],'21':[0,0,0],'22':[0,0,0],'23':[0,0,0],'24':[0,0,0],'25':[0,0,0],'26':[0,0,0],'27':[0,0,0],'28':[0,0,0],'29':[0,0,0],'30':[0,0,0],'31':[0,0,0]}
     #policy_dict = {'01':[0,0,0,0,0],'02':[0,0,0,0,0],'03':[0,0,0,0,0],'04':[0,0,0,0,0],'05':[0,0,0,0,0],'06':[0,0,0,0,0],'07':[0,0,0,0,0],'08':[0,0,0,0,0],'09':[0,0,0,0,0],'10':[0,0,0,0,0],'11':[0,0,0,0,0],'12':[0,0,0,0,0],'13':[0,0,0,0,0],'14':[0,0,0,0,0],'15':[0,0,0,0,0],'16':[0,0,0,0,0],'17':[0,0,0,0,0],'18':[0,0,0,0,0],'19':[0,0,0,0,0],'20':[0,0,0,0,0],'21':[0,0,0,0,0],'22':[0,0,0,0,0],'23':[0,0,0,0,0],'24':[0,0,0,0,0],'25':[0,0,0,0,0],'26':[0,0,0,0,0],'27':[0,0,0,0,0],'28':[0,0,0,0,0],'29':[0,0,0,0,0],'30':[0,0,0,0,0],'31':[0,0,0,0,0]}
     #select_dict = {'party':party_dict, 'leader':leader_dict, 'policy':policy_dict}
 
-    if year in xyear:
+    if year in yearTable:
     #if month in xyear[year]:
-        xyear[year][month][name][day][scale] += 1
+        yearTable[year][month][name][day][scale] += 1
      #   else:
       #      leader_dict = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
        #     xyear[year][month][name] = leader_dict
         #    xyear[year][month][name][day][scale] += 1
-    return xyear
 
 def compute(word):
-    global yearTable
     print(word)
+    global yearTable
     word[0] = word[0].lower()
     mutex.acquire()
     for party in party_list: #search if any party name in the sentence
         if party.getName() in word[0]: # if sentence contains words found in scale database
             #attitude likert scale
             if search_scale("Attitude",1,word[0]): # search whether this word in database
-                yearTable = addScale(yearTable, word[3], word[2], word[1], party.getName(), 0, "party")
+                addScale(word[3], word[2], word[1], party.getName(), 0, "party")
             elif search_scale("Attitude",3,word[0]):
-                yearTable = addScale(yearTable, word[3], word[2], word[1], party.getName(), 1, "party")
+                addScale(word[3], word[2], word[1], party.getName(), 1, "party")
        
     #for govtPolicy in govtPolicy_list: 
     #    if govtPolicy.getName() in word[0]: 
@@ -56,9 +56,9 @@ def compute(word):
         if leader.getName() in word[0]: 
             #popularity likert scale
             if search_scale("Popularity", 1, word[0]):
-                yearTable = addScale(yearTable, word[3], word[2], word[1], leader.getName(), 0, "leader")
+                addScale(word[3], word[2], word[1], leader.getName(), 0, "leader")
             elif search_scale("Popularity", 5, word[0]):
-                yearTable = addScale(yearTable, word[3], word[2], word[1], leader.getName(), 1, "leader")
+                addScale(word[3], word[2], word[1], leader.getName(), 1, "leader")
     mutex.release()
 
 def getResult(word_list):
@@ -100,6 +100,7 @@ while(len(full_word_list) >= 10):
     #del xxx
 getResult(full_word_list)
 
+#print(yearTable)
 UpdateRecord(param['temp.dir'], yearTable)
 #print(tt)
 #_location = getDirInTemp(param["temp.dir"])
