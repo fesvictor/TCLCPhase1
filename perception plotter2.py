@@ -36,7 +36,7 @@ def date_converter(filename):
 def plot_perception():
     plt.ioff()
     my_dpi = 150#96
-    filename = 'temp/2017_01.csv'
+    filename = 'temp/2017_04.csv'
     date_str = date_converter(filename)
     df_main = pd.read_csv(filename)
     top3_daily_list = get_top3_daily(df_main)
