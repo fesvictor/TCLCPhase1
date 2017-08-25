@@ -1,10 +1,11 @@
 from AnalysisLib.ProcessFile import getObjectList, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
+from time import time
 import threading
 
 def definexYear(year, party_list, leader_list):
-    leader_dict = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
+    #leader_dict = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
     xyear = {}
     for oyear in year:
         xyear[oyear] = {'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{}}
@@ -57,7 +58,7 @@ def compute(word):
             #popularity likert scale
             if search_scale("Popularity", 1, word[0]):
                 addScale(word[3], word[2], word[1], leader.getName(), 0, "leader")
-            elif search_scale("Popularity", 5, word[0]):
+            elif search_scale("Popularity", 2, word[0]):
                 addScale(word[3], word[2], word[1], leader.getName(), 1, "leader")
     mutex.release()
 
@@ -91,7 +92,7 @@ full_word_list = []
 full_word_list += ProcessLowyatData(param["lowyat.files"])
 
 yearTable = definexYear(['17'], party_list, leader_list)
-
+t0 = time()
 while(len(full_word_list) >= 10):
     print(len(full_word_list))
     xxx = full_word_list[:10]
@@ -99,7 +100,7 @@ while(len(full_word_list) >= 10):
     getResult(xxx)
     #del xxx
 getResult(full_word_list)
-
+print(time() - t0)
 #print(yearTable)
 UpdateRecord(param['temp.dir'], yearTable)
 #print(tt)
