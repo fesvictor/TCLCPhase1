@@ -7,7 +7,7 @@ import calendar
 
 def plot_subplots(df, axes):
     df1 = df
-    splt1 = df1.plot(ax=axes, kind='bar')
+    splt1 = df1.plot(ax=axes, kind='bar', color='C0')
     labels = df1['name'].tolist()
     labels = [x.upper().replace(' ','\n') for x in labels]
     splt1.set_xticklabels(labels, fontsize=8, rotation=90)
@@ -18,7 +18,7 @@ def get_top3_daily(df_main, no_of_days):
     top3_daily_list = []
     for i in range(1, no_of_days+1):
         df = df_main[['name','scale','%d'%i]]
-        df_positive = df.loc[df['scale'] == 1]
+        df_positive = df.loc[df['scale'] == 2]
         series_positive_top3 = df_positive.sort_values('%d'%i, ascending=False).reset_index().loc[[0,1,2,3,4]].drop('index', axis=1)
         series_positive_top3 = series_positive_top3.drop('scale', axis=1)
         top3_daily_list.append(series_positive_top3)
