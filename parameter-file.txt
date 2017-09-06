@@ -35,12 +35,20 @@ policies.perception.scale=./data/categories/perceptions
 
 popular.political=./data/categories/popularity
 
+# directory for phrases for popolarity of political parties/leader
+
+polarity.political=./data/categories/polarity
+
 # directory for targets to analyse
 target=./data/target
 
 # directory to hold intermediate results
 
-temp.dir=./temp
+temp.fb.dir=./temp/facebook
+
+temp.tweet.dir=./temp/twitter
+
+temp.other.dir=./temp/others
 
 # directory to hold output (png, jpg files, etc) from visualization program
 

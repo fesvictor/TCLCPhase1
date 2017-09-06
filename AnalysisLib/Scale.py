@@ -37,6 +37,10 @@ def search_scale(category, num, sentence): #pass the sentence to be interpreted 
     popular_words = scale_database(param['popular.political'] + "/popular.txt")
     not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt")
     
+    #storing words to rate the polarity scale
+    pos_words = scale_database(param['polarity.political'] + "/positive.txt")
+    neg_words = scale_database(param['polarity.political'] + "/negative.txt")
+    
     if category == "Attitude":
         if num == 1:
             for words in att_scale1_words:
@@ -102,4 +106,18 @@ def search_scale(category, num, sentence): #pass the sentence to be interpreted 
                 p = re.compile(words)
                 if p.search(sentence):
                     return True
+                
+    elif category == "Polarity":
+        if num == 1:
+            for words in neg_words:
+                words = words.replace(" ",".*")
+                p = re.compile(words)
+                if p.search(sentence):
+                    return True
+        elif num == 2:
+            for words in pos_words:
+                words = words.replace(" ",".*")
+                p = re.compile(words)
+                if p.search(sentence):
+                    return True  
     return False
