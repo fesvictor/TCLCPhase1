@@ -44,11 +44,11 @@ target=./data/target
 
 # directory to hold intermediate results
 
-temp.fb.dir=./temp/facebook
+temp.facebook.dir=./temp/facebook
 
 temp.tweet.dir=./temp/twitter
 
-temp.other.dir=./temp/others
+temp.others.dir=./temp/others
 
 # directory to hold output (png, jpg files, etc) from visualization program
 

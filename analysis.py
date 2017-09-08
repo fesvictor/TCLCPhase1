@@ -61,8 +61,10 @@ def compute(word):
         if leader.getName() in word[0]: 
             #popularity likert scale
             if search_scale("Popularity", 1, word[0]):
+                print(word)
                 addScale(word[3], word[2], word[1], leader.getName(), 0, "leader")
             elif search_scale("Popularity", 2, word[0]):
+                print(word)
                 addScale(word[3], word[2], word[1], leader.getName(), 1, "leader")
     mutex.release()
 
@@ -96,12 +98,12 @@ others_list += ProcessJsonData(param["json.files"])
 others_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
 others_list += ProcessLowyatData(param["lowyat.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
-while(len(others_list) >= 5):
+while(len(others_list) >= 10):
     print(len(others_list))
-    xxx = others_list[:5]
-    others_list = others_list[5:]
+    xxx = others_list[:10]
+    others_list = others_list[10:]
     getResult(xxx)
-UpdateResult(param['temp.fb.dir'], yearTable , 'facebook_')
+UpdateResult(param['temp.others.dir'], yearTable , 'others_')
 
 fb_list = ProcessFbData(param["facebook.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
@@ -110,7 +112,7 @@ while(len(fb_list) >= 10):
     xxx = fb_list[:10]
     fb_list = fb_list[10:]
     getResult(xxx)
-UpdateResult(param['temp.other.dir'], yearTable, 'others_')
+UpdateResult(param['temp.facebook.dir'], yearTable, 'facebook_')
 
 tweet_list = ProcessTweetData(param['twitter.files'])
 yearTable = definexYear(['17'], party_list, leader_list)
@@ -123,6 +125,3 @@ while(len(tweet_list) >= 5):
 UpdateResult(param['temp.tweet.dir'], yearTable, 'twitter_')
 
 print(time() - t0)
-
-#print(tt)
-#_location = getDirInTemp(param["temp.dir"])
