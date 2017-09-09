@@ -36,6 +36,7 @@ def addScale(year, month, day, name, scale, _type):
 
 def compute(word):
     #print(word)
+    global i
     global yearTable
     word[0] = word[0].lower()
     mutex.acquire()
@@ -43,10 +44,10 @@ def compute(word):
         if party.getName() in word[0]: # if sentence contains words found in scale database
             #attitude likert scale
             if search_scale("Attitude",1,word[0]): # search whether this word in database
-                print(word)
+                i += 1
                 addScale(word[3], word[2], word[1], party.getName(), 0, "party")
             elif search_scale("Attitude",2,word[0]):
-                print(word)
+                i += 1
                 addScale(word[3], word[2], word[1], party.getName(), 1, "party")
        
     #for govtPolicy in govtPolicy_list: 
@@ -61,10 +62,10 @@ def compute(word):
         if leader.getName() in word[0]: 
             #popularity likert scale
             if search_scale("Popularity", 1, word[0]):
-                print(word)
+                i += 1
                 addScale(word[3], word[2], word[1], leader.getName(), 0, "leader")
             elif search_scale("Popularity", 2, word[0]):
-                print(word)
+                i += 1
                 addScale(word[3], word[2], word[1], leader.getName(), 1, "leader")
     mutex.release()
 
@@ -92,36 +93,39 @@ party_list = getObjectList("Party", param["target"] + '/party.txt')
 leader_list = getObjectList("Leader", param["target"] + '/leader.txt')
 
 t0 = time()
-
+i = 0
 others_list = []
 others_list += ProcessJsonData(param["json.files"])
 others_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
 others_list += ProcessLowyatData(param["lowyat.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(others_list) >= 10):
-    print(len(others_list))
+    #print(len(others_list))
     xxx = others_list[:10]
     others_list = others_list[10:]
     getResult(xxx)
 UpdateResult(param['temp.others.dir'], yearTable , 'others_')
-
+print("total scale count from others:", i)
+i = 0
 fb_list = ProcessFbData(param["facebook.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(fb_list) >= 10):
-    print(len(fb_list))
+    #print(len(fb_list))
     xxx = fb_list[:10]
     fb_list = fb_list[10:]
     getResult(xxx)
 UpdateResult(param['temp.facebook.dir'], yearTable, 'facebook_')
+print("total scale count from facebook:", i)
 
+i = 0
 tweet_list = ProcessTweetData(param['twitter.files'])
 yearTable = definexYear(['17'], party_list, leader_list)
 
 while(len(tweet_list) >= 5):
-    print(len(tweet_list))
+    #print(len(tweet_list))
     xxx = tweet_list[:5]
     tweet_list = tweet_list[5:]
     getResult(xxx)
 UpdateResult(param['temp.tweet.dir'], yearTable, 'twitter_')
-
+print("total scale count from twitter:", i)
 print(time() - t0)
