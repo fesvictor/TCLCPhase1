@@ -5,7 +5,7 @@ def scale_database(FileName):
             scale_words.append(line.decode('utf-8').replace('\r\n',''))   
     return scale_words
 
-def getDirInTemp(_dir):
+def getDirInTemp(_dir): #(replcaed)
     from os import makedirs
     from os.path import exists
     from time import strftime
@@ -13,31 +13,124 @@ def getDirInTemp(_dir):
         makedirs(_dir + "/" + strftime("%Y") + "/" + strftime("%B"))
     return _dir + "/" + strftime("%Y") + "/" + strftime("%B")
 
-def GetPartyRecord(FileName): #get data from record file
-    from AnalysisLib.Party import createParty
-    party_list = []
+def getObjectList(ObjectType, FileName): #get data from record file(replaced)
+    if ObjectType == "Party":
+        from AnalysisLib.Party import instantObject
+    elif ObjectType == "GovtPolicy":
+        from AnalysisLib.GovtPolicy import instantObject
+    elif ObjectType == "Leader":
+        from AnalysisLib.Leader import instantObject
+    object_list = []
     with open(FileName) as record_file:
         for row in record_file.read().splitlines():
-            party_list.append(createParty(row))
-    return party_list
+            object_list.append(instantObject(row))
+    return object_list
 
-def GetLeaderRecord(FileName):
-    from AnalysisLib.Leader import createLeader
-    leader_list = []
-    with open(FileName) as record_file:
-        for row in record_file.read().splitlines():
-            leader_list.append(createLeader(row))
-    return leader_list
+def UpdateResult(_location, _table, _type):
+    year_list = ['17']
+    month_list = ['01', '02','03','04','05','06','07','08','09','10','11','12']
+    for _year in year_list:
+        if _year in _table:
+            for _month in month_list:
+                if _month in _table[_year]:
+                    #if _table[_year][_month] != {}:
+                        with open(_location + '/leader/' + '20' + _year + '_' + _month + '_' + _type + '_leader.csv', 'w') as outFile:
+                            if _month is "02":
+                                if((int(_year)%4)==0):
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29")
+                                    for key, value in _table[_year][_month]['leader'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]))        
+                                else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28")
+                                    for key, value in _table[_year][_month]['leader'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]))        
+                                   
 
-def GetGovtPolicyRecord(FileName):
-    from AnalysisLib.GovtPolicy import createGovtPolicy
-    govt_policy_list = []
-    with open(FileName) as record_file:
-        for row in record_file.read().splitlines():
-            govt_policy_list.append(createGovtPolicy(row))
-    return govt_policy_list
+                            elif ((int(_month)%2)!= 0) or _month is "08":
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31")
+                                    for key, value in _table[_year][_month]['leader'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]) + ','+ str(value['31'][i]))                                    
+                            else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30")
+                                    for key, value in _table[_year][_month]['leader'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]))                               
 
-def UpdateRecord(FileName, object_list): #update the record file
+                        with open(_location + '/party/' + '20' + _year + '_' + _month + '_' + _type + '_party.csv', 'w') as outFile:
+                            if _month is "02":
+                                if((int(_year)%4)==0):
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29")
+                                    for key, value in _table[_year][_month]['party'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]))        
+                                else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28")
+                                    for key, value in _table[_year][_month]['party'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]))        
+                                   
+
+                            elif ((int(_month)%2)!= 0) or _month is "08":
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31")
+                                    for key, value in _table[_year][_month]['party'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]) + ','+ str(value['31'][i]))                                    
+                            else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30")
+                                    for key, value in _table[_year][_month]['party'].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]))                               
+
+
+def xUpdateResult(_location, _table):
+    year_list = ['17']
+    month_list = ['01', '02','03','04','05','06','07','08','09','10','11','12']
+    for _year in year_list:
+        if _year in _table:
+            for _month in month_list:
+                if _month in _table[_year]:
+                    #if _table[_year][_month] != {}:
+                        with open(_location + '/' + '20' + _year + '_' + _month + '.csv', 'w') as outFile:
+                            if _month is "02":
+                                if((int(_year)%4)==0):
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29")
+                                    for key, value in _table[_year][_month].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]))        
+                                else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28")
+                                    for key, value in _table[_year][_month].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]))        
+                                   
+
+                            elif ((int(_month)%2)!= 0) or _month is "08":
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31")
+                                    for key, value in _table[_year][_month].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]) + ','+ str(value['31'][i]))                                    
+                            else:
+                                    outFile.write("name,scale,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30")
+                                    for key, value in _table[_year][_month].items():
+                                        for i, x in enumerate(value['01'], 0):
+                                            outFile.write('\n')
+                                            outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]))                               
+
+def xUpdateRecord(FileName, object_list): #update the record file(replaced)
     from time import strftime
     import pandas as pd
     _day = strftime("%d")
@@ -79,18 +172,21 @@ def UpdateRecord(FileName, object_list): #update the record file
                 for index, scale in enumerate(_object.getScale(), 1):
                     record_file.write("\n" + object_name + "(scale" + str(index) + ")," + str(scale)) #scale
                 
-def ProcessJsonData(FilePath): #process json format file
+def ProcessJsonData(FilePath): #process json format scrapped data
     from os import listdir
     from json import loads
     word_list = []
+    lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
     for FileName in listdir(FilePath):
         with open(FilePath + "/" + FileName) as InFile:
             for line in InFile:
                 data = loads(line)
-                word_list.append(data['text'])
+                _time = data['created_at'].split()
+                word_list.append([data['text'], _time[2],lookup_table[_time[1]],_time[5][2:]])
+#    print(word_list)
     return word_list
 
-def ProcessFbData(FilePath): #process facebook txt file
+def ProcessFbData(FilePath): #process facebook csv scrapped data
     from pandas import read_csv
     from os import listdir
     from ast import literal_eval
@@ -100,39 +196,69 @@ def ProcessFbData(FilePath): #process facebook txt file
             df = read_csv(InFile)
             for index, row in df.iterrows():
                 _text = df.loc[index]['status_message']
+                _date = df.loc[index]['status_published']
+                _date = _date.split(" ")
+                _date = _date[0].split("-")
+                if len(_date[0]) == 1:                        
+                        _date[0] = '0' + _date[0]
                 try:
                     if _text is not "":
-                        word_list.append(literal_eval(_text).decode('utf-8'))
-                except ValueError:
+                        word_list.append([literal_eval(_text).decode('utf-8'), _date[2], _date[1], _date[0][2:]])
+                except ValueError: #skip nan type
                     pass
+  #  print(word_list)                
     return word_list
 
-def ProcessMalaysiaKiniData(FilePath): #process malaysiakini txt file
+def ProcessMalaysiaKiniData(FilePath): #process malaysiakini scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
+    lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
     for FileName in listdir(FilePath):
         with open(FilePath + "/" + FileName, encoding='UTF-8') as InFile:
             df = read_csv(InFile)
             for index, row in df.iterrows():
-                word_list.append(df.loc[index]['text'])
-    #print(word_list)
+                _date = df.loc[index]['created_at'].split(" ")
+                word_list.append([df.loc[index]['text'], _date[2],lookup_table[_date[1]],_date[5][2:]])
+#    print(word_list)
     return word_list
 
-def ProcessLowyatData(FilePath):
+def ProcessLowyatData(FilePath): #process lowyat scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
+    lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+
     for FileName in listdir(FilePath):
-        with open(FilePath + "/" + FileName) as InFile:
+        if FileName.startswith('lowyat'):
+            with open(FilePath + "/" + FileName) as InFile:
+                next(InFile)
+                df = read_csv(InFile)
+                for index, row in df.iterrows():
+                    _text = df.loc[index]['text']
+                    _time = df.loc[index]['date']
+                    _time = str(_time)
+                    _time = [_time[2:4],_time[4:6],_time[6:]]
+                    try:
+                        if not isinstance(_text, float):
+                            if _text is not "":
+                                word_list.append([_text,_time[2],_time[1],_time[0]])
+                    except ValueError: #skip nan type
+                        pass
+    #print(word_list)
+    del lookup_table
+    return word_list
+
+def ProcessTweetData(FilePath):
+    from os import listdir
+    from pandas import read_csv
+    word_list = []
+    lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+    for FileName in listdir(FilePath):
+        with open(FilePath + "/" + FileName, encoding='UTF-8') as InFile:
             df = read_csv(InFile)
             for index, row in df.iterrows():
-                _text = df.loc[index]['text']
-                try:
-                    if not isinstance(_text, float):
-                        if _text is not "":
-                            word_list.append(_text)
-                except ValueError:
-                    print("aaa")
+                _date = df.loc[index]['created_at'].split(" ")
+                word_list.append([df.loc[index]['text'], _date[2],lookup_table[_date[1]],_date[5][2:]])
 #    print(word_list)
     return word_list
