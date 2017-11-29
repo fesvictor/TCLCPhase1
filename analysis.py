@@ -126,6 +126,7 @@ others_list = []
 others_list += ProcessJsonData(param["json.files"])
 others_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
 others_list += ProcessLowyatData(param["lowyat.files"])
+others_list += ProcessLowyatData(param["jbtalks.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(others_list) >= 10):
     print(len(others_list))

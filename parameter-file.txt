@@ -15,9 +15,13 @@ malaysiakini.files=./data/scraperesults/malaysiakini
  
 json.files=./data/scraperesults/json
 
-# directory to hold scraping output from lowyat forums (scraping.py)
+# directory to hold scraping output from lowyat forums
 
 lowyat.files=./data/scraperesults/lowyat
+
+# directory to hold scraping output from jbtalks forums
+
+jbtalks.files=./data/scraperesults/jbtalks
 
 # directory to hold scraping output from twitter
 
