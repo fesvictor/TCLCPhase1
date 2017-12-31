@@ -23,6 +23,10 @@ lowyat.files=./data/scraperesults/lowyat
 
 jbtalks.files=./data/scraperesults/jbtalks
 
+# directory to hold scraping output from cari forums
+
+carinet.files=./data/scraperesults/carinet
+
 # directory to hold scraping output from twitter
 
 twitter.files=./data/scraperesults/twitter
@@ -47,12 +51,13 @@ polarity.political=./data/categories/polarity
 target=./data/target
 
 # directory to hold intermediate results
-
 temp.facebook.dir=./temp/facebook
 
 temp.tweet.dir=./temp/twitter
 
 temp.others.dir=./temp/others
+
+temp.chinese.others.dir=./temp/chinese/other
 
 # directory to hold output (png, jpg files, etc) from visualization program
 
