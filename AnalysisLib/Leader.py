@@ -1,6 +1,9 @@
 class Leader:
-    def __init__(self, _name):
-        self.name = _name
+    def __init__(self, _name_list):
+        self.name = []
+        for _name in _name_list.split(','):
+            self.name.append(_name)
+        print(self.name)
         self.scale1 = 0
         self.scale2 = 0
 

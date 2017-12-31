@@ -34,7 +34,7 @@ def getObjectList(ObjectType, FileName, _language = 'english'): #get data from r
                 
     elif _language == 'chinese':
         with open(FileName, encoding = 'utf-8') as record_file:
-            for row in record_file.read().splitlines():
+            for row in record_file.read().replace('\ufeff','').splitlines():
                 object_list.append(instantObject(row))
     return object_list
 
@@ -328,13 +328,12 @@ def ProcessLowyatData(FilePath): #process lowyat scrapped data
 def ProcessCariData(FilePath): #process lowyat scrapped data
     from os import listdir
     from pandas import read_csv
-    import parser
     word_list = []
     lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
 
     for FileName in listdir(FilePath): 
         if FileName.startswith('carinet'): 
-            print(FileName)
+            #print(FileName)
             with open(FilePath + "/" + FileName, encoding="UTF-8") as InFile:
                 next(InFile)
                 try:
@@ -352,7 +351,7 @@ def ProcessCariData(FilePath): #process lowyat scrapped data
                             pass
                 except:
                     pass
-    #print(word_list)
+    print(word_list)
     del lookup_table
     return word_list
 
