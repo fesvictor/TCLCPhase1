@@ -337,7 +337,7 @@ def ProcessCariData(FilePath): #process lowyat scrapped data
             with open(FilePath + "/" + FileName, encoding="UTF-8") as InFile:
                 next(InFile)
                 try:
-                    df = read_csv(InFile, sep = ',')
+                    df = read_csv(InFile)
                     for index, row in df.iterrows():
                         _text = df.loc[index]['text']
                         _time = df.loc[index]['date']

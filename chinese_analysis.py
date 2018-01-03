@@ -143,7 +143,7 @@ print(others_list)
 
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(others_list) >= 10):
-    print(len(others_list))
+    print('the remaining: ', len(others_list))
     xxx = others_list[:10]
     others_list = others_list[10:]
     getResult(xxx)
@@ -152,4 +152,4 @@ UpdateResult(param['temp.chinese.others.dir'], yearTable , 'others' , 'chinese')
 
 print("total scale count from others:", i)
 
-print(time() - t0)
+print("total time taken:", time() - t0, " seconds")
