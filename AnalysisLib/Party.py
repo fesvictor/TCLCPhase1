@@ -20,5 +20,8 @@ class Party:
     def increScale3(self):
         self.scale3 += 1
 
+    def __str__(self):
+        return f"\nscale1 = {self.scale1}\nscale2 = {self.scale2}\nscale3 = {self.scale3}\n" 
+
 def instantObject(Name):
     return Party(Name)
