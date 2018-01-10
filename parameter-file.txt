@@ -15,9 +15,17 @@ malaysiakini.files=./data/scraperesults/malaysiakini
  
 json.files=./data/scraperesults/json
 
-# directory to hold scraping output from lowyat forums (scraping.py)
+# directory to hold scraping output from lowyat forums
 
 lowyat.files=./data/scraperesults/lowyat
+
+# directory to hold scraping output from jbtalks forums
+
+jbtalks.files=./data/scraperesults/jbtalks
+
+# directory to hold scraping output from cari forums
+
+carinet.files=./data/scraperesults/carinet
 
 # directory to hold scraping output from twitter
 
@@ -43,12 +51,19 @@ polarity.political=./data/categories/polarity
 target=./data/target
 
 # directory to hold intermediate results
-
 temp.facebook.dir=./temp/facebook
 
 temp.tweet.dir=./temp/twitter
 
 temp.others.dir=./temp/others
+
+temp.chinese.others.dir=./temp/chinese/others
+
+temp.english.facebook.dir=./temp/english/facebook
+
+temp.english.twitter.dir=./temp/english/twitter
+
+temp.english.others.dir=./temp/english/others
 
 # directory to hold output (png, jpg files, etc) from visualization program
 

@@ -19,9 +19,10 @@ param = get_parameter_dict()
 #popular_words = scale_database(param['popular.political'] + "/popular.txt")
 #not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt")
 
-def search_scale(category, num, sentence): #pass the sentence to be interpreted in database
+def search_scale(category, num, sentence, language = "mix"): #pass the sentence to be interpreted in database
     #print(texts)
     #storing words to rate the attitude scale
+    
     att_scale1_words = scale_database(param['political.attitudes.scale'] + "/scale1.txt")
     att_scale2_words = scale_database(param['political.attitudes.scale'] + "/scale2.txt")
     att_scale3_words = scale_database(param['political.attitudes.scale'] + "/scale3.txt")
@@ -38,9 +39,15 @@ def search_scale(category, num, sentence): #pass the sentence to be interpreted 
     not_popular_words = scale_database(param['popular.political'] + "/notpopular.txt")
     
     #storing words to rate the polarity scale
-    pos_words = scale_database(param['polarity.political'] + "/positive.txt")
-    neg_words = scale_database(param['polarity.political'] + "/negative.txt")
-    
+    if language == "english":
+        pos_words = scale_database(param['polarity.political'] + "/english_positive.txt")
+        neg_words = scale_database(param['polarity.political'] + "/english_negative.txt")
+    elif language == "chinese":
+        pos_words = scale_database(param['polarity.political'] + "/chinese_positive.txt", "chinese")
+        neg_words = scale_database(param['polarity.political'] + "/chinese_negative.txt", "chinese")
+    else:
+        pos_words = scale_database(param['polarity.political'] + "/positive.txt")
+        neg_words = scale_database(param['polarity.political'] + "/negative.txt")
     #sentence_list = texts.split('.')
     #for sentence in sentence_list:
     if category == "Attitude":
