@@ -26,3 +26,22 @@ This should provide instructions for running these 3 components; for e.g. what P
  
  All code development should be confined to these branches until it has been tested to be working for a specific features. Then issue a pull-request and I will merge the required branch into the master branch. 
 
+## How to get started
+First, clone the project 
+```
+git clone https://github.com/fesvictor/TCLCPhase1
+```
+Secondly, install all the necessary packages 
+```
+pip install -r requirements.txt
+```
+Now you can run anyfile by running, for example :
+```
+py Analysis.py
+```
+
+### How to regenerate `requirements.txt` ?
+```
+pipreqs ./ --force
+```
+Basically, `pipreqs` will scan through all `*.py` files to see what import is required. For more information, read [here](http://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/).

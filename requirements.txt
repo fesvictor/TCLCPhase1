@@ -1,0 +1,4 @@
+beautifulsoup4==4.6.0
+matplotlib==2.1.1
+numpy==1.14.0
+pandas==0.22.0
