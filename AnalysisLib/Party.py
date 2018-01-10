@@ -4,7 +4,7 @@ class Party:
         self.scale1 = 0
         self.scale2 = 0
         self.scale3 = 0
-
+        
     def getName(self):
         return self.name
 
@@ -20,5 +20,5 @@ class Party:
     def increScale3(self):
         self.scale3 += 1
 
-def createParty(Name):
+def instantObject(Name):
     return Party(Name)

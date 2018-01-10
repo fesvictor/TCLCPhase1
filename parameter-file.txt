@@ -15,6 +15,14 @@ malaysiakini.files=./data/scraperesults/malaysiakini
  
 json.files=./data/scraperesults/json
 
+# directory to hold scraping output from lowyat forums (scraping.py)
+
+lowyat.files=./data/scraperesults/lowyat
+
+# directory to hold scraping output from twitter
+
+twitter.files=./data/scraperesults/twitter
+
 # directory for phrases for attitude to political parties
 
 political.attitudes.scale=./data/categories/attitudes
@@ -27,42 +35,28 @@ policies.perception.scale=./data/categories/perceptions
 
 popular.political=./data/categories/popularity
 
+# directory for phrases for popolarity of political parties/leader
+
+polarity.political=./data/categories/polarity
+
 # directory for targets to analyse
 target=./data/target
 
 # directory to hold intermediate results
 
-temp.dir=./temp
+temp.facebook.dir=./temp/facebook
+
+temp.tweet.dir=./temp/twitter
+
+temp.others.dir=./temp/others
 
 # directory to hold output (png, jpg files, etc) from visualization program
 
 output.dir=./results
 
-# directory to hold scraping output from lowyat forums (start_scraper.py)
-
-lowyat.files=./data/scraperesults/lowyat
-
-# scraper configuration
-# 1. Crawler configuration
-scraper.c.link=https://forum.lowyat.net/
-scraper.c.levels=2
-scraper.c.l1_search=kopi
-scraper.c.l2_search=serious
-
-# 2. Thread link scraper configuration
-#scraper.t.page_limit=20
-#scraper.t.search_list=
-#scraper.t.start_date=1/1/2017
-#scraper.t.end_date=today
-
-# 3. Post scraper configuration
-#scraper.p.page_limit_p=99999
-=======
 # scrap links text file
 
 scrap.links=scrap_links.txt
 
-# directory to hold scraping output from lowyat forums (scraping.py)
-
-lowyat.files=./data/scraperesults/lowyat
-
+#directory of regex module(regex.py)
+regex.files=./AnalysisLib

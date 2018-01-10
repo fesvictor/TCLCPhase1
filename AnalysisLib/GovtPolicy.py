@@ -6,7 +6,7 @@ class GovtPolicy:
         self.scale3 = 0
         self.scale4 = 0
         self.scale5 = 0
-        
+    
     def getName(self):
         return self.name
     
@@ -28,5 +28,5 @@ class GovtPolicy:
     def increScale5(self):
         self.scale5 += 1
 
-def createGovtPolicy(Name):
+def instantObject(Name):
     return GovtPolicy(Name)
