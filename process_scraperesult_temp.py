@@ -3,7 +3,7 @@
 #common between all
 #log count for them
 from AnalysisLib.ProcessFile import ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 
 def MatchingWordFinder(_key):
     temp_list = []

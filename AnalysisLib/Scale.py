@@ -1,5 +1,5 @@
 from AnalysisLib.ProcessFile import scale_database
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 import re
 param = get_parameter_dict()
 

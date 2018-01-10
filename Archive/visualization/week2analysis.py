@@ -1,6 +1,6 @@
 from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData
 from AnalysisLib.Scale import search_scale
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 
 def getResult():
     word_list = []

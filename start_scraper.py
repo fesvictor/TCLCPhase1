@@ -4,7 +4,7 @@ import scraper.crawler as c
 import scraper.tlink_scraper as t
 import scraper.post_scrape as p
 import read_wordlist as wl
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 import datetime
 import re
 import pandas as pds

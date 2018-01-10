@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import glob
 import os
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 
 def autolabel(rects,ax):
     for rect in rects:

@@ -1,6 +1,6 @@
 from AnalysisLib.ProcessFile import getObjectList, UpdateResult, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData
 from AnalysisLib.Scale import search_scale
-from ReadParameterFile import get_parameter_dict
+from get_parameter_dict import get_parameter_dict
 from time import time
 import threading
 
