@@ -23,4 +23,3 @@ prs
 spdp
 supp
 swp
-umno
