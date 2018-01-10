@@ -57,7 +57,13 @@ temp.tweet.dir=./temp/twitter
 
 temp.others.dir=./temp/others
 
-temp.chinese.others.dir=./temp/chinese/other
+temp.chinese.others.dir=./temp/chinese/others
+
+temp.english.facebook.dir=./temp/english/facebook
+
+temp.english.twitter.dir=./temp/english/twitter
+
+temp.english.others.dir=./temp/english/others
 
 # directory to hold output (png, jpg files, etc) from visualization program
 

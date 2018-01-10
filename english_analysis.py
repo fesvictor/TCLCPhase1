@@ -1,22 +1,23 @@
-from AnalysisLib.ProcessFile import getObjectList, UpdateResult, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData, ProcessCariData, ProcessJbtalksData
+from AnalysisLib.ProcessFile import getObjectList, UpdateResult, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
 from time import time
 import threading
+#import os
 
 def definexYear(year, party_list, leader_list):
     #leader_dict = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
     xyear = {}
     for oyear in year:
-        xyear[oyear] = {'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{} , '09':{}, '10':{},'11':{} ,'12' :{}}
+        xyear[oyear] = {'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{} , '09':{}, '10':{},'11':{}}
         
         for key, value in xyear[oyear].items():
             xyear[oyear][key]['party'] = {}
             for party in party_list:
-                    xyear[oyear][key]['party'][party.getName()[0]] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
+                    xyear[oyear][key]['party'][party.getName()] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
             xyear[oyear][key]['leader'] = {}
             for leader in leader_list:
-                    xyear[oyear][key]['leader'][leader.getName()[0]] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
+                    xyear[oyear][key]['leader'][leader.getName()] = {'01':[0,0],'02':[0,0],'03':[0,0],'04':[0,0],'05':[0,0],'06':[0,0],'07':[0,0],'08':[0,0],'09':[0,0],'10':[0,0],'11':[0,0],'12':[0,0],'13':[0,0],'14':[0,0],'15':[0,0],'16':[0,0],'17':[0,0],'18':[0,0],'19':[0,0],'20':[0,0],'21':[0,0],'22':[0,0],'23':[0,0],'24':[0,0],'25':[0,0],'26':[0,0],'27':[0,0],'28':[0,0],'29':[0,0],'30':[0,0],'31':[0,0]}
     #print(xyear)
     return xyear
 
@@ -41,17 +42,14 @@ def compute(word):
     word[0] = word[0].lower()
     mutex.acquire()
     for party in party_list: #search if any party name in the sentence
-        for party_name in party.getName():
-            if party_name in word[0]: # if sentence contains words found in scale database
-                #attitude likert scale
-                if search_scale('Polarity', 1, word[0], 'chinese'): # search whether this word in database
-                    i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 0, 'party')
-                    break
-                elif search_scale('Polarity', 2, word[0], 'chinese'):
-                    i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 1, 'party')
-                    break
+        if party.getName() in word[0]: # if sentence contains words found in scale database
+            #attitude likert scale
+            if search_scale('Attitude', 1, word[0], 'english'): # search whether this word in database
+                i += 1
+                addScale(word[3], word[2], word[1], party.getName(), 0, 'party')
+            elif search_scale('Attitude', 2, word[0], 'english'):
+                i += 1
+                addScale(word[3], word[2], word[1], party.getName(), 1, 'party')
        
     #for govtPolicy in govtPolicy_list: 
     #    if govtPolicy.getName() in word[0]: 
@@ -61,18 +59,15 @@ def compute(word):
     #        elif search_scale("Perception",2,word[0]):
     #            yearTable = Year.addScale(yearTable, word[3], word[2], word[1], govtPolicy.getName(), 1, "policy")
     
-    for leader in leader_list:
-        for leader_name in leader.getName():
-            if leader_name in word[0]: 
-                #popularity likert scale
-                if search_scale('Polarity', 1, word[0], 'chinese'):
-                    i += 1
-                    addScale(word[3], word[2], word[1], leader.getName()[0], 0, 'leader')
-                    break
-                elif search_scale('Polarity', 2, word[0], 'chinese'):
-                    i += 1
-                    addScale(word[3], word[2], word[1], leader.getName()[0], 1, 'leader')
-                    break
+    for leader in leader_list: 
+        if leader.getName() in word[0]: 
+            #popularity likert scale
+            if search_scale('Popularity', 1, word[0], 'english'):
+                i += 1
+                addScale(word[3], word[2], word[1], leader.getName(), 0, 'leader')
+            elif search_scale('Popularity', 2, word[0], 'english'):
+                i += 1
+                addScale(word[3], word[2], word[1], leader.getName(), 1, 'leader')
     mutex.release()
 
 def getResult(word_list):
@@ -94,9 +89,9 @@ mutex = threading.Lock()
 
 param = get_parameter_dict()
 
-party_list = getObjectList('Party', param['target'] + '/chinese_party.txt', 'chinese')
+party_list = getObjectList('Party', param['target'] + '/party.txt')
 #govtPolicy_list = getObjectList("GovtPolicy", param["target"] + '/govtPolicy.txt')
-leader_list = getObjectList('Leader', param['target'] + '/chinese_leader.txt', 'chinese')
+leader_list = getObjectList('Leader', param['target'] + '/leader.txt')
 
 #if not os.path.exists("./temp"):
 #    os.makedirs("./temp")
@@ -104,49 +99,45 @@ leader_list = getObjectList('Leader', param['target'] + '/chinese_leader.txt', '
 t0 = time()
 
 i = 0
-'''
 fb_list = ProcessFbData(param['facebook.files'])
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(fb_list) >= 10):
     #print(len(fb_list))
     xxx = fb_list[:10]
-    fb_list = fb_list[10:]
-    getResult(xxx)
-UpdateResult(param['temp.chinese.facebook.dir'], yearTable, 'facebook', 'chinese')
-print("total scale count from facebook:", i)
-'''
+    fb_list = fb_list[10:] 
+    getResult(xxx) 
+UpdateResult(['17'], 12, param['temp.english.facebook.dir'], yearTable, 'facebook', 'english') 
+print("total scale count from facebook:", i) 
 
-'''
-i = 0
-tweet_list = ProcessTweetData(param['twitter.files'])
-yearTable = definexYear(['17'], party_list, leader_list)
+i = 0 
+tweet_list = ProcessTweetData(param['twitter.files']) 
+yearTable = definexYear(['17'], party_list, leader_list) 
 
-while(len(tweet_list) >= 5):
-    #print(len(tweet_list))
-    xxx = tweet_list[:5]
-    tweet_list = tweet_list[5:]
-    getResult(xxx)
-UpdateResult(param['temp.chinese.tweet.dir'], yearTable, 'twitter', 'chinese')
-print("total scale count from twitter:", i)
-'''
+while(len(tweet_list) >= 5): 
+    #print(len(tweet_list)) 
+    xxx = tweet_list[:5] 
+    tweet_list = tweet_list[5:] 
+    getResult(xxx) 
+UpdateResult(['17'], 12, param['temp.english.tweet.dir'], yearTable, 'twitter', 'english') 
+print("total scale count from twitter:", i) 
 
-i = 0
-others_list = []
-others_list += ProcessJbtalksData(param['jbtalks.files'])
-others_list += ProcessCariData(param['carinet.files'])
-#location of carinet: /data/scraperesults/carinet
-
-print(others_list)
+i = 0 
+others_list = [] 
+others_list += ProcessJsonData(param['json.files']) 
+others_list += ProcessMalaysiaKiniData(param['malaysiakini.files']) 
+others_list += ProcessLowyatData(param['lowyat.files']) 
+#others_list += ProcessJbtalksData(param['jbtalks.files']) 
+#others_list += ProcessCariData(param['cari.files']) 
 
 yearTable = definexYear(['17'], party_list, leader_list) 
 while(len(others_list) >= 10): 
-    print('the remaining: ', len(others_list)) 
+    print(len(others_list)) 
     xxx = others_list[:10] 
     others_list = others_list[10:] 
     getResult(xxx) 
     
-UpdateResult(['17'], 12, param['temp.chinese.others.dir'], yearTable , 'others' , 'chinese') 
+UpdateResult(['17'], 12, param['temp.english.others.dir'], yearTable , 'others' , 'english') 
 
 print("total scale count from others:", i) 
 
-print("total time taken:", time() - t0, " seconds") 
+print("total time: ", time() - t0, "seconds") 

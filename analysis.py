@@ -1,4 +1,4 @@
-from AnalysisLib.ProcessFile import getObjectList, UpdateResult, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData
+from AnalysisLib.ProcessFile import getObjectList, UpdateResult, ProcessCariData, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData, ProcessTweetData
 from AnalysisLib.Scale import search_scale
 from ReadParameterFile import get_parameter_dict
 from time import time
@@ -103,15 +103,15 @@ fb_list = ProcessFbData(param["facebook.files"])
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(fb_list) >= 10):
     #print(len(fb_list))
-    xxx = fb_list[:10]
-    fb_list = fb_list[10:]
-    getResult(xxx)
-UpdateResult(param['temp.facebook.dir'], yearTable, 'facebook')
-print("total scale count from facebook:", i)
+    xxx = fb_list[:10] 
+    fb_list = fb_list[10:] 
+    getResult(xxx) 
+UpdateResult(param['temp.facebook.dir'], yearTable, 'facebook') 
+print("total scale count from facebook:", i) 
 
 i = 0
-tweet_list = ProcessTweetData(param['twitter.files'])
-yearTable = definexYear(['17'], party_list, leader_list)
+tweet_list = ProcessTweetData(param['twitter.files']) 
+yearTable = definexYear(['17'], party_list, leader_list) 
 
 while(len(tweet_list) >= 5):
     #print(len(tweet_list))
@@ -121,13 +121,13 @@ while(len(tweet_list) >= 5):
 UpdateResult(param['temp.tweet.dir'], yearTable, 'twitter')
 print("total scale count from twitter:", i)
 
-i = 0
-others_list = []
-others_list += ProcessJsonData(param['json.files'])
-others_list += ProcessMalaysiaKiniData(param['malaysiakini.files'])
-others_list += ProcessLowyatData(param['lowyat.files'])
-others_list += ProcessLowyatData(param['jbtalks.files'])
-#others_list += ProcessLowyatData(param['cari.files'])
+i = 0 
+others_list = [] 
+others_list += ProcessJsonData(param['json.files']) 
+others_list += ProcessMalaysiaKiniData(param['malaysiakini.files']) 
+others_list += ProcessLowyatData(param['lowyat.files']) 
+others_list += ProcessLowyatData(param['jbtalks.files']) 
+others_list += ProcessCariData(param['cari.files']) 
 
 yearTable = definexYear(['17'], party_list, leader_list)
 while(len(others_list) >= 10):
@@ -135,7 +135,7 @@ while(len(others_list) >= 10):
     xxx = others_list[:10]
     others_list = others_list[10:]
     getResult(xxx)
-UpdateResult(param['temp.others.dir'], yearTable , 'others')
+UpdateResult(['17'], param['temp.others.dir'], yearTable , 'others')
 print("total scale count from others:", i)
 
-print(time() - t0)
+print('total time: ', time() - t0)

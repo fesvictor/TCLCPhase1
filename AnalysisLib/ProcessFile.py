@@ -1,16 +1,19 @@
-def scale_database(FileName, _language = "english"):
+def scale_database(FileName, _language = "both"):
+    import sys
     scale_words = []
     
-    with open(FileName, "rb")as scale_file:
-        for line in scale_file:
-            scale_words.append(line.decode('utf-8').replace('\r\n','')) 
-            
+#    with open(FileName, "rb")as scale_file:
+#        for line in scale_file:
+#            scale_words.append(line.decode('utf-8').replace('\r\n','')) 
+#            
     with open(FileName, "r", encoding = 'utf-8')as scale_file:
         for line in scale_file:
             scale_words.append(line.replace('\r\n',''))     
+    print(scale_words)
+    sys.exit()
     return scale_words
 
-def getDirInTemp(_dir): #(replcaed)
+def getDirInTemp(_dir): #replaced
     from os import makedirs
     from os.path import exists
     from time import strftime
@@ -38,12 +41,13 @@ def getObjectList(ObjectType, FileName, _language = 'english'): #get data from r
                 object_list.append(instantObject(row))
     return object_list
 
-def UpdateResult(_location, _table, _type, _language = 'english'):
+def UpdateResult(year_list, _month, _location, _table, _type, _language = 'chinese'):
     import os
-    year_list = ['17']
-    month_list = ['01', '02','03','04','05','06','07','08','09','10','11','12']
-    for _year in year_list:
-        if _year in _table:
+    
+    month_list = ['01', '02','03','04','05','06','07','08','09','10','11','12'][:_month]
+    
+    for _year in year_list: 
+        if _year in _table: 
             for _month in month_list:
                 if _month in _table[_year]:
                     #if _table[_year][_month] != {}:
@@ -110,6 +114,7 @@ def UpdateResult(_location, _table, _type, _language = 'english'):
                                             for i, x in enumerate(value['01'], 0):
                                                 outFile.write('\n')
                                                 outFile.write(key + ',' + str(i+1) + ',' + str(value['01'][i]) + ',' + str(value['02'][i]) + ','+ str(value['03'][i]) + ','+ str(value['04'][i]) + ','+ str(value['05'][i]) + ','+ str(value['06'][i]) + ','+ str(value['07'][i]) + ','+ str(value['08'][i]) + ','+ str(value['09'][i]) + ','+ str(value['10'][i]) + ','+ str(value['11'][i]) + ','+ str(value['12'][i]) + ','+ str(value['13'][i]) + ','+ str(value['14'][i]) + ','+ str(value['15'][i]) + ','+ str(value['16'][i]) + ','+ str(value['17'][i]) + ','+ str(value['18'][i]) + ','+ str(value['19'][i]) + ','+ str(value['20'][i]) + ','+ str(value['21'][i]) + ','+ str(value['22'][i]) + ','+ str(value['23'][i]) + ','+ str(value['24'][i]) + ','+ str(value['25'][i]) + ','+ str(value['26'][i]) + ','+ str(value['27'][i]) + ','+ str(value['28'][i]) + ','+ str(value['29'][i]) + ','+ str(value['30'][i]))                               
+
                         elif _language == 'chinese':
                             with open(_location + '/leader/' + '20' + _year + '_' + _month + '_' + _type + '_leader.csv', 'w', encoding = 'utf-8') as outFile:
                                 if _month is "02":
@@ -351,8 +356,32 @@ def ProcessCariData(FilePath): #process lowyat scrapped data
                             pass
                 except:
                     pass
-    print(word_list)
+    #print(word_list)
     del lookup_table
+    return word_list
+
+def ProcessJbtalksData(FilePath): #process facebook csv scrapped data
+    from pandas import read_csv
+    from os import listdir
+    #from ast import literal_eval
+    word_list = []
+    for FileName in listdir(FilePath):
+        with open(FilePath + "/" + FileName, encoding = 'utf-8') as InFile:
+            df = read_csv(InFile)
+            for index, row in df.iterrows():
+                _text = df.loc[index]['text']
+                _date = df.loc[index]['date']
+                _date = _date.split(" ")
+                _date = _date[0].split("-")
+                if len(_date[0]) == 1:                        
+                        _date[0] = '0' + _date[0]
+                try:
+                    if _text is not "":
+#                        word_list.append([literal_eval(_text).decode('utf-8'), _date[2], _date[1], _date[0][2:]])
+                        word_list.append([_text, _date[2], _date[1], _date[0][2:]])
+                except ValueError: #skip nan type
+                    pass     
+    #print(word_list)
     return word_list
 
 def ProcessTweetData(FilePath):
