@@ -2,7 +2,7 @@
 #common between party,policy,leader
 #common between all
 #log count for them
-from AnalysisLib.ProcessFile import ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData, ProcessLowyatData
+from AnalysisLib.ProcessFile import process_json_data, process_fb_data, process_malaysia_kini_data, process_lowyat_data
 from get_parameter_dict import get_parameter_dict
 
 def MatchingWordFinder(_key):
@@ -35,10 +35,10 @@ def writeFile(_list, _filename):
 param = get_parameter_dict()
 
 word_list = []
-word_list += ProcessJsonData(param["json.files"])
-word_list += ProcessFbData(param["facebook.files"])
-word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
-word_list += ProcessLowyatData(param["lowyat.files"])
+word_list += process_json_data(param["json.files"])
+word_list += process_fb_data(param["facebook.files"])
+word_list += process_malaysia_kini_data(param["malaysiakini.files"])
+word_list += process_lowyat_data(param["lowyat.files"])
 
 
 #main program

@@ -1,12 +1,12 @@
-from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, ProcessJsonData, ProcessFbData, ProcessMalaysiaKiniData
+from AnalysisLib.ProcessFile import GetPartyRecord, GetLeaderRecord, GetGovtPolicyRecord, UpdateRecord, process_json_data, process_fb_data, process_malaysia_kini_data
 from AnalysisLib.Scale import search_scale
 from get_parameter_dict import get_parameter_dict
 
 def getResult():
     word_list = []
-    word_list += ProcessJsonData(param["json.files"])
-    word_list += ProcessFbData(param["facebook.files"])
-    word_list += ProcessMalaysiaKiniData(param["malaysiakini.files"])
+    word_list += process_json_data(param["json.files"])
+    word_list += process_fb_data(param["facebook.files"])
+    word_list += process_malaysia_kini_data(param["malaysiakini.files"])
 
     for word in word_list:  #process every sentence
     
