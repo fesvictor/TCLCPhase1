@@ -1,12 +1,6 @@
-# The 2 lines below allow you to import modules from parent directory
-# For more info, refer https://stackoverflow.com/questions/16780014/import-file-from-parent-directory/16780068
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+from TCLCPhase1.get_parameter_dict import get_parameter_dict
 
 def test():
-    from get_parameter_dict import get_parameter_dict
     expected = {
         'facebook.files':            './data/scraperesults/facebook',
         'json.files':                './data/scraperesults/json',
