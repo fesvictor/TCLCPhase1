@@ -1,5 +1,10 @@
-from AnalysisLib.ProcessFile import get_object_list, update_result, process_json_data, process_fb_data, process_malaysia_kini_data, process_lowyat_data, process_tweet_data
-from AnalysisLib.Scale import search_scale
+from TCLCPhase1.AnalysisLib.process_file.get_object_list import get_object_list
+from TCLCPhase1.AnalysisLib.process_file.update_result import update_result
+from TCLCPhase1.AnalysisLib.process_file.process_json_data import process_json_data
+from TCLCPhase1.AnalysisLib.process_file.process_fb_data import process_fb_data
+from TCLCPhase1.AnalysisLib.process_file.process_malaysia_kini_data import process_malaysia_kini_data
+from TCLCPhase1.AnalysisLib.process_file.process_tweet_data import process_tweet_data
+from TCLCPhase1.AnalysisLib.Scale import search_scale
 from get_parameter_dict import get_parameter_dict
 from time import time
 import threading
