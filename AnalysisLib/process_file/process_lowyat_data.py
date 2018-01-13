@@ -1,14 +1,14 @@
-def process_lowyat_data(FilePath): #process lowyat scrapped data
+def process_lowyat_data(file_path): #process lowyat scrapped data
     from os import listdir
     from pandas import read_csv
     word_list = []
     lookup_table = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08','Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
 
-    for FileName in listdir(FilePath):
-        if FileName.startswith('lowyat'):
-            with open(FilePath + "/" + FileName) as InFile:
-                next(InFile)
-                df = read_csv(InFile)
+    for file_name in listdir(file_path):
+        if file_name.startswith('lowyat'):
+            with open(file_path + "/" + file_name) as in_file:
+                next(in_file)
+                df = read_csv(in_file)
                 for index, row in df.iterrows():
                     _text = df.loc[index]['text']
                     _time = df.loc[index]['date']
