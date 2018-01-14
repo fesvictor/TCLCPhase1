@@ -1,4 +1,4 @@
-def define_x_year(year, party_list, leader_list):
+def get_year_table(year, party_list, leader_list):
     year_table = {}
     for year in year:
         year_table[year] = get_month_list();

@@ -1,13 +1,13 @@
-from TCLCPhase1.AnalysisLib.analysis.define_x_year import define_x_year, get_month_list, get_day_list
+from TCLCPhase1.AnalysisLib.analysis.get_year_table import get_year_table, get_month_list, get_day_list
 from TCLCPhase1.AnalysisLib.Party import Party
 from TCLCPhase1.AnalysisLib.Leader import Leader
 
 
 
-def test_define_x_year():
+def test_get_year_table():
     sample_party_list = [Party("Barisan National")]
     sample_leader_list = [Leader("Najib")]
-    result = define_x_year(['17'], sample_party_list, sample_leader_list)
+    result = get_year_table(['17'], sample_party_list, sample_leader_list)
     expected = {
         '17': {
             '01': {
