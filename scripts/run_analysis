@@ -1,0 +1,8 @@
+#!/bin/bash
+current_dir=$(pwd)
+if [[ "$current_dir" == *TCLCPhase1 ]]; then
+    cd ..
+    py -m TCLCPhase1.AnalysisLib.analysis.analysis.py
+else
+  echo "ERROR! You must be exactly in directory of TCLCPhase1 in order to run this script."
+fi

@@ -9,6 +9,10 @@ Then, run the following command:
 py -m TCLCPhase1.AnalysisLib.analysis.py
 ```
 Of course, the same principle applies if you want to `py` other files.
+Alternatively, you can run the following command:
+```
+./scripts/run_analysis
+```
 
 
 ## How to run unit tests?
