@@ -1,5 +1,4 @@
 def scale_database(FileName, _language = "both"):
-    import sys
     scale_words = []
     
 #    with open(FileName, "rb")as scale_file:
@@ -8,9 +7,7 @@ def scale_database(FileName, _language = "both"):
 #            
     with open(FileName, "r", encoding = 'utf-8')as scale_file:
         for line in scale_file:
-            scale_words.append(line.replace('\r\n',''))     
-    print(scale_words)
-    sys.exit()
+            scale_words.append(line.replace('\n','').replace('\ufeff',''))
     return scale_words
 
 def getDirInTemp(_dir): #replaced
@@ -373,8 +370,10 @@ def ProcessJbtalksData(FilePath): #process facebook csv scrapped data
                 _date = df.loc[index]['date']
                 _date = _date.split(" ")
                 _date = _date[0].split("-")
-                if len(_date[0]) == 1:                        
-                        _date[0] = '0' + _date[0]
+                if len(_date[1]) == 1:                        
+                        _date[1] = '0' + _date[1]
+                if len(_date[2]) == 1:                        
+                        _date[2] = '0' + _date[2]
                 try:
                     if _text is not "":
 #                        word_list.append([literal_eval(_text).decode('utf-8'), _date[2], _date[1], _date[0][2:]])

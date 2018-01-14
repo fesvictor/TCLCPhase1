@@ -51,17 +51,17 @@ polarity.political=./data/categories/polarity
 target=./data/target
 
 # directory to hold intermediate results
-temp.facebook.dir=./temp/facebook
+temp.mix.facebook.dir=./temp/mix/facebook
 
-temp.tweet.dir=./temp/twitter
+temp.mix.tweet.dir=./temp/mix/twitter
 
-temp.others.dir=./temp/others
+temp.mix.others.dir=./temp/mix/others
 
 temp.chinese.others.dir=./temp/chinese/others
 
 temp.english.facebook.dir=./temp/english/facebook
 
-temp.english.twitter.dir=./temp/english/twitter
+temp.english.tweet.dir=./temp/english/twitter
 
 temp.english.others.dir=./temp/english/others
 
