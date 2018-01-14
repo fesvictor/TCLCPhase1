@@ -40,8 +40,27 @@ Now you can run anyfile by running, for example :
 py Analysis.py
 ```
 
+## Naming convention
+The naming convention will be based on [ Google's PyGuide ](https://google.github.io/styleguide/pyguide.html) : 
+```
+module_name, 
+package_name, 
+ClassName, 
+method_name, 
+ExceptionName, 
+function_name, 
+GLOBAL_CONSTANT_NAME, 
+global_var_name, 
+instance_var_name, 
+function_parameter_name, 
+local_var_name.
+```
+
+
+
 ### How to regenerate `requirements.txt` ?
 ```
 pipreqs ./ --force
 ```
 Basically, `pipreqs` will scan through all `*.py` files to see what import is required. For more information, read [here](http://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/).
+
