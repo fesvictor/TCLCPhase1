@@ -34,11 +34,21 @@ others_list += process_json_data(param["json.files"])
 others_list += process_malaysia_kini_data(param["malaysiakini.files"])
 others_list += process_lowyat_data(param["lowyat.files"])
 yearTable = get_year_table(['17'], party_list, leader_list)
+
+
+"""
+The following section is to limit the thread number to 10 at once.
+This is because by default threads will be created as much as possible 
+which will eventually raise an error
+"""
 while(len(others_list) >= 10):
     #print(len(others_list))
     xxx = others_list[:10]
     others_list = others_list[10:]
     get_result(xxx)
+
+
+
 update_result(param['temp.others.dir'], yearTable , 'others_')
 print("total scale count from others:", i)
 i = 0
