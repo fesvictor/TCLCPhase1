@@ -1,2 +1,19 @@
-coalition.bn=liow tiong lai,subramaniam,najib razak,mah siew keong
-coalition.pakatan=lim kit siang,lim guan eng,anwar,mahathir,abdul hadi awang
+# Same coalition leaders
+leader_same_bn=liow tiong lai,subramaniam,najib razak,mah siew keong
+leader_same_pakatan=lim kit siang,lim guan eng,anwar,mahathir,abdul hadi awang
+
+# Same coalition parties
+party_same_bn=mca,mic,umno,pbb,gerakan
+party_same_pakatan=dap,pkr,pas,ppbm,amanah
+
+# Different coalition leaders
+leader_different=lim kit siang,lim guan eng,anwar,mahathir,abdul haji awang,liow tiong lai,subramaniam,najib razak
+
+# Different coalition parties
+party_different=dap,pkr,ppbm,pas,mca,umno,mic
+
+# Input data directory
+input_dir=../temp
+
+# Output data directory
+output_dir=../results
