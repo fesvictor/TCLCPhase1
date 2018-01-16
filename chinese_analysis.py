@@ -112,7 +112,7 @@ while(len(fb_list) >= 10):
     xxx = fb_list[:10]
     fb_list = fb_list[10:]
     getResult(xxx)
-UpdateResult(param['temp.chinese.facebook.dir'], yearTable, 'facebook', 'chinese')
+UpdateResult(['17'], 12, param['temp.chinese.facebook.dir'], yearTable, 'facebook', 'chinese')
 print("total scale count from facebook:", i)
 '''
 
@@ -126,7 +126,7 @@ while(len(tweet_list) >= 5):
     xxx = tweet_list[:5]
     tweet_list = tweet_list[5:]
     getResult(xxx)
-UpdateResult(param['temp.chinese.tweet.dir'], yearTable, 'twitter', 'chinese')
+UpdateResult(['17'], 12, param['temp.chinese.tweet.dir'], yearTable, 'twitter', 'chinese')
 print("total scale count from twitter:", i)
 '''
 
