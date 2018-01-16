@@ -17,3 +17,15 @@ input_dir=../temp
 
 # Output data directory
 output_dir=../results
+
+# Start and end period
+start_year=2017
+end_year=2017
+start_month=7
+end_month=12
+
+# Graph types
+graph_types=positive,negative,overall
+
+# Languages
+languages=english,chinese,mix
