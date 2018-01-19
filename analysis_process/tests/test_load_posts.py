@@ -6,7 +6,7 @@ def test1():
     assert len(posts) == 2
     assert posts[0] == {
         'date': '2017-05-18 11:56:09',
-        'value': "b'Report: Red Granite in talks with DOJ to settle 1MDB-linked lawsuit'",
+        'value': "b'report: red granite in talks with doj to settle 1mdb-linked lawsuit'",
         'source': 'facebook',
         'related_to': None,
         'semantic_value': None

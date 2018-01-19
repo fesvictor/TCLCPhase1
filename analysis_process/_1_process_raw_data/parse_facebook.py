@@ -8,7 +8,7 @@ def parse_facebook(file_path):
         for row in reader:
             p = Post()
             p.date = row['status_published']
-            p.value = row['status_message'] + row['link_name']
+            p.value = str.lower(row['status_message'] + row['link_name'])
             p.source = 'facebook'
             result.append(p)
     return result
