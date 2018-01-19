@@ -1,18 +1,14 @@
-import re
 from os import listdir
 from analysis_process._2_remove_unrelated_data.load_labels import load_labels
+from analysis_process._2_remove_unrelated_data.label_post import label_post
 from analysis_process.load_posts import load_posts
 from analysis_process.save_posts import save_posts
 
 def main():
     all_posts = get_posts()
     all_labels = get_labels()
-    for post in all_posts:
-        for label in all_labels:
-            pattern = f"[^a-z]{label}[^a-z]"; # This will make sure 'lks' would not match 'talks'
-            if re.search(pattern, post['value']) is not None:
-                post['related_to'] = label
-    purified = [x for x in all_posts if x['related_to'] is not None]
+    label_post(all_posts, all_labels)
+    purified = [x for x in all_posts if len(x['related_to']) > 0]
     save_posts(purified, 'analysis_process/_2_remove_unrelated_data/output.json')
 
 
