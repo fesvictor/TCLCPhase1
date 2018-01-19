@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ../..
+py -m analysis_process._3_label_semantic.main
