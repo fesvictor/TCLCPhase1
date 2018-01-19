@@ -8,6 +8,7 @@ Post = {
     semantic_value = 1 # 1 = positive, 0 =neutral, -1 = negative
 }
 '''
+from json import JSONEncoder
 class Post:
     def __init__(self):
         self.date   = ""
@@ -16,5 +17,7 @@ class Post:
         self.related_to  = []
         self.semantic_value = []
         
+    def default(self, o):
+            return o.__dict__ 
     def __str__(self):
         return "date: %s\nvalue: %s\nsource: %s\nrelated_to: %s\nsemantic_value: %s" % (self.date, self.value, self.source, self.related_to, self.semantic_value)
