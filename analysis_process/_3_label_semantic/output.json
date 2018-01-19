@@ -3,1414 +3,1948 @@
     "date": "2017-05-18 06:24:38",
     "value": "b'kinitv bulletin: film director david teo was given a nasty \"lesson\" by comedian mat over when he asked prime minister najib razak a question during a national transformation (tn50) event last night.'b'kiniflash - 18 may: film director assaulted at tn50 event'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 05:34:04",
     "value": "b'video | kinitv: women who wish to avoid being harassed in public should dress in a \"comot\" (shabby) manner, according to federal territories minister tengku adnan tengku mansor.'b'dress shabbily to avoid harassment, jokes tengku adnan'",
     "source": "facebook",
-    "related_to": "tengku adnan tengku mansor",
+    "related_to": [
+      "tengku adnan tengku mansor"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 05:06:24",
     "value": "b'however, this state gov\\xe2\\x80\\x99t sold far less land, and obtained a much higher return, says lim guan eng.'b'cm: bn sold 36 times more land in penang than pakatan'",
     "source": "facebook",
-    "related_to": "pakatan",
+    "related_to": [
+      "lim guan eng",
+      "bn",
+      "pakatan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 05:06:20",
     "value": "b'pas deputy president tuan ibrahim tuan man says a meeting will be set with election commission to discuss this.'b'kelantan claims voters moved around in the state'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "tuan ibrahim tuan man",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 04:23:36",
     "value": "b'#letters kamarul zaman yusof\\xe2\\x80\\x99s false and malicious police report against selangor state assembly speaker and dap assemblyperson for subang jaya, hannah yeoh, accusing her of proselytisation of muslims with the publication of her autobiography \\xe2\\x80\\x98being hannah\\xe2\\x80\\x99, raises the question whether he is fit and proper to be a lecturer of plural malaysia\\xe2\\x80\\x99s public universities'b'is kamarul zaman fit to be a lecturer of a public university?'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "hannah yeoh",
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 03:29:33",
     "value": "b'video | kinitv: gerakan merah leader mohd ali baharom, better known as ali tinju, claims that film director david teo could have been sent by a certain opposition figure to disrupt the the national transformation (tn50) event held at seri perdana on wednesday.\\n\\nali tinju also lodged a police report against teo.'b\"ali tinju claims david teo sent by 'opposition' to disrupt najib's event\"",
     "source": "facebook",
-    "related_to": "gerakan",
+    "related_to": [
+      "najib",
+      "gerakan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 02:58:05",
     "value": "b\"anwar's application is frivolous, vexatious and borders on sedition, it argues.\"b\"gov't applies to strike out anwar's bid to overturn sodomy ii\"",
     "source": "facebook",
-    "related_to": "anwar",
+    "related_to": [
+      "anwar"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-18 02:25:10",
     "value": "b\"raja petra's vitriolic attack on irwan serigar has tongues wagging.\"b'all is not well in the house of najib?'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 01:53:23",
     "value": "b\"'thank god the surgery went smoothly, he is now in the process of recovery,' pm says.\"b'najib spends time to visit hadi in ijn'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 01:53:21",
     "value": "b\"it's up to the sultan, who acts on mb's advice, says pas sec-gen.\"b\"pas decides to stay put in s'gor exco\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 01:53:18",
     "value": "b'the dialogue had a gleeful moment when moderator rosyam nor teased the pm about his love for wife rosmah.'b'najib teased on romance with rosmah at tn50 do'",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "najib",
+      "rosmah"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-18 01:53:11",
     "value": "b'pm assures all will be heard after a film director was slapped in front of him.'b'all good now, najib says after tn50 slap drama'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 01:21:15",
     "value": "b'pkr leader asks this after minister moots idea to ban car park bays in central kl.'b\"'would ku nan now take public transport?'\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 00:28:58",
     "value": "b'video | kinitv: prime minister najib abdul razak says social media influencers should work on building a great future for the national transformation 2050 (tn50) generation.'b\"najib: it's easy to condemn\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-18 00:16:01",
     "value": "b'padang serai mp ticks the pm off for not condemning the assault at the tn50 dialogue.'b\"najib gets heat from mp for being cool over 'mob justice'\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 23:50:26",
     "value": "b'video | kinitv: federal territories minister tengku adnan tengku mansor says malaysians have been spoiled by the generous bn-led government that they expect many things to be free.'b'minister: malaysians want everything for free'",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "tengku adnan tengku mansor",
+      "bn"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-17 23:49:40",
     "value": "b'video | kinitv: pas vice-president iskandar abdul samad says menteri besar azmin ali did not ask state executive councillors from pas to resign.'b'azmin did not ask us to quit, says pas exco'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "azmin ali",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 23:48:36",
     "value": "b'video | kinitv: the transformasi nasional 2050 (tn50) dialogue session with people from the local entertainment scene on wednesday night could have been a great platform to address important issues plaguing the industry, but...'b\"'how did you fall in love with rosmah?'\"",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "rosmah"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-17 23:11:14",
     "value": "b\"a dap orang asal politician says his state's rights in the federation is slowly being eroded.\"b'sabah dap leader: attack against yeoh sign of increasing intolerance'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 23:11:07",
     "value": "b\"amanah mp says the bodek culture has gone overboard merely to prove the artistes community's loyalty to pm.\"b'mujahid: slapping incident brought shame to entire country'",
     "source": "facebook",
-    "related_to": "amanah",
+    "related_to": [
+      "amanah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 22:59:00",
     "value": "b'video | kinitv: moments after film director david teo was attacked by comedian sulaiman yassin, better known as \"mat over\" in front of prime minister najib abdul razak during a transformasi nasional 50 (tn50) dialogue session, both men were asked to return on stage to shake hands.'b'david teo shakes the hand that slapped him'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 21:33:13",
     "value": "b'yoursay | \\xe2\\x80\\x98the rm1m received by your party from najib could be stolen funds\\xe2\\x80\\xa6\\xe2\\x80\\x99'b'marcus, it\\xe2\\x80\\x99s wrong to accept allegedly stolen money'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 21:33:10",
     "value": "b'mp speaks | the seemingly ad-hoc decision-making will only scare off future investors.'b\"looks like najib's making up bandar m'sia plans as he goes along\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 21:01:11",
     "value": "b'pkr leader spurns religious monism which leads others to tar hannah with christianisation, says paul tan.'b'bishop hails nik nazmi\\xe2\\x80\\x99s defence of hannah yeoh'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "hannah yeoh",
+      "nik nazmi",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 20:28:04",
     "value": "b'however the s\\xe2\\x80\\x99gor exco denies the party is doing it to garner votes.'b\"iskandar admits pas' syariah agenda did pakatan in\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pakatan",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 19:59:06",
     "value": "b'#columns comment | \\xe2\\x80\\x98perkasa is waging a muddled war on two fronts, the first with mic and the second, mca.\\xe2\\x80\\x99'b'perkasa, you should worry that najib is a manchurian candidate'",
     "source": "facebook",
-    "related_to": "mca",
+    "related_to": [
+      "najib",
+      "mca"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 19:23:42",
     "value": "b'not all pas grassroots are keen to see the pkr split turn into a bloodbath at the next ge.'b\"in s'gor, not all sold on pas-pkr polls showdown\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 18:51:10",
     "value": "b'however, titiwangsa umno man named by rafizi denies knowledge of funds.'b'rafizi: rm2.6m src-linked funds used on media campaigns'",
     "source": "facebook",
-    "related_to": "rafizi",
+    "related_to": [
+      "rafizi"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 13:58:53",
     "value": "b\"najib: no turning back on axed bandar m'sia deal with iwh-crec\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 07:54:42",
     "value": "b'abdul rashid abdul rahman reminds new ec chief that his loyalty is to the people, not bn.'b\"ex-ec chief tells latest ec chief not to be bn's lackey\"",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 06:25:41",
     "value": "b'kinitv bulletin: in the wake of the pkr-pas fallout, pkr has instructed their party members in the kelantan state government to vacate their posts immediately.'b'kiniflash - 17 may: pkr pulls its members from kelantan govt'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 05:09:40",
     "value": "b'party president dr sim kui hian says pujut traditionally belongs to supp as a bn component party.'b'supp to take on dap in pujut by-election'",
     "source": "facebook",
-    "related_to": "supp",
+    "related_to": [
+      "bn",
+      "dap",
+      "supp"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 04:43:30",
     "value": "b'video | kinitv: dap secretary-general lim guan eng has questioned why selangor speaker hannah yeoh was being persecuted for speaking about her own faith as a christian.'b'guan eng: is it wrong for non-muslims to talk about their faith?'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "hannah yeoh",
+      "lim guan eng",
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 04:38:20",
     "value": "b'info chief nasrudin hassan urges muslims to stop battling each other and rise against this.'b'enemies of islam circling to wrest power, pas leader warns'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 04:38:16",
     "value": "b\"the gov't should dismantle the sugar industry's duopoly instead, says pkr's gooi hsiao leung.\"b'putrajaya urged to block sugar price hike lobby'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 03:31:10",
     "value": "b'therefore, no open tender is needed for the rm2 billion development on peel avenue, lim guan eng adds.'b'island hospital project is akin to foreign investment, says cm'",
     "source": "facebook",
-    "related_to": "lim guan eng",
+    "related_to": [
+      "lim guan eng"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 03:06:36",
     "value": "b'video | kinitv: parti amanah negara (amanah) today defended dap\\'s subang jaya asssemblyperson, following allegations that she is proselytising christianity through her book \"becoming hannah\".'b\"amanah: what's wrong with yeoh being christian?\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "amanah",
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 02:58:19",
     "value": "b'the visit is organised in order for both sides to learn more about their respective religions and cultures.'b'pas division visits leaders of other faiths, stresses on mutual respect'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 02:58:09",
     "value": "b'she is just articulating the good values learnt from her religion, says salahuddin.'b\"what's wrong with yeoh being christian, asks amanah\"",
     "source": "facebook",
-    "related_to": "amanah",
+    "related_to": [
+      "amanah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 02:50:11",
     "value": "b'video | kinitv: prime minister najib abdul razak says the finance ministry will retain 100% ownership of bandar malaysia.'b\"najib: gov't to retain 100% ownership of bandar malaysia\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 02:44:42",
     "value": "b'video | kinitv: universiti utara malaysia lecturer kamarul zaman yusoff today lodged a police report against selangor speaker hannah yeoh for allegedly driving a \"christian agenda\".'b'lecturer lodges report accusing hannah yeoh of proselytisation'",
     "source": "facebook",
-    "related_to": "hannah yeoh",
+    "related_to": [
+      "hannah yeoh"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 02:26:08",
     "value": "b'hannah yeoh talking about her religious convictions is not tantamount to preaching, says lim guan eng.'b'cm: is it wrong for non-muslims to talk about their faith?'",
     "source": "facebook",
-    "related_to": "lim guan eng",
+    "related_to": [
+      "hannah yeoh",
+      "lim guan eng"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 01:20:50",
     "value": "b\"reports saying otherwise are 'erroneous', adds the prime minister.\"b\"najib: no turning back on axed bandar m'sia deal with iwh-crec\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 01:20:45",
     "value": "b\"ti lian ker opens fire on perkasa, and gives it a history lesson on umno's ties with the communist party of china.\"b'why no battle cries over umno-cpc ties, mca leader asks perkasa'",
     "source": "facebook",
-    "related_to": "mca",
+    "related_to": [
+      "mca"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 01:20:38",
     "value": "b\"pkr is also giving pas a not-so-subtle nudge about selangor, says amanah's no 2.\"b'amanah: pkr shows integrity by vacating kelantan posts'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "amanah",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 00:48:08",
     "value": "b\"najib razak's lawyers plan to argue that their client is not a 'public officer' yet again.\"b\"hearing to strike out pua's 'misfeasance' suit on june 15\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 00:48:06",
     "value": "b'the pas president thanks those who prayed for his health.'b'hadi cheerful, recovering from surgery'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-17 00:16:10",
     "value": "b'bersatu president states the tie-up will lead to straight fights in the next general election.'b'better for harapan if umno and pas merge, quips muhyiddin'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "muhyiddin",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 23:43:16",
     "value": "b'he is filing a suit for double jeopardy in charges related to organising the black 505 rally.'b\"nik nazmi's suit vs gani and agc to go on trial\"",
     "source": "facebook",
-    "related_to": "nik nazmi",
+    "related_to": [
+      "nik nazmi"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 23:43:12",
     "value": "b'the call comes from pas research centre director mohd zuhdi marzuki.'b\"respond to kiwi author's book on 'christian agenda', dap told\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 22:47:47",
     "value": "b\"video | kinitv: pkr will vacate all political appointments in the pas-led kelantan government following pas' decision to cut ties with pkr, said pkr president dr wan azizah wan ismail.\"b'pkr to vacate kelantan posts'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "wan azizah",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 21:33:17",
     "value": "b'the pas chief underwent surgery at the ijn yesterday to replace a leaking heart valve.'b'kit siang wishes hadi a speedy recovery'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 21:01:02",
     "value": "b'yoursay | \\xe2\\x80\\x98many forget this is a diverse nation with sarawak and sabah playing a significant part.\\xe2\\x80\\x99'b'wan azizah too nice a person to survive hudud politics'",
     "source": "facebook",
-    "related_to": "wan azizah",
+    "related_to": [
+      "wan azizah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 18:53:12",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"'umno, bn got rm10m src funds'; bersatu strategist blames pas 5\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "bn",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 11:25:20",
     "value": "b'wan azizah says the decision on selangor will be made when azmin returns.'b\"pkr to vacate kelantan posts, leaves s'gor exco issue for later\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "wan azizah",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 11:05:04",
     "value": "b\"the party accepts pas' decision to cut ties but rejects reasons given for the decision.\\n \\nhttps://www.malaysiakini.com/news/382450\"b\"pkr to vacate kelantan posts, leaves s'gor exco issue for later\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 07:36:09",
     "value": "b'religious conviction can motivate people to do good in politics, says selangor exco member.'b'nik nazmi defends yeoh, says islam motivates him'",
     "source": "facebook",
-    "related_to": "nik nazmi",
+    "related_to": [
+      "nik nazmi"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 06:59:22",
     "value": "b'kinitv bulletin: pakatan harapan representatives today called upon dewan rakyat speaker pandikar amin mulia to relinquish his post if he is no longer able to focus on implementing reforms in parliament.'b'kiniflash - 16 may: pakatan harapan wants dewan rakyat speaker to step down'",
     "source": "facebook",
-    "related_to": "pakatan harapan",
+    "related_to": [
+      "pakatan",
+      "pakatan harapan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 05:56:43",
     "value": "b'pas members are loyal to their leaders, who are working with evildoers, says ex-pm.'b\"dr m: pas' goal is to split malay vote\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-16 05:56:35",
     "value": "b\"the party's no 2 says statements by mahathir, particularly those that went against its policy and struggle caused the stalemate.\"b'tuan ibrahim pins failure of pas-bersatu talks on dr m'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "mahathir",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 05:25:20",
     "value": "b\"marcus mojigoh tells rafizi to 'go and fly a kite' over his latest allegation.\"b'upko: normal to receive funds from bn chief for public programmes'",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "rafizi",
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 05:25:16",
     "value": "b'baru bian says this after state confirmed that  funds for rural projects will only go to bn-held constituencies.'b\"gov't accused of 'bullying' as non-bn reps deprived of funds\"",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 05:25:11",
     "value": "b\"the malay rights body asks the police, army, ngos and political parties to counter mca's action.\"b'perkasa worries of communist infiltration in mca deal'",
     "source": "facebook",
-    "related_to": "mca",
+    "related_to": [
+      "mca"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 04:20:12",
     "value": "b\"penang opposition leader jahara hamid also says it's not wrong for state liaision to receive money from party president.\"b'penang umno denies receiving money from najib'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 03:47:35",
     "value": "b'the political bureau will meet tonight to discuss whether to jettison pas out of the selangor government.'b\"azmin can't be at pkr meet to discuss pas exco reps' fate\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 03:35:28",
     "value": "b'video | kinitv: the pakatan harapan secretariat has urged pandikar amin mulia to relinquish his post as dewan rakyat speaker if he is no longer able to focus on implementing reforms in parliament.'b'pakatan harapan wants pandikar to quit as speaker'",
     "source": "facebook",
-    "related_to": "pakatan harapan",
+    "related_to": [
+      "pakatan",
+      "pakatan harapan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 03:14:19",
     "value": "b'he wants them to return the money to src international.'b\"rafizi claims umno, bn got 'rm10.02m src money' from najib\"",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "najib",
+      "rafizi",
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 03:13:35",
     "value": "b'video | kinitv: peng liyuan, wife of chinese president xi jinping, invited the partners of world leaders attending the belt and road forum for international cooperation to the palace museum in beijing on monday.'b\"rosmah visits palace museum in beijing with other leaders' wives\"",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "rosmah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 02:41:17",
     "value": "b'coalition wants him to resign if he cannot focus on implementing reforms or wants to return to active politics.'b'pakatan harapan tells pandikar to quit as speaker'",
     "source": "facebook",
-    "related_to": "pakatan harapan",
+    "related_to": [
+      "pakatan",
+      "pakatan harapan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 02:09:20",
     "value": "b'video | kinitv: pakatan harapan secretary-general saifuddin abdullah says malaysians will get a change to choose which logo the opposition coalition will use in the 14th general elections (ge14).'b'pakatan harapan wants you to help them choose a logo'",
     "source": "facebook",
-    "related_to": "pakatan harapan",
+    "related_to": [
+      "pakatan",
+      "pakatan harapan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 02:09:12",
     "value": "b\"focus | china's 'belt and road' initiative an enormous opportunity for malaysia to be a developed nation, says najib.\"b'of sovereighty, alibaba and durian diplomacy'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 02:09:08",
     "value": "b\"they will be asked to explain their absence and detail the usage of state gov't allocations for their constituencies, says cm lim guan eng.\"b\"penang reps absent from governor's do to be penalised\"",
     "source": "facebook",
-    "related_to": "lim guan eng",
+    "related_to": [
+      "lim guan eng"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-16 01:37:09",
     "value": "b'ti lian ker says grassroots leaders the party sent to china were only learning technical knowledge.'b\"mca denies indoctrination training by china's communist party\"",
     "source": "facebook",
-    "related_to": "mca",
+    "related_to": [
+      "mca"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-16 00:26:46",
     "value": "b'video | kinitv: it is unconventional for the finance ministry to return the rm741 million deposit paid for the bandar malaysia land, if it insists that the payment deal was breached, said petaling jaya utara mp tony pua.'b\"tony pua: why return bandar m'sia deposit?\"",
     "source": "facebook",
-    "related_to": "tony pua",
+    "related_to": [
+      "tony pua"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 23:58:19",
     "value": "b'video | kinitv: penang chief minister lim guan eng appeared on a video posted on his official facebook explaining why he had his right hand wrapped.\\n\\nhe said he underwent a minor surgery to fix a damaged ligament on his pinky.'b'guan eng underwent finger surgery'",
     "source": "facebook",
-    "related_to": "lim guan eng",
+    "related_to": [
+      "lim guan eng"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 23:28:10",
     "value": "b'former pkr senator saiful izham ramli says his party should relinquish political appointments in pas-led kelantan.'b\"'after divorce with pas, pkr should quit in kelantan'\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 21:20:20",
     "value": "b'yoursay | \\xe2\\x80\\x98pas is one political party that wants to have its cake and eat it too.\\xe2\\x80\\x99'b'a case of \\xe2\\x80\\x98we\\xe2\\x80\\x99re are in, but out\\xe2\\x80\\x99 or \\xe2\\x80\\x98out, but in\\xe2\\x80\\x99'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 21:20:14",
     "value": "b\"the dap veteran also sheds doubts on pas' ambition to capture five states, especially pahang and selangor.\"b\"kit siang: pas can't win 40 seats without umno pact\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 19:45:11",
     "value": "b'yoursay | \\xe2\\x80\\x98we need more politicians who are able to reveal their financial transactions instantly.\\xe2\\x80\\x99'b'unlike mo1, rafizi has nothing to hide'",
     "source": "facebook",
-    "related_to": "rafizi",
+    "related_to": [
+      "rafizi"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 19:14:21",
     "value": "b'however, one of them, nik abduh, is just sore the talks fell through, says rais hussin.'b'bersatu strategist names five pas men who foiled tie-up plans'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 18:41:08",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"pkr won't push pas out; iwh-crec gets 2nd go at bandar m'sia?\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 09:23:42",
     "value": "b\"mb azmin ali's main consideration would be the stability of the pkr-led government, says source.\"b\"no push to remove excos, so pas is expected to remain in s'gor\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "azmin ali",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 08:17:56",
     "value": "b\"'i have full confidence in him,' najib tells reporters in beijing.\"b\"arul kanda remains 1mdb ceo, irwan in charge of bandar m'sia\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 07:12:46",
     "value": "b\"bank's it expert says printing was done on the accused's computer, but accused had no access to the documents.\"b\"poser over who printed documents in rafizi's bafia trial\"",
     "source": "facebook",
-    "related_to": "rafizi",
+    "related_to": [
+      "rafizi"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 06:10:28",
     "value": "b'ceo says record shows ex-pujut assemblyperson was not a returnee under the returning expert programme (rep).'b'talentcorp denies bringing back disqualified dap rep'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 06:05:35",
     "value": "b'kinitv bulletin: after former premier dr. mahathir mohamad considered pas a bn component party, pas responded that they are still committed to the fight against the ruling coalition.'b'kiniflash - 15 may: pas \"still committed\" to fighting bn'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "mahathir",
+      "bn",
+      "pas"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-15 05:37:12",
     "value": "b\"it would be cowardly for pas to stay on in selangor gov't, says perkasa president.\"b'perkasa urges pas to leave selangor exco'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 05:35:20",
     "value": "b\"video | kinitv: perkasa president ibrahim ali says it wouldn't make sense for pas excos in selangor to remain with the state government.\"b'ibrahim ali: pas excos should resign in principle'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-15 04:32:49",
     "value": "b\"seeing red over sallehen's remarks, one exco tells pas that umno's purported mischief is greater.\"b\"what mischief have we done? dap reps want s'gor pas to spell it out\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 04:20:55",
     "value": "b\"video | kinitv: dap leader lim guan eng says pas' three state executive councillors in selangor should resign after the party decided to cut ties with pkr.\"b'why divorce and stay in the same house, guan eng asks pas'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "lim guan eng",
+      "dap",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-15 03:59:18",
     "value": "b\"pas says pcm's willingness to join hands shows the party can work with anyone provided its policies are respected.\"b\"huan's hand in friendship proves pas not against non-muslims\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 02:20:19",
     "value": "b\"70-year-old pas leader to undergo 'intensive treatment' tomorrow.\"b'pas president abdul hadi admitted to hospital'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 02:20:12",
     "value": "b'almost 90pct of places where pas fields candidates will be against bn, says pas no 2.'b'pas will field candidates against bn, vows tuan ibrahim'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "bn",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 01:49:08",
     "value": "b\"this is in connection with najib's second defamation suit against the dap national publicity secretary.\"b\"pua asked to submit defence in najib's suit by wednesday\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "najib",
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 01:45:15",
     "value": "b'video | kinitv: pas deputy president tuan ibrahim tuan man says the party is focused on fighting bn.\\n\\nhe was responding to comments made by bersatu chairperson dr mahathir mohamad that pas can be considered a bn component party.'b\"pas: we're committed to fighting bn\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "mahathir",
+      "tuan ibrahim tuan man",
+      "bn",
+      "pas"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-15 01:44:24",
     "value": "b'video | kinitv: pas deputy president tuan ibrahim tuan man says party president abdul hadi awang appears cheerful after he was warded at a hospital in kuala lumpur.'b'pas: hadi awang hospitalised, in good condition'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "abdul hadi awang",
+      "tuan ibrahim tuan man",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 00:42:35",
     "value": "b'pkr sec-gen also reveals that the party will hold next congress on sunday.'b\"pkr leaders to discuss pas' role in s'gor tomorrow\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 00:33:24",
     "value": "b'video | kinitv: attorney-general mohamed apandi ali says he does not dare to comment on the disqualification of dap pujut assemblyperson ting tiong choon, citing he wasn\\'t sure about the facts.\\n\\n\"the law is clear, but i am not sure about the facts,\" he said when met at the 17th asean senior law officials meeting (aslom) in putrajaya today.'b'ag: you cannot have dual citizenship'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 00:28:34",
     "value": "b\"video | kinitv: pkr's top leadership will meet tomorrow and pas' role in the selangor cabinet is on the agenda, according to pkr secretary-general saifuddin nasution ismail.\"b'pkr: future of pas in selangor government will be discussed tomorrow'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-15 00:19:52",
     "value": "b\"video | kinitv: more questions have been raised on the participation of the prime minister's son norashman and stepson riza aziz in official government working visits abroad.\"b\"khairuddin: najib's sons participate in official visit to china?\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 23:49:24",
     "value": "b'video | kinitv: pkr president dr wan azizah wan ismail does not rule out the implementation of hudud in malaysia.'b'wan azizah: hudud will be implemented when the time comes'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "wan azizah",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 23:38:38",
     "value": "b'he tells tuan ibrahim no one needs to ask the pas excos to quit, it should be automatic.'b\"pas excos shouldn't hide behind s'gor sultan, says mahfuz\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 23:09:17",
     "value": "b\"video | kinitv: the malaysian anti-corruption commission (macc) is expected to conclude its investigation into src international's rm42 million, which went to prime minister najib abdul razak's personal bank account, within a month.\"b'ag: macc will submit src probe within a month'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-14 23:06:12",
     "value": "b\"parti amanah negara deputy president said group gathered outside johor mb's office to submit memo against eviction order.\"b'alleged inaction over plight of johor villagers rues salahuddin ayub'",
     "source": "facebook",
-    "related_to": "amanah",
+    "related_to": [
+      "amanah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 23:06:10",
     "value": "b'mp speaks | and who\\xe2\\x80\\x99s so silly to pay more than what iskandar waterfront had offered?'b\"why is najib practically begging china to buy up bandar m'sia?\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 22:35:34",
     "value": "b'the law is clear, but i am not sure about the facts, says attorney-general mohamed apandi ali.'b\"ag reluctant to touch on disqualification of dap s'wak rep\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 22:01:04",
     "value": "b'explain presence of norashman and riza aziz at hangzhou function pm attended, says khairuddin abu hassan.'b\"explain role of najib's sons in china trip, ali hamsa told\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 21:28:16",
     "value": "b'adun speaks | it\\xe2\\x80\\x99s an absolute disgrace for pas to scapegoat dap, using what is common umno-speak.'b\"s'gor pas, don\\xe2\\x80\\x99t use dap as excuse to keep exco posts\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-14 19:52:11",
     "value": "b'comment | fdi is welcome but not at any cost, bersatu supreme council says in response to najib\\xe2\\x80\\x99s op-ed.'b\"'we'd rather be world-class people with dignity, pm'\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 19:38:14",
     "value": "b'#columns comment | \\xe2\\x80\\x98i get the conundrum politicians like wan azizah are in, but\\xe2\\x80\\xa6\\xe2\\x80\\x99.'b'wan azizah, \\xe2\\x80\\x98not in the near future\\xe2\\x80\\x99 is unacceptable'",
     "source": "facebook",
-    "related_to": "wan azizah",
+    "related_to": [
+      "wan azizah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 19:23:13",
     "value": "b\"her interview with al jazeera highlights pkr's struggle in maintaining its centrist position, they say.\"b\"analysts: much wanting in wan azizah's hudud position\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "wan azizah",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 18:50:07",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"pas in s'gor exco to check dap; bandar m'sia fallout continues\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 05:58:13",
     "value": "b'that way, people can see that pas is all about positions and rewards, instead of principles, says pkr vp.'b'rafizi: better for harapan if pas clings to exco'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "rafizi",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-14 05:26:12",
     "value": "b'it is contesting nine seats in the federal territories, including those held by pkr and dap.'b'pas may contest 100 seats, targeting victory in 40'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "dap",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 03:18:08",
     "value": "b'the dpm hopes a by-election will hand them yet another seat to add to their majority.'b'zahid confident bn can wrest pujut from opposition'",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-14 02:13:13",
     "value": "b'the pm rubs shoulders with putin, gentiloni, erdogan and joko widodo in beijing.'b'najib joins world leaders at belt and road forum'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-14 00:04:07",
     "value": "b\"johor umno's reluctance to let shahrir samad reveals their lack of eligible candidates, says johor pkr.\"b\"'johor umno's plea to shahrir signals distress'\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 22:30:10",
     "value": "b\"the selangor commissioner hits out at umno but manages a swipe at his party's former ally.\"b\"pas staying put in s'gor gov't to stop dap 'mischief', says sallehen\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 21:28:08",
     "value": "b\"mp speaks |  without even a mou signed, it makes one 'wanda' if its all a smokescreen.\"b\"najib's magic wanda fails to cast spell over reality\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 20:26:36",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"najib's wanda meet ends bandar m\\xe2\\x80\\x99sia question mark; pas excos\\xe2\\x80\\x99 fate murky\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "najib",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 19:55:09",
     "value": "b'comment | the mandate was given by the people of selangor to pakatan rakyat.'b'out you go, pas'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pakatan",
+      "pakatan rakyat",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 19:25:12",
     "value": "b\"abang johari isn't perturbed by dap's claim the state's move goes against the court ruling on ting tiong choon.\"b\"s'wak cm says state gov't has 'no issue' with pujut rep's termination\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 06:28:12",
     "value": "b'khairy says this is because the foreign ministry is responsible for handling the travel of m\\xe2\\x80\\x99sians abroad.'b'foreign ministry to decide on n korea-malaysia match in pyongyang'",
     "source": "facebook",
-    "related_to": "khairy",
+    "related_to": [
+      "khairy"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 04:20:21",
     "value": "b'prime minister najib stress that such projects open up huge swathes of the country.'b'\\xe2\\x80\\x98i make no apologies for wanting to build world-class infrastructure\\xe2\\x80\\x99'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 04:20:18",
     "value": "b'dap secretary-general shocked by the decision of the sarawak state assembly to disqualify ting.'b'guan eng tells sarawak dap to be ready for pujut by-election'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 03:17:14",
     "value": "b'iskandar samad refuses to comment on news that azmin has asked the three pas excos to resign.'b\"pas s'gor exco says no word from mb to quit after pkr divorce\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 03:17:11",
     "value": "b\"pm says this in a visit to the chinese construction giant, which has been reported to take over bandar m'sia development.\"b\"najib: wanda group can do wonders in bandar m'sia\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 01:41:15",
     "value": "b'the former premier also tells sbs world news that harapan will not name the pm candidate before election, for fear of sabotage.'b'dr m tells australian tv that najib got the better of him'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-13 01:41:12",
     "value": "b\"for a muslim, hudud must be accepted as god's law, but implementation is a different matter, says pkr president.\"b\"wan azizah doesn't rule out hudud in m'sia, but no stonings 'in near future'\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "wan azizah",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-13 01:08:12",
     "value": "b\"she says the fact that the former premier is willing to work with the opposition shows just how 'bad' pm najib is.\"b'wan azizah: working with mahathir not a deal with the devil'",
     "source": "facebook",
-    "related_to": "wan azizah",
+    "related_to": [
+      "mahathir",
+      "najib",
+      "wan azizah"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-13 00:03:07",
     "value": "b\"penang cm fully supports move by azmin ali asking pas' selangor state executive councillors to resign from their government post\"b\"guan eng agrees with calls for pas' s'gor excos to quit\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "azmin ali",
+      "pas"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-12 22:26:21",
     "value": "b\"'why not blame umno for not adopting hadi's bill?'\"b'anwar questions reasoning behind pas-pkr divorce'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "anwar",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 21:22:05",
     "value": "b'it is reported that azmin had asked the three pas state cabinet members to resign.'b\"'pkr scuttling islam' among issues raised in azmin-pas meet\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 20:49:16",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b'drama overshadows umno show of force; possible multi-cornered fight with pas'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 20:17:10",
     "value": "b'comment | sheer reliance on principles can get you exposed to the vicissitudes of life and politics.'b'is pas-umno cooperation syariah-compliant?'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 19:44:11",
     "value": "b'yoursay | \\xe2\\x80\\x98in the absence of anwar, the choice of mahathir would not be out of place.\\xe2\\x80\\x99'b'mahathir is only pakatan leader who can bag rural voters'",
     "source": "facebook",
-    "related_to": "pakatan",
+    "related_to": [
+      "anwar",
+      "mahathir",
+      "pakatan"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-12 19:11:15",
     "value": "b'yoursay | \\xe2\\x80\\x98he is the most credible of all the eligible opposition leaders\\xe2\\x80\\xa6\\xe2\\x80\\x9d'b'dr m as pm candidate will be najib\\xe2\\x80\\x99s worst nightmare'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 11:32:07",
     "value": "b'azmin: we may have to take on pas in three-cornered fights'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 11:06:51",
     "value": "b'it is dishonourable for remaining in the state gov\\xe2\\x80\\x99t despite terminating ties with pkr, says noh omar.'b'selangor umno slams s\\xe2\\x80\\x99gor pas as \\xe2\\x80\\x98opportunist\\xe2\\x80\\x99'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 08:54:20",
     "value": "b\"their action to hold on to positions in s'gor gov't 9 'is immoral and dishonourable', says saifudddin nasution.\"b'pkr sec-gen quotes nik aziz in swipe against pas exco members'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 07:18:13",
     "value": "b'kinitv bulletin: after their exit from pakatan rakyat last year, pas has broken their last line to the opposition coalition pakatan harapan but severing their ties with pkr.'b\"kiniflash - 12 may: it's over - pas severs ties with pkr\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pakatan",
+      "pakatan rakyat",
+      "pakatan harapan",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 04:34:40",
     "value": "b'they\\xe2\\x80\\x99ll do so to to garner votes in the next general election, but wouldn\\xe2\\x80\\x99t dare abolish it, adds pm.'b'opposition will continue to manipulate gst, says najib'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 04:34:37",
     "value": "b'dpm says, for instance, umno has to now face three-cornered fights in ge14.'b'zahid: bn to adopt new strategy in wake of pas-pkr split'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "bn",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 03:59:46",
     "value": "b'if the situation warrants it, ge14 will see old buddies pas and pkr facing off each other.'b'azmin: we may have to take on pas in three-cornered fights'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 03:59:41",
     "value": "b'penang gerakan wants to know who the prime plot of land was allegedly sold off to, and whether it was done through open tender.'b\"explain sale of land to private developer, gerakan tells penang gov't\"",
     "source": "facebook",
-    "related_to": "gerakan",
+    "related_to": [
+      "gerakan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 03:28:35",
     "value": "b\"the state gov\\xe2\\x80\\x99't is still stable despite pas officially severing ties with pkr, the s'gor mb adds.\"b'azmin: no dissolving the state assembly, for now'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 03:28:28",
     "value": "b'lawyers directed to file letters of demand to pm najib, igp, dpm and ag for their detention under sosma.'b'khairuddin, chang plan to file suit following their acquittal'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 01:20:19",
     "value": "b\"the split is a blessing in disguise as there's no more issue of trying to get pas to join the opposition, says amanah man.\"b\"mujahid: pas-pkr split follows umno's script\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "amanah",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 00:48:14",
     "value": "b\"on pas severing political ties with pkr, the former premier describes the islamist party as 'confused'.\"b'pas will perform badly if it goes alone in ge14, says dr m'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 00:14:53",
     "value": "b\"ting tiong choon's disqualification raises the possibility of a by-election for the state seat of pujut.\"b\"s'wak dap rep loses seat over aussie citizenship\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-12 00:14:51",
     "value": "b'pm told to call for general election after hinting of early polls at anniversary brouhaha.'b'khairuddin dares najib to dissolve parliament now'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 23:44:45",
     "value": "b\"former premier says they share similar objectives to 'bring down this kleptocratic government'.\"b\"mahathir: i'm with dap but it does not own me\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "mahathir",
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 23:44:41",
     "value": "b\"s'gor mb says pas' decision to sever ties with pkr betrays the people's desire to see changes in the country.\"b\"azmin meets s'gor pas commissioner and reps\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 22:43:11",
     "value": "b'he is to attend the belt and road forum for international cooperation on may 14-15.'b'najib makes brief stopover at hangzhou to visit alibaba'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 22:11:27",
     "value": "b'umno cares for not just one race, says liow after yesterday\\xe2\\x80\\x99s anniversary bash.'b'mca chief praises umno\\xe2\\x80\\x99s \\xe2\\x80\\x98moderation\\xe2\\x80\\x99 and care for all races'",
     "source": "facebook",
-    "related_to": "mca",
+    "related_to": [
+      "mca"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 22:11:24",
     "value": "b'selangor dap chief tony pua amused by decision of selangor pas to stay with the state government after breaking ties with pkr.'b'pua urges selangor pas to join umno as opposition'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "tony pua",
+      "dap",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 19:32:40",
     "value": "b'kini roundup | headlines from yesterday you may have missed, in brief.'b'pas finalises pkr divorce; najib\\xe2\\x80\\x99s hand in 1mdb deals questioned'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "najib",
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 11:26:54",
     "value": "b'its sec-gen saifuddin nasution stresses that pkr has been consistent based on its record.'b'pkr rejects syura council\\xe2\\x80\\x99s accusations, to discuss next move'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 10:57:01",
     "value": "b'umno president najib abdul razak marked the party\\xe2\\x80\\x99s 71st anniversary by taking a swipe at a former party leader, while praising pas president abdul hadi awang\\n\\nnajib said none could have imagined how this former leader could have betrayed the party and colluded with its old foe, dap.\\n\\nread more: https://www.malaysiakini.com/news/381940 \\n\\nphotos by lim huey teng'b\"umno's 71st anniversary\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "abdul hadi awang",
+      "najib",
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 10:19:27",
     "value": "b'\\xe2\\x80\\x98we did not forget who taught us that dap was a racist chauvinist party,\\xe2\\x80\\x99 he says.'b'najib takes swipes at ex-umno leader, praises hadi at anniversary bash'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "najib",
+      "dap"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-11 08:07:18",
     "value": "b'nazir was seated at the front row during nurul izzah\\xe2\\x80\\x99s speech at the world economic forum.'b'was it so easy to forgive dr m, nazir asks nurul izzah'",
     "source": "facebook",
-    "related_to": "nurul izzah",
+    "related_to": [
+      "nurul izzah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 06:33:19",
     "value": "b'the trio from pas will remain in their respective state government portfolios, says state party commissioner.'b\"sallehen: s'gor excos will not have political ties with pkr, but...\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 06:03:52",
     "value": "b'in his blog post, the pm speaks more about his new friend jack ma.'b\"najib in for awkward meeting with china leaders after bandar m'sia twist\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 05:31:31",
     "value": "b'despite its decision to sever ties with pkr, pas remains vague on its presence in the selangor government.'b\"pas syura council passes s'gor buck to central committee\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 05:31:27",
     "value": "b\"the party's syura council makes the decision at a meeting this afternoon.\"b\"it's official \\xe2\\x80\\x93 pas severs ties with pkr\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pas",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 05:00:23",
     "value": "b'party reps lug a copier machine and a generator to make draft electoral rolls copies, which ec stopped supplying.'b'perak pkr photocopies draft electoral rolls to get around ec ruling'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 03:26:29",
     "value": "b'no use going after young officers while ignoring the elephant in the room, says teo nie ching.'b\"what about najib's lavish lifestyle, dap mp asks macc\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "najib",
+      "dap"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-11 02:56:15",
     "value": "b\"the pm says the gov't never restricts freedom of expression, unless it involves sensitive issues.\"b\"najib: no gov't compromise on sensitive race, religion issues\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 02:23:19",
     "value": "b'teng chang khim says change is unnecessary as long as pas works within established framework.'b\"no issues with pas reps staying, says s'gor dap exco\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "dap",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 01:51:07",
     "value": "b'the illegal workers should be treated as human trafficking victims, says dap lawmakers.'b'dap: act against employers in forest city but treat illegal workers as victims'",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-11 01:19:15",
     "value": "b'pkr man wants to know who is footing the bill to provide the goodies promised to students who attend the event.'b\"afif: umno 'recruiting' uni students to attend anniversary do\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 23:41:38",
     "value": "b'rizal mansor wants the opposition to apologise for their accusations.'b\"rosmah's aide burns opposition as fuel prices dip\"",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "rosmah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 23:41:35",
     "value": "b\"tengku razaleigh hamzah tells members to focus on umno's original struggle of safeguarding people's welfare.\"b'ku li: members must go beyond personal agenda'",
     "source": "facebook",
-    "related_to": "tengku razaleigh",
+    "related_to": [
+      "tengku razaleigh"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 19:34:16",
     "value": "b'#columns comment | a mahathir-najib showdown makes sense in a way that the whole 1mdb fiasco could never.'b'dr m is the only choice for opposition for pm'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "mahathir",
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 19:22:13",
     "value": "b'kini roundup | headlines from yesterday you may have missed, in brief.'b\"gov't firm bought trx land; pas beat bn at popularity; s'gor gov't won't fall\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "bn",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 08:28:26",
     "value": "b\"amanah's hanipa maidin says the new line-up in his former party lacks the calibre to take on bn in ge14.\"b\"'new pas lineup will be best at protesting concerts'\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "amanah",
+      "bn",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 05:42:15",
     "value": "b\"video | kinitv: a survey commissioned by some of parti pribumi bersatu malaysia's (bersatu) founding members found pas to be the most popular party as at the middle of last year, surpassing even bn.\"b'survey: pas needs to field ulama as election candidates'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "bn",
+      "parti pribumi bersatu malaysia",
+      "pas"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-10 05:27:18",
     "value": "b'video | kinitv: selangor menteri besar mohamed azmin ali is maintaining his present exco members because he is afraid of pas, according to selangor umno chief noh omar.'b'noh omar: azmin fearful of pas'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "azmin ali",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 05:10:02",
     "value": "b\"pm urges m'sians to hold true to their respective religions and reject extremism and violence, to build a more gracious society.\"b'najib: let extremists be very few on the fringe'",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-10 05:09:57",
     "value": "b\"'no amount of money can buy any exco or state assemblypersons so that they will form a new government with umno'.\"b\"iskandar: pas cannot be bought to bring down s'gor gov't\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 05:09:53",
     "value": "b'dap veteran wants macc chief to explain if he will walk the talk to fight the corruption scourge and act against the 1mdb scandal.'b\"are politicians included in macc's 'one graft a week' arrests?\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": -1
   },
   {
     "date": "2017-05-10 05:09:50",
     "value": "b'noh omar speculates that azmin ali recognises that pas is powerful.'b'azmin not sacking excos as he fears pas, says noh'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "azmin ali",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 04:56:00",
     "value": "b\"video | kinitv: bn always had a clear candidate for prime minister, unlike the opposition, said selangor umno chief noh omar.\\n\\nhowever, when asked who will be bn's candidate for selangor menteri besar, noh said that this has yet to be decided.\"b'umno yet to decide on selangor mb candidate, says noh omar'",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 04:39:24",
     "value": "b'selangor bn wants to win in selangor before deciding on who gets to be menteri besar, says noh omar.'b\"noh proud that bn has pm candidate, but falls short on s'gor mb\"",
     "source": "facebook",
-    "related_to": "bn",
+    "related_to": [
+      "bn"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 01:53:06",
     "value": "b'we have identified the person, the pkr deputy chief says, but declines to name him or her.'b'harapan has candidate for pm, says azmin'",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-10 01:20:32",
     "value": "b'however, respondents favour bersatu leaders such as muhyiddin yassin and dr mahathir mohamad as prime minister.'b'bersatu survey finds pas more popular than bn last year'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "mahathir",
+      "muhyiddin",
+      "bn",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 22:38:48",
     "value": "b\"video | kinitv: selangor pas has accused parti amanah negara (amanah) of being too eager to take over the former's roles in the state government.\\n\\npas newly appointed selangor commissioner sallehin mukhyi said this in response to amanah youth vice-chief shazni munir mohd ithnin's suggestion for a reshuffle of the state cabinet to exclude pas' representatives.\"b'selangor pas: amanah eager to replace pas excos'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "amanah",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 19:57:09",
     "value": "b'live broadcast of proceedings would encourage lawmakers to behave, says mengkibol rep.'b\"dap rep begs to differ over sultan's speech on live telecast\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 17:47:11",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief'b'arul kanda and bandar m\\xe2\\x80\\x99sia; salleh slams stalking of rosmah'",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "rosmah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 11:51:37",
     "value": "b\"amanah has been eyeing pas' various roles in selangor for a long time, says new selangor pas head.\"b\"amanah a bit too eager 'snatch' exco posts, says new s'gor pas chief\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "amanah",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 08:45:11",
     "value": "b'addressing the meetings held between bersatu and pas representatives, rais cited a meeting of four people last year at which he was present, together with bersatu president muhyiddin yassin, hadi and former pas election director mustafa ali.'b'bersatu strategist divulges discussions with hadi'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "muhyiddin",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 07:59:06",
     "value": "b'all exco members will continue to serve until term expires, says azmin ali.'b'no cabinet reshuffle in selangor, says mb'",
     "source": "facebook",
-    "related_to": "azmin ali",
+    "related_to": [
+      "azmin ali"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 06:48:51",
     "value": "b\"kinitv | communications and multimedia minister salleh said keruak has accused whistleblower site sarawak report of stalking and harassing prime minister najib abdul razak's wife rosmah mansor in london.\"b\"kiniflash - 9 may: rosmah 'harassed' in london\"",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "najib",
+      "rosmah"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 05:49:53",
     "value": "b'selangor menteri besar mohamed azmin ali has denied there is a spat between pkr vice-president rafizi ramli and ampang pkr youth chief adam rosly abdullah.'b\"azmin denies 'adam-rafizi' spat, blames media instead\"",
     "source": "facebook",
-    "related_to": "pkr",
+    "related_to": [
+      "azmin ali",
+      "rafizi",
+      "pkr"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 03:59:52",
     "value": "b'pas deputy president tuan ibrahim is wondering if ties between 1mdb president arul kanda kandasamy and prime minister najib abdul razak had soured, resulting in the former being removed from key positions in bandar malaysia sdn bhd and trx city sdn bhd.'b\"pas leader speculates on arul's removal, cites possible fallout with pm\"",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "najib",
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 03:42:16",
     "value": "b'youth and sports minister khairy jamaluddin hopes north korea can assure the safety of harimau malaya (national squad ) who will travel to pyongyang for the 2019 asian cup qualifying match on june 8.'b\"kj hopes n korea will ensure safety of m'sian players in afc match\"",
     "source": "facebook",
-    "related_to": "khairy",
+    "related_to": [
+      "khairy"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 02:46:09",
     "value": "b\"video | kinitv: with the general election expected to be held soon, pakatan harapan has yet to name its candidate for the prime minister's post should the opposition coalition seize control of putrajaya.\"b'harapan: our pm candidate will be better than najib'",
     "source": "facebook",
-    "related_to": "pakatan harapan",
+    "related_to": [
+      "najib",
+      "pakatan",
+      "pakatan harapan"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 02:08:06",
     "value": "b'saifuddin abdullah jokes that finding someone better than najib is not a difficult task.'b\"our pm candidate will be better than najib \\xe2\\x80\\x93 harapan's promise\"",
     "source": "facebook",
-    "related_to": "najib",
+    "related_to": [
+      "najib"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 00:58:47",
     "value": "b'pas has clarified that it has not sidelined its former elections director mustafa ali, but have left him out of the new leadership line-up in accordance to his own request.'b'pas: mustafa wished to give way for new leaders, not sidelined'",
     "source": "facebook",
-    "related_to": "pas",
+    "related_to": [
+      "pas"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-09 00:43:34",
     "value": "b'datuk zaid ibrahim : \"for what it\\xe2\\x80\\x99s worth, however, i say to them: \\xe2\\x80\\x9chere is a 92-year-old man who works the hardest amongst the aspirants for pm and who commands the respect of many. this is what matters for our victory, so bite the bullet, give the respect due to him, and declare him your candidate for prime minister.\"'b'tun mahathir as the prime minister'",
     "source": "facebook",
-    "related_to": "mahathir",
+    "related_to": [
+      "mahathir"
+    ],
     "semantic_value": null
   },
   {
     "date": "2017-05-08 23:53:38",
     "value": "b'the finance ministry must come clean on 1mdb president arul kanda kandasamy\\xe2\\x80\\x99s sudden removal from key positions in bandar malaysia sdn bhd and trx city sdn bhd, said a dap leader.'b\"explain conflict of interest in arul's removal, pua urges mof\"",
     "source": "facebook",
-    "related_to": "dap",
+    "related_to": [
+      "dap"
+    ],
     "semantic_value": 1
   },
   {
     "date": "2017-05-08 23:19:30",
     "value": "b\"sarawak report editor clare rewcastle-brown has denied a minister's accusations that her website had been stalking or harassing prime minister najib abdul razak's wife rosmah mansor.\"b\"it wasn't me, says s'wak report editor on 'harassment' claim\"",
     "source": "facebook",
-    "related_to": "rosmah",
+    "related_to": [
+      "najib",
+      "rosmah"
+    ],
     "semantic_value": -1
   }
 ]
