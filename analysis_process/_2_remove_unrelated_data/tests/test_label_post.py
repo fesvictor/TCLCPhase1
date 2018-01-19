@@ -30,7 +30,7 @@ sample_labels = [
     "lks"
 ]
 
-import pprint
+
 def test_1():
     label_post(sample_posts, sample_labels)
     assert sample_posts[0]['related_to'] == ['najib', 'guan eng']

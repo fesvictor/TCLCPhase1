@@ -13,6 +13,7 @@ def main():
         for keyword in all_keywords:
             if keyword['word'] in post['value']:
                 post['semantic_value'] = keyword['value']
+                break
     save_posts(all_posts, 'analysis_process/_3_label_semantic/output.json')
 
 
