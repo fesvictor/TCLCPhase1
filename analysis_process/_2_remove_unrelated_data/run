@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ../..
+py -m analysis_process._2_remove_unrelated_data.main
+echo "The output is stored in directory: 'output'"
