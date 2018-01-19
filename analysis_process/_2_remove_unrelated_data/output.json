@@ -1,12 +1,5 @@
 [
   {
-    "date": "2017-05-18 11:56:09",
-    "value": "b'report: red granite in talks with doj to settle 1mdb-linked lawsuit'",
-    "source": "facebook",
-    "related_to": "lks",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-18 06:24:38",
     "value": "b'kinitv bulletin: film director david teo was given a nasty \"lesson\" by comedian mat over when he asked prime minister najib razak a question during a national transformation (tn50) event last night.'b'kiniflash - 18 may: film director assaulted at tn50 event'",
     "source": "facebook",
@@ -38,7 +31,7 @@
     "date": "2017-05-18 04:23:36",
     "value": "b'#letters kamarul zaman yusof\\xe2\\x80\\x99s false and malicious police report against selangor state assembly speaker and dap assemblyperson for subang jaya, hannah yeoh, accusing her of proselytisation of muslims with the publication of her autobiography \\xe2\\x80\\x98being hannah\\xe2\\x80\\x99, raises the question whether he is fit and proper to be a lecturer of plural malaysia\\xe2\\x80\\x99s public universities'b'is kamarul zaman fit to be a lecturer of a public university?'",
     "source": "facebook",
-    "related_to": "ph",
+    "related_to": "dap",
     "semantic_value": null
   },
   {
@@ -53,13 +46,6 @@
     "value": "b\"anwar's application is frivolous, vexatious and borders on sedition, it argues.\"b\"gov't applies to strike out anwar's bid to overturn sodomy ii\"",
     "source": "facebook",
     "related_to": "anwar",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-18 02:25:19",
-    "value": "b'stephen rundi says this is what the various water supply programmes under the 11mp, 12mp will cost.'b's\\xe2\\x80\\x99wak needs rm17 b for rural water supply plan'",
-    "source": "facebook",
-    "related_to": "supp",
     "semantic_value": null
   },
   {
@@ -140,27 +126,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-17 23:30:56",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting fair and unbiased news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 23:30:15",
-    "value": "b'enjoy full access to all our current news & views that matter with just rm100 instead of rm150 per year special discount with our group package! (y)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 23:29:39",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-17 23:11:14",
     "value": "b\"a dap orang asal politician says his state's rights in the federation is slowly being eroded.\"b'sabah dap leader: attack against yeoh sign of increasing intolerance'",
     "source": "facebook",
@@ -179,13 +144,6 @@
     "value": "b'video | kinitv: moments after film director david teo was attacked by comedian sulaiman yassin, better known as \"mat over\" in front of prime minister najib abdul razak during a transformasi nasional 50 (tn50) dialogue session, both men were asked to return on stage to shake hands.'b'david teo shakes the hand that slapped him'",
     "source": "facebook",
     "related_to": "najib",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 22:37:08",
-    "value": "b'red granite lawyers have requested a deadline extension for the case.'b'red granite in talks with doj to settle 1mdb-linked lawsuit, says report'",
-    "source": "facebook",
-    "related_to": "lks",
     "semantic_value": null
   },
   {
@@ -245,27 +203,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-17 10:53:04",
-    "value": "b\"welcome to 'pasar karat' [kini lens]\"",
-    "source": "facebook",
-    "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 09:10:00",
-    "value": "b'new study correlates hearing loss and dementia\\n\\nhearing loss is one of the most common health problems in the world. how do you fight it? \\n\\nsign up for a free consultation at: http://bit.ly/2omet0a\\n#brandvoice'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 08:27:12",
-    "value": "b\"trump is not being allowed to do his job properly, due to 'political schizophrenia' in the us, says russian president.\"b'putin says can prove trump did not pass russia secrets'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-17 07:54:42",
     "value": "b'abdul rashid abdul rahman reminds new ec chief that his loyalty is to the people, not bn.'b\"ex-ec chief tells latest ec chief not to be bn's lackey\"",
     "source": "facebook",
@@ -277,20 +214,6 @@
     "value": "b'kinitv bulletin: in the wake of the pkr-pas fallout, pkr has instructed their party members in the kelantan state government to vacate their posts immediately.'b'kiniflash - 17 may: pkr pulls its members from kelantan govt'",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 05:58:48",
-    "value": "b'fuel prices are set to end its three consecutive weeks of decline as the retail prices of ron95 and ron97 will go up by seven sen effective midnight.\\n\\nthe new retail price of ron95 and ron97 will be rm2.08 and rm2.36 per litre respectively.\\n\\nfull story: https://www.malaysiakini.com/news/382568'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 05:09:45",
-    "value": "b\"the trio had implied that the gov't was involved in the abduction of pastor raymond koh and the vanishing of three others.\"b\"cops summon activists over 'enforced disappearances' claim\"",
-    "source": "facebook",
-    "related_to": "pas",
     "semantic_value": null
   },
   {
@@ -319,13 +242,6 @@
     "value": "b\"the gov't should dismantle the sugar industry's duopoly instead, says pkr's gooi hsiao leung.\"b'putrajaya urged to block sugar price hike lobby'",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-17 04:26:45",
-    "value": "b'prices are up by 4.4 percent compared to last year but transport costs have gone up a whopping 16.7 percent. do you feel the pinch?\\n\\nhttps://www.malaysiakini.com/news/382522'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -434,38 +350,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-16 23:00:21",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting fair and unbiased news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-16 22:59:22",
-    "value": "b'enjoy full access to all our current news & views that matter with just rm100 instead of rm150 per year special discount with our group package! (y)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-16 22:58:48",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-16 22:47:47",
     "value": "b\"video | kinitv: pkr will vacate all political appointments in the pas-led kelantan government following pas' decision to cut ties with pkr, said pkr president dr wan azizah wan ismail.\"b'pkr to vacate kelantan posts'",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-16 22:39:37",
-    "value": "b'video | kinitv: a video has emerged online of a queue cutter trying to intimidate another road user on jalan loke yew in kuala lumpur. \\n\\nthe man stops his car in the middle of traffic and walks to the car behind him; loud knocking can be heard moments later.'b'queue cutter tries to intimidate road user in kl'",
-    "source": "facebook",
-    "related_to": "lks",
     "semantic_value": null
   },
   {
@@ -501,20 +389,6 @@
     "value": "b\"the party accepts pas' decision to cut ties but rejects reasons given for the decision.\\n \\nhttps://www.malaysiakini.com/news/382450\"b\"pkr to vacate kelantan posts, leaves s'gor exco issue for later\"",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-16 09:46:19",
-    "value": "b'police seize a car, mobile phones, debit and credit cards, a cheque book and rm20,936 in cash.'b'three arrested in jjptr ponzi scheme'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-16 09:46:12",
-    "value": "b\"he pledged allegiance via telegram and said 'alhamdulillah' over the movida bar bombing in puchong.\"b'technician jailed for supporting is'",
-    "source": "facebook",
-    "related_to": "supp",
     "semantic_value": null
   },
   {
@@ -658,27 +532,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-15 22:42:39",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting fair and unbiased news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 22:35:50",
-    "value": "b'enjoy full access to all our current news & views that matter with just rm100 instead of rm150 per year special discount with our group package! (y)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 22:33:24",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-15 21:20:20",
     "value": "b'yoursay | \\xe2\\x80\\x98pas is one political party that wants to have its cake and eat it too.\\xe2\\x80\\x99'b'a case of \\xe2\\x80\\x98we\\xe2\\x80\\x99re are in, but out\\xe2\\x80\\x99 or \\xe2\\x80\\x98out, but in\\xe2\\x80\\x99'",
     "source": "facebook",
@@ -711,13 +564,6 @@
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"pkr won't push pas out; iwh-crec gets 2nd go at bandar m'sia?\"",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 11:32:00",
-    "value": "b\"malaysiakini's cover photo\"",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -770,24 +616,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-15 04:48:01",
-    "value": "b'video | kinitv: a video of a young girl enthusiastically waving at perak ruler sultan nazrin muizzuddin shah as he approached has gone viral on social media.'b'little girl waves at sultan nazrin for photograph'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-15 04:32:49",
     "value": "b\"seeing red over sallehen's remarks, one exco tells pas that umno's purported mischief is greater.\"b\"what mischief have we done? dap reps want s'gor pas to spell it out\"",
     "source": "facebook",
     "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 04:32:47",
-    "value": "b\"this is to ensure the company's profitability this year, says fgv ceo zakaria arshad.\"b\"msm, gov't in talks to increase sugar price a further 29 sen\"",
-    "source": "facebook",
-    "related_to": "lks",
     "semantic_value": null
   },
   {
@@ -805,13 +637,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-15 02:23:27",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting fair and unbiased news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-15 02:20:19",
     "value": "b\"70-year-old pas leader to undergo 'intensive treatment' tomorrow.\"b'pas president abdul hadi admitted to hospital'",
     "source": "facebook",
@@ -823,20 +648,6 @@
     "value": "b'almost 90pct of places where pas fields candidates will be against bn, says pas no 2.'b'pas will field candidates against bn, vows tuan ibrahim'",
     "source": "facebook",
     "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 02:08:21",
-    "value": "b'enjoy full access to all our current news & views that matter with just rm100 instead of rm150 per year special discount with our group package! (y)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-15 02:06:12",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -945,13 +756,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-14 20:55:11",
-    "value": "b'her cdu secures 33.5 percent of the vote in north rhine westphalia, the most populous state in germany.'b\"merkel's party snatches state from rivals in crushing election win\"",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-14 19:52:11",
     "value": "b'comment | fdi is welcome but not at any cost, bersatu supreme council says in response to najib\\xe2\\x80\\x99s op-ed.'b\"'we'd rather be world-class people with dignity, pm'\"",
     "source": "facebook",
@@ -975,13 +779,6 @@
   {
     "date": "2017-05-14 18:50:07",
     "value": "b'kini roundup | key headlines you may have missed yesterday, in brief.'b\"pas in s'gor exco to check dap; bandar m'sia fallout continues\"",
-    "source": "facebook",
-    "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-14 08:08:10",
-    "value": "b\"the documents were issued after malaysiakini's report on the workers employed illegally there.\"b'immigration issues permits, passes to forest city workers'",
     "source": "facebook",
     "related_to": "pas",
     "semantic_value": null
@@ -1078,13 +875,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-13 04:20:16",
-    "value": "b\"both deals with china were signed on m'sia's behalf, by companies owned by the finance ministry.\"b\"m'sia inks second phase deals on ecrl and malacca-pengerang pipeline\"",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-13 03:17:14",
     "value": "b'iskandar samad refuses to comment on news that azmin has asked the three pas excos to resign.'b\"pas s'gor exco says no word from mb to quit after pkr divorce\"",
     "source": "facebook",
@@ -1120,22 +910,8 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-13 00:35:35",
-    "value": "b'this is in contrast with johor sultan ibrahim sultan iskandar, who disapproves such a move.'b\"s'gor ruler supports state assembly live broadcasts\"",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-13 00:03:07",
     "value": "b\"penang cm fully supports move by azmin ali asking pas' selangor state executive councillors to resign from their government post\"b\"guan eng agrees with calls for pas' s'gor excos to quit\"",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-12 23:00:23",
-    "value": "b\"the lawyer says he and khairuddin abu hassan getting back their passports doesn't mean ban is over.\"b'acquitted, but question of travel ban remains, says chang'",
     "source": "facebook",
     "related_to": "pas",
     "semantic_value": null
@@ -1183,13 +959,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-12 17:03:45",
-    "value": "b'#columns would critics be better off saving their breath?'b'blasphemy by believers?'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-12 11:32:07",
     "value": "b'azmin: we may have to take on pas in three-cornered fights'",
     "source": "facebook",
@@ -1201,13 +970,6 @@
     "value": "b'it is dishonourable for remaining in the state gov\\xe2\\x80\\x99t despite terminating ties with pkr, says noh omar.'b'selangor umno slams s\\xe2\\x80\\x99gor pas as \\xe2\\x80\\x98opportunist\\xe2\\x80\\x99'",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-12 10:39:57",
-    "value": "b\"malaysiakini's cover photo\"",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -1316,27 +1078,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-11 22:15:33",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-11 22:14:24",
-    "value": "b'get full access to all our current online news and enjoy special discounts and offers! (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop) https://msub.malaysiakini.com/ (mobile)\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-11 22:13:51",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-11 22:11:27",
     "value": "b'umno cares for not just one race, says liow after yesterday\\xe2\\x80\\x99s anniversary bash.'b'mca chief praises umno\\xe2\\x80\\x99s \\xe2\\x80\\x98moderation\\xe2\\x80\\x99 and care for all races'",
     "source": "facebook",
@@ -1348,20 +1089,6 @@
     "value": "b'selangor dap chief tony pua amused by decision of selangor pas to stay with the state government after breaking ties with pkr.'b'pua urges selangor pas to join umno as opposition'",
     "source": "facebook",
     "related_to": "pkr",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-11 20:05:36",
-    "value": "b\"the party's muscle-flexing comes at a time when its malay support is at its lowest.\"b\"umno's show of numbers beats bersih 5, act 355 rally, but...\"",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-11 19:32:44",
-    "value": "b'yoursay | \\xe2\\x80\\x98with all these blasphemy laws, are indonesians better muslims?\\xe2\\x80\\x99'b'indonesians follow malaysia on religious intolerance'",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -1382,7 +1109,7 @@
     "date": "2017-05-11 10:57:01",
     "value": "b'umno president najib abdul razak marked the party\\xe2\\x80\\x99s 71st anniversary by taking a swipe at a former party leader, while praising pas president abdul hadi awang\\n\\nnajib said none could have imagined how this former leader could have betrayed the party and colluded with its old foe, dap.\\n\\nread more: https://www.malaysiakini.com/news/381940 \\n\\nphotos by lim huey teng'b\"umno's 71st anniversary\"",
     "source": "facebook",
-    "related_to": "ph",
+    "related_to": "pas",
     "semantic_value": null
   },
   {
@@ -1431,14 +1158,14 @@
     "date": "2017-05-11 05:00:23",
     "value": "b'party reps lug a copier machine and a generator to make draft electoral rolls copies, which ec stopped supplying.'b'perak pkr photocopies draft electoral rolls to get around ec ruling'",
     "source": "facebook",
-    "related_to": "supp",
+    "related_to": "pkr",
     "semantic_value": null
   },
   {
     "date": "2017-05-11 03:26:29",
     "value": "b'no use going after young officers while ignoring the elephant in the room, says teo nie ching.'b\"what about najib's lavish lifestyle, dap mp asks macc\"",
     "source": "facebook",
-    "related_to": "ph",
+    "related_to": "dap",
     "semantic_value": null
   },
   {
@@ -1484,34 +1211,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-10 23:20:18",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-10 23:18:11",
-    "value": "b'get full access to all our current online news and enjoy special discounts and offers! (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop) https://msub.malaysiakini.com/ (mobile)\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-10 23:17:27",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-10 22:25:00",
-    "value": "b'medication may relief the pain but not treat it.\\ntreat the cause today with the help of our doctors\\n\\nlearn more at http://nexuswellness.com.my/jointpain\\n#brandvoice'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-10 19:34:16",
     "value": "b'#columns comment | a mahathir-najib showdown makes sense in a way that the whole 1mdb fiasco could never.'b'dr m is the only choice for opposition for pm'",
     "source": "facebook",
@@ -1526,24 +1225,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-10 18:49:10",
-    "value": "b\"bersatu's tariq ismail worries hiring of mainland chinese on visit pass is widespread.\"b\"bersatu: get tough on china developers' hiring of its own citizens\"",
-    "source": "facebook",
-    "related_to": "pas",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-10 08:28:26",
     "value": "b\"amanah's hanipa maidin says the new line-up in his former party lacks the calibre to take on bn in ge14.\"b\"'new pas lineup will be best at protesting concerts'\"",
     "source": "facebook",
     "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-10 06:49:30",
-    "value": "b\"the dress worn by the 12-year-old was in fact much shorter than shown in photo, claims sophian yusuf's lawyer.\"b\"chess tourney director to sue coach, three others over 'short dress' fiasco\"",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -1617,31 +1302,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-10 00:19:09",
-    "value": "b'they gather to show moral support and sympathy for the outgoing jakarta governor, who has been jailed for blasphemy.'b\"thousands of ahok's supporters throng jakarta city hall grounds\"",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-09 22:38:48",
     "value": "b\"video | kinitv: selangor pas has accused parti amanah negara (amanah) of being too eager to take over the former's roles in the state government.\\n\\npas newly appointed selangor commissioner sallehin mukhyi said this in response to amanah youth vice-chief shazni munir mohd ithnin's suggestion for a reshuffle of the state cabinet to exclude pas' representatives.\"b'selangor pas: amanah eager to replace pas excos'",
     "source": "facebook",
     "related_to": "pas",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 21:30:00",
-    "value": "b'the p10 is what smartphone makers should strive to achieve. \\n\\nlearn more at http://vox.malaysiakini.com/en/24231\\n#brandvoice'b'huawei improves on the perfect with the p10'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 21:02:11",
-    "value": "b'the minister will also lead the discussion on \\xe2\\x80\\x98towards a regional digital single market\\xe2\\x80\\x99 in phnom penh tomorrow.'b'mustapa to lead world economic forum-asean 2017 delegation'",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -1694,20 +1358,6 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-09 05:11:07",
-    "value": "b'#letters the society for the promotion of human rights (proham - persatuan promosi hak asasi manusia) fully supports and endorses the statement issued by simon sipaun, the former suhakam vice-chairperson and state secretary of sabah together with nineteen other eminent persons from sabah and sarawak, in saying no to act 355.'b'proham: proposed act 355 is unconstitutional'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 04:22:56",
-    "value": "b\"malaysiakini's cover photo\"",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-09 03:59:52",
     "value": "b'pas deputy president tuan ibrahim is wondering if ties between 1mdb president arul kanda kandasamy and prime minister najib abdul razak had soured, resulting in the former being removed from key positions in bandar malaysia sdn bhd and trx city sdn bhd.'b\"pas leader speculates on arul's removal, cites possible fallout with pm\"",
     "source": "facebook",
@@ -1729,52 +1379,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-09 02:28:57",
-    "value": "b\"[special report] 'some workers can't even afford to buy food' https://www.malaysiakini.com/news/381628\"b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-09 02:08:06",
     "value": "b'saifuddin abdullah jokes that finding someone better than najib is not a difficult task.'b\"our pm candidate will be better than najib \\xe2\\x80\\x93 harapan's promise\"",
     "source": "facebook",
     "related_to": "najib",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 01:29:03",
-    "value": "b'malaysiakini news is independent from government/opposition influence and corporate interests. malaysiakini is neither pro-opposition nor pro-government either. we believe in reporting news and views that matter, holding governments of the day (federal and state) accountable.\\n\\nsupport independent media. support malaysiakini today. (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop)\\nhttps://msub.malaysiakini.com/ (mobile)'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "supp",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 01:26:49",
-    "value": "b'get full access to all our current online news and enjoy special discounts and offers! (y)\\n\\nhttps://subscription.malaysiakini.com/ (desktop) https://msub.malaysiakini.com/ (mobile)\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 01:25:38",
-    "value": "b'free zunar cartoon book! subscribe or renew your malaysiakini subscription to 1 year from may 03 to may 30 and get 1 free 1 funny malaysia book by zunar! click here ~> https://goo.gl/qo6xdo for more information:\\n\\n*terms & conditions apply'b'timeline photos'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 01:21:47",
-    "value": "b'#letters i am elated to read the warning from bank negara malaysia (bnm) that rogue investors in illegal financial schemes will be prosecuted as well as the arrangers of such scheme as reported recently.'b'it\\xe2\\x80\\x99s not bank negara\\xe2\\x80\\x99s job to protect the foolish and greedy'",
-    "source": "facebook",
-    "related_to": "bn",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-09 01:01:24",
-    "value": "b\"video | kinitv: an indonesian court on tuesday sentenced jakarta's christian governor to two years in prison for blasphemy over remarks he made about the quran.\"b'jakarta governor ahok faces jail time for blasphemy'",
-    "source": "facebook",
-    "related_to": "ph",
     "semantic_value": null
   },
   {
@@ -1799,24 +1407,10 @@
     "semantic_value": null
   },
   {
-    "date": "2017-05-08 23:36:20",
-    "value": "b\"an indonesian court on tuesday sentenced jakarta's outgoing governor to two years in prison for blasphemy over remarks he made about the quran.\"b'court sentences ahok to two years in prison for blasphemy'",
-    "source": "facebook",
-    "related_to": "ph",
-    "semantic_value": null
-  },
-  {
     "date": "2017-05-08 23:19:30",
     "value": "b\"sarawak report editor clare rewcastle-brown has denied a minister's accusations that her website had been stalking or harassing prime minister najib abdul razak's wife rosmah mansor.\"b\"it wasn't me, says s'wak report editor on 'harassment' claim\"",
     "source": "facebook",
     "related_to": "rosmah",
-    "semantic_value": null
-  },
-  {
-    "date": "2017-05-18 11:56:09",
-    "value": "b'report: red granite in talks with doj to settle 1mdb-linked lawsuit'",
-    "source": "facebook",
-    "related_to": "lks",
     "semantic_value": null
   }
 ]
