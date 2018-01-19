@@ -14,8 +14,8 @@ class Post:
         self.date   = ""
         self.value  = ""
         self.source = ""
-        self.related_to  = []
-        self.semantic_value = []
+        self.related_to  = None
+        self.semantic_value = None
         
     def default(self, o):
             return o.__dict__ 
