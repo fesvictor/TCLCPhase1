@@ -10,10 +10,10 @@ def main():
     negative_keywords = load_keywords(keyword_dir + 'negative.txt', -1)
     all_keywords = positive_keywords + negative_keywords
     for post in all_posts:
+        post['semantic_value'] = 0
         for keyword in all_keywords:
             if keyword['word'] in post['value']:
-                post['semantic_value'] = keyword['value']
-                break
+                post['semantic_value'] += keyword['value']
     save_posts(all_posts, 'analysis_process/_3_label_semantic/output.json')
 
 

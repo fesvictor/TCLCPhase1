@@ -20,10 +20,9 @@ def get_labels():
 
 
 def get_posts():
-    posts_dir = 'analysis_process/_1_process_raw_data/output'
+    posts_dir = 'analysis_process/_1_process_raw_data/output/all_output.json'
     result = []
-    for file_name in listdir(posts_dir):
-        result += load_posts(posts_dir + '/' + file_name)
+    result += load_posts(posts_dir)
     return result
 
 
