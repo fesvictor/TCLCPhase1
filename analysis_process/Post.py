@@ -9,15 +9,18 @@ Post = {
 }
 '''
 from json import JSONEncoder
+
+
 class Post:
     def __init__(self):
-        self.date   = ""
-        self.value  = ""
+        self.date = ""
+        self.value = ""
         self.source = ""
-        self.related_to  = None
+        self.related_to = None
         self.semantic_value = None
-        
+
     def default(self, o):
-            return o.__dict__ 
+        return o.__dict__
+
     def __str__(self):
         return "date: %s\nvalue: %s\nsource: %s\nrelated_to: %s\nsemantic_value: %s" % (self.date, self.value, self.source, self.related_to, self.semantic_value)
