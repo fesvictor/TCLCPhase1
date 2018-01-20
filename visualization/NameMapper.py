@@ -4,7 +4,7 @@ def map_name_from_file(filename):
         for row in inFile:
             names = row.split(",")
             for name in names:
-                name = name.strip()
+                name = name.strip('\n')
                 name_dict[name] = names[0]
     name_dict.pop('')
     return name_dict
