@@ -5,7 +5,10 @@ from pprint import pprint
 from analysis_process.Post import Post
 
 def parse_lowyat(file_path):
+    if("links_retrieved" in file_path):
+        return [Post()]
     result = []
+    # try:
     result.append(read_title(file_path))
     with open(file_path, 'r', errors='ignore') as csvfile:
         df = pandas.read_csv(csvfile, skiprows=[0])
@@ -17,13 +20,16 @@ def parse_lowyat(file_path):
             result.append(p)
 
     return result
+    # except:
+    #     print("Error at " + file_path)
+    # Please comment out try-except, because it will slow down performance
 
 def read_title(file_path):
-    with open(file_path, 'r', errors='ignore') as csvfile:
-        df = pandas.read_csv(csvfile)
-        first_row = list(df)
-        p = Post()
-        p.value = first_row[0].split(':')[1].strip()
-        p.date = first_row[1].split(':')[1].split(',')[0].strip()
-        p.source = 'lowyat'
-        return p
+    file_path = file_path.split('/')[-1]
+    if(not 'lowyat' in file_path): 
+        return Post()
+    p = Post()
+    p.date = file_path.split('_')[1]
+    p.value = file_path.split('_')[3].split('.')[0]
+    p.source = 'lowyat'
+    return p
