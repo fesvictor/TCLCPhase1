@@ -26,8 +26,8 @@ def process_tweet_data(FilePath):
     #print(word_list) 
     return word_list
 
-import os
-os.chdir('C:/Users/tanhongzher/Documents/GitHub')
-from TCLCPhase1.get_parameter_dict import get_parameter_dict
-param = get_parameter_dict()
-hi = process_tweet_data('TCLCPhase1/' + param['twitter.files'])
+#import os
+#os.chdir('C:/Users/tanhongzher/Documents/GitHub')
+#from TCLCPhase1.get_parameter_dict import get_parameter_dict
+#param = get_parameter_dict()
+#hi = process_tweet_data('TCLCPhase1/' + param['twitter.files'])
