@@ -8,7 +8,7 @@ def process_json_data(FilePath): #process json format scrapped data
             for line in InFile:
                 data = loads(line)
                 _time = data['created_at'].split()
-                print('json:', data['text'], _time)
+                #print('json:', data['text'], _time)
                 word_list.append([data['text'], _time[2],lookup_table[_time[1]],_time[5][2:]])
 #    print(word_list)
     return word_list

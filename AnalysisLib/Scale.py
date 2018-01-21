@@ -48,10 +48,10 @@ def search_scale(category, num, sentence, _language = 'both'): #pass the sentenc
     elif _language == 'both':
         pos_words = scale_database(param['polarity.political'] + "/positive.txt")
         neg_words = scale_database(param['polarity.political'] + "/negative.txt")
-
+        
     #sentence_list = texts.split('.')
     #for sentence in sentence_list:
-        '''
+    '''
     if category == "Attitude":
         if num == 1:
             for words in att_scale1_words:
@@ -118,7 +118,7 @@ def search_scale(category, num, sentence, _language = 'both'): #pass the sentenc
                 p = re.compile(words)
                 if p.search(sentence):
                     return True
-                '''
+    '''
     if category == "Polarity":
         if num == 1:
             for words in neg_words:

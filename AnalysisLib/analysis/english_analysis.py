@@ -76,11 +76,11 @@ def compute(word):
                 #attitude likert scale
                 if search_scale('Attitude', 1, word[0], 'english'): # search whether this word in database
                     i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 0, 'party')
+                    addScale(word[3], word[2], word[1], party.get_name()[0], 0, 'party')
                     break
                 elif search_scale('Attitude', 2, word[0], 'english'):
                     i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 1, 'party')
+                    addScale(word[3], word[2], word[1], party.get_name()[0], 1, 'party')
                     break
        
     #for govtPolicy in govtPolicy_list: 
@@ -97,11 +97,11 @@ def compute(word):
                 #popularity likert scale
                 if search_scale('Popularity', 1, word[0], 'english'):
                     i += 1
-                    addScale(word[3], word[2], word[1], leader.getName()[0], 0, 'leader')
+                    addScale(word[3], word[2], word[1], leader.get_name()[0], 0, 'leader')
                     break
                 elif search_scale('Popularity', 2, word[0], 'english'):
                     i += 1
-                    addScale(word[3], word[2], word[1], leader.getName()[0], 1, 'leader')
+                    addScale(word[3], word[2], word[1], leader.get_name()[0], 1, 'leader')
                     break
     mutex.release()
 
@@ -125,7 +125,7 @@ while(len(fb_list) >= 10):
     xxx = fb_list[:10]
     fb_list = fb_list[10:] 
     get_result(xxx) 
-update_result(['17'], 12, param['temp.english.facebook.dir'], yearTable, 'facebook', 'english') 
+update_result(['17'], 12,'TCLCPhase1/' +  param['temp.english.facebook.dir'], yearTable, 'facebook', 'english') 
 print("total scale count from facebook:", i) 
 
 i = 0 
@@ -137,7 +137,7 @@ while(len(tweet_list) >= 5):
     xxx = tweet_list[:5] 
     tweet_list = tweet_list[5:] 
     get_result(xxx) 
-update_result(['17'], 12, param['temp.english.tweet.dir'], yearTable, 'twitter', 'english') 
+update_result(['17'], 12,'TCLCPhase1/' +  param['temp.english.tweet.dir'], yearTable, 'twitter', 'english') 
 print("total scale count from twitter:", i) 
 
 i = 0 
@@ -153,7 +153,7 @@ while(len(others_list) >= 10):
     others_list = others_list[10:] 
     get_result(xxx) 
     
-update_result(['17'], 12, param['temp.english.others.dir'], yearTable , 'others' , 'english') 
+update_result(['17'], 12,'TCLCPhase1/' +  param['temp.english.others.dir'], yearTable , 'others' , 'english') 
 
 print("total scale count from others:", i) 
 

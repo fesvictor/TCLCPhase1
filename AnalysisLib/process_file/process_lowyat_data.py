@@ -20,7 +20,7 @@ def process_lowyat_data(file_path): #process lowyat scrapped data
                         if not isinstance(_text, float):
                             if _text is not "":
                                 word_list.append([_text,_time[2],_time[1],_time[0]])
-                                print('lowyat:', _text, _time)
+                                #print('lowyat:', _text, _time)
                     except ValueError: #skip nan type
                         pass
     #print(word_list)

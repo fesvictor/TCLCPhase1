@@ -76,11 +76,11 @@ def compute(word):
                 #attitude likert scale
                 if search_scale("Polarity",1,word[0]): # search whether this word in database
                     i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 0, "party")
+                    addScale(word[3], word[2], word[1], party.get_name()[0], 0, "party")
                     break
                 elif search_scale("Polarity",2,word[0]):
                     i += 1
-                    addScale(word[3], word[2], word[1], party.getName()[0], 1, "party")
+                    addScale(word[3], word[2], word[1], party.get_name()[0], 1, "party")
                     break
        
     #for govtPolicy in govtPolicy_list: 
@@ -109,18 +109,11 @@ def compute(word):
 mutex = threading.Lock()
 
 param = get_parameter_dict()
-print('1')
 party_list = get_object_list("party", param["target"] + '/party.txt')
 #govtPolicy_list = getObjectList("GovtPolicy", param["target"] + '/govtPolicy.txt')
 leader_list = get_object_list("leader", param["target"] + '/leader.txt')
-for party in party_list:
-    print(party.get_name())
-for leader in leader_list:
-    print(leader.get_name())
-print('2')
 #if not os.path.exists("./temp"):
 #    os.makedirs("./temp"
-sleep(60)
 t0 = time()
 
 i = 0

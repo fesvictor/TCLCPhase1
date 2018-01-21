@@ -16,7 +16,7 @@ def process_cari_data(FilePath): #process carinet scrapped data
                         _time = df.loc[index]['date']
                         _time = str(_time)
                         _time = [_time[2:4],_time[4:6],_time[6:]]
-                        print('cari:',_text,_time)
+                        #print('cari:',_text,_time)
                         try:
                             if not isinstance(_text, float):
                                 if _text is not "":

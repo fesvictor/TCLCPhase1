@@ -16,7 +16,7 @@ def process_jbtalks_data(FilePath): #process jbtalks csv scrapped data
                 if len(_date[2]) == 1:                        
                         _date[2] = '0' + _date[2]
                 
-                print('jbtalks:',_text,_date)
+                #print('jbtalks:',_text,_date)
                 if type(_text) == str:
     #                        word_list.append([literal_eval(_text).decode('utf-8'), _date[2], _date[1], _date[0][2:]])
                         word_list.append([_text, _date[2], _date[1], _date[0][2:]])

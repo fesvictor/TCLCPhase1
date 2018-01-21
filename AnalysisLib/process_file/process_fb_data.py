@@ -16,7 +16,7 @@ def process_fb_data(FilePath): #process facebook csv scrapped data
                 try:
                     if _text is not "":
                         word_list.append([literal_eval(_text).decode('utf-8'), _date[2], _date[1], _date[0][2:]])                
-                        print('fb:', literal_eval(_text).decode('utf-8'), _date)
+                        #print('fb:', literal_eval(_text).decode('utf-8'), _date)
                 except ValueError: #skip nan type
                     pass
   #  print(word_list)                
