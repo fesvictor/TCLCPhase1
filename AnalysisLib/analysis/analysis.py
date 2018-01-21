@@ -123,7 +123,9 @@ while(len(fb_list) >= 10):
     #print(len(fb_list))
     xxx = fb_list[:10] 
     fb_list = fb_list[10:] 
-    get_result(xxx) 
+    get_result(xxx)
+print(len(fb_list))
+get_result(fb_list)
 update_result(['17'], 12, 'TCLCPHase1' + param['temp.mix.facebook.dir'], yearTable, 'facebook') 
 print("total scale count from facebook:", i) 
 
@@ -136,6 +138,8 @@ while(len(tweet_list) >= 5):
     xxx = tweet_list[:5]
     tweet_list = tweet_list[5:]
     get_result(xxx)
+print(len(tweet_list))
+get_result(tweet_list)
 update_result(['17'], 12, 'TCLCPhase1' + param['temp.mix.tweet.dir'], yearTable, 'twitter')
 print("total scale count from twitter:", i)
 
@@ -153,6 +157,8 @@ while(len(others_list) >= 10):
     xxx = others_list[:10]
     others_list = others_list[10:]
     get_result(xxx)
+print(len(others_list))
+get_result(others_list)
 update_result(['17'], 12, 'TCLCPhase1' + param['temp.mix.others.dir'], yearTable , 'others')
 
 print("total scale count from others:", i)

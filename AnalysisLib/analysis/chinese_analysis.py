@@ -134,6 +134,8 @@ while(len(others_list) >= 10):
     xxx = others_list[:10] 
     others_list = others_list[10:] 
     get_result(xxx) 
+print(len(others_list))
+get_result(others_list)    
     
 update_result(['17'], 12, 'TCLCPhase1/' + param['temp.chinese.others.dir'], yearTable , 'others' , 'chinese') 
 

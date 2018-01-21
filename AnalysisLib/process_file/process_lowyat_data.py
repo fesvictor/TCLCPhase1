@@ -6,7 +6,7 @@ def process_lowyat_data(file_path): #process lowyat scrapped data
 
     for file_name in listdir(file_path):
         if file_name.startswith('lowyat'):
-            print(file_name)
+            #print(file_name)
             with open(file_path + "/" + file_name) as in_file:
                 next(in_file)
 #                in_file = open(file_path + "/" + file_name, encoding = 'utf-8')
