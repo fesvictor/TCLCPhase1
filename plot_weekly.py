@@ -11,21 +11,28 @@ pd.options.display.chop_threshold = None
 pd.options.display.expand_frame_repr = False
 
 def date_converter(filename, _source, _type):
-    date_regex = re.compile("temp/%s/%s/(.*)_%s__%s.csv" % (_source, _type, _source, _type))
-    date = date_regex.search(filename.replace('\\','/'))
+    search = "temp/english/%s/%s/(.*)_%s_%s.csv" % (_source, _type, _source, _type)
+    date_regex = re.compile(search)
+    date = date_regex.search(filename)
     date = str(date.group(1))
     date = datetime.datetime.strptime(date, '%Y_%m') #Converts string to date object
     return datetime.datetime.strftime(date, '%B %Y')
 
 def get_single_scale(df, scale):
-    _df = df.loc[df['scale'] == scale].set_index('name').reset_index()
+    if scale == -1:
+        _df = df.groupby('name', sort=False).sum().reset_index()
+        _df = _df.set_index('name').reset_index()
+    else:
+        _df = df.loc[df['scale'] == scale]
+        _df = _df.set_index('name').reset_index()
     return _df
 
 def get_names(df):
     return list(df.iloc[:,0])
 
 def process_single_name(df, name):
-    _df = df.loc[df['name'] == name].set_index('name').reset_index()
+    _df = df.loc[df['name'] == name]
+    _df = _df.set_index('name').reset_index()
     return _df
 
 def subplot_week(df, name, ax, c):
@@ -58,10 +65,9 @@ def plot_weekly(filename, _source, _type):
     
     df = pd.read_csv(filename)
     date_str = date_converter(filename, _source, _type)
-    
     plt.ioff()
     
-    scales = [1,2]
+    scales = [1,2, -1]
     for _scale in scales:
         
         my_dpi = 150#96
@@ -82,7 +88,11 @@ def plot_weekly(filename, _source, _type):
         if _scale == 2:
             _s = 'Positive'
             color = 'C0'
-            
+        if _scale == -1:
+            _s = 'Overall'
+            color = 'C2'
+        
+        counter = 1
         for _name, _axes in zip(names, axes.reshape(-1)):
             _df2 = process_single_name(_df, _name) #Process single name
             _df2 = subplot_week(_df2, _name, _axes, color) #Process subplot for single name
@@ -104,7 +114,7 @@ types = ['leader', 'party']
 
 for _s in sources:
     for _t in types:
-        directory = "temp\%s\%s" % (_s, _t)
+        directory = os.path.join("temp","english",_s,_t)
         for file in os.listdir(directory):
             filename = os.fsdecode(file)
             if filename.startswith("20") and filename.endswith(".csv"): 
