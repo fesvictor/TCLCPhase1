@@ -14,6 +14,7 @@ def main():
     label_post(all_posts, all_labels)
     print("Removing unrelated posts")
     purified = [x for x in all_posts if len(x['related_to']) > 0]
+    print("Number of removed posts = " + str(len(all_posts) - len(purified)))
     print("Saving the purified posts into output.json")
     save_posts(purified, 'analysis_process/_2_remove_unrelated_data/output.json')
     print("DONE.")

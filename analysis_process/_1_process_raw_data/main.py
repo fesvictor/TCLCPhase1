@@ -20,6 +20,7 @@ def main():
     all_posts += parse_files_from(TWITTER_DIR, parse_twitter, "Parsing files from twitter")
     print("Saving Posts as all_output.json")
     save_posts(all_posts, f'analysis_process/_1_process_raw_data/output/all_output.json')
+    print("Number of posts created : " + str(len(all_posts)))
     print("DONE.")
 
 def parse_files_from(directory, parser, whats_happening):
