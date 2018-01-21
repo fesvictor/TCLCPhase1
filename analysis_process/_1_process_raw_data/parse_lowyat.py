@@ -17,8 +17,8 @@ def parse_lowyat(file_path):
             p.date = str(row['date'])
             p.value = row['text']
             p.source = 'lowyat'
-            result.append(p)
-
+            if(isinstance(p.value, str)):
+                result.append(p)
     return result
     # except:
     #     print("Error at " + file_path)
