@@ -29,7 +29,7 @@ def main():
     chinese_posts = []
     chinese_posts += parse_files_from(JBTALKS_DIR, parse_jbtalks, "Parsing files from jbtalks")
     log("Saving chinese posts as chinese.json", 1)
-    save_posts(english_posts, f'analysis_process/_1_process_raw_data/output/chinese.json')
+    save_posts(chinese_posts, f'analysis_process/_1_process_raw_data/output/chinese.json')
     log("DONE.", 1)
 
 
