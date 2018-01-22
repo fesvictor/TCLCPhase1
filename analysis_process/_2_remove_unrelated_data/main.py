@@ -1,4 +1,6 @@
 from os import listdir
+from collections import OrderedDict
+from hanziconv import HanziConv
 from analysis_process.log import log
 from analysis_process._2_remove_unrelated_data.load_labels import load_labels
 from analysis_process._2_remove_unrelated_data.label_post import label_post
@@ -39,6 +41,7 @@ def get_chinese_labels():
     labels_dir = 'data/target/'
     leaders = load_labels(labels_dir + 'chinese_leader.txt')
     parties = load_labels(labels_dir + 'chinese_party.txt')
-    return leaders + parties
+    simplified = list(map(HanziConv.toSimplified, leaders + parties))
+    return list(OrderedDict.fromkeys(simplified))
 
 main()

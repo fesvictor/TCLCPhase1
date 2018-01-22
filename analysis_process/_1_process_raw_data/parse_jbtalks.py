@@ -1,4 +1,5 @@
 import csv
+from hanziconv import HanziConv
 from analysis_process.Post import Post
 
 
@@ -11,7 +12,7 @@ def parse_jbtalks(file_name):
         for row in reader:
             p = Post()
             p.date = date
-            p.value = row['text'].replace("\n", "").strip()
+            p.value = HanziConv.toSimplified(row['text'].replace("\n", "").strip())
             p.source = 'jbtalks'
             result.append(p)
     return result
